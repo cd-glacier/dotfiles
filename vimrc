@@ -31,7 +31,7 @@ hi PmenuThumb ctermfg=3
 set syntax=markdown
 au BufRead,BufNewFile *.md set filetype=markdown 
 " ステータスライン
-"set laststatus=2
+set laststatus=2
 " メッセージ表示欄
 "set cmdheight=2
 " コマンドを画面下に表示させる
@@ -92,14 +92,44 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " 以下にインストールしたいプラグインのgitリポジトリを列挙
+" vimshell
 Bundle 'https://github.com/Shougo/vimshell.git'
 " vimshell使うのに必要
 " cd ~/.vim/bundle/vimproc
 " make -f make_~~~~.mak
 Bundle 'https://github.com/Shougo/vimproc'
+" vim-airline
+Bundle "https://github.com/vim-airline/vim-airline"
+" vim-airline-theme
+Bundle "https://github.com/vim-airline/vim-airline-themes"
 
 filetype plugin indent on     " required!
 
 """"vimshell""""
 " ,is: シェルを起動
 nnoremap <silent> ,is :VimShell<CR>
+
+""""vim-airline""""
+let g:airline_section_a = airline#section#create(['mode','','branch'])
+"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+set guifont=Ricty\ Regular\ for\ Powerline:h14
+let g:Powerline_symbols = 'fancy'
+set t_Co=256
+" theme
+let g:airline_theme='sol'
+"let g:airline_theme='papercolor'
+let g:airline_left_sep = '⮀'
+let g:airline_right_sep = '⮂'
+let g:airline_linecolumn_prefix = '⭡'
+let g:airline_branch_prefix = '⭠ '
+let g:airline#extensions#tabline#left_sep = '⮀'
+let g:airline#extensions#tabline#left_alt_sep = '⮀'
+let g:airline#extensions#readonly#symbol = '⭤ '
+
+let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#readonly#enabled = 0
+let g:airline_section_b = ""
+let g:airline_section_c = "%t %M "
