@@ -99,3 +99,7 @@ Bundle 'https://github.com/Shougo/vimshell.git'
 Bundle 'https://github.com/Shougo/vimproc'
 
 filetype plugin indent on     " required!
+
+""""vimshell""""
+" ,is: シェルを起動
+nnoremap <silent> ,is :VimShell<CR>
