@@ -5,6 +5,13 @@
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
+#export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:$PYTHONPATH"
+export PATH=$PATH:/System/Library/Java
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting 
+#export GOROOT="/usr/local/Cellar/go/1.6.2/libexec"
+export GOPATH=$HOME
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -17,10 +24,10 @@ bindkey -v
 function zle-line-init zle-keymap-select {
   case $KEYMAP in
       vicmd)
-				PROMPT="%{$fg[2B1624]%}[%{$reset_color%}%n/%{$fg[green]%}@%c/%{$fg_bold[blue]%}NOR%{$reset_color%}%{$fg[2525]%}]%%%{$reset_color%} "
+				PROMPT="%{$fg[2B1624]%}[%{$reset_color%}%n on ${OSTYPE}/%{$fg[green]%}@%c/%{$fg_bold[blue]%}NOR%{$reset_color%}%{$fg[2525]%}]%%%{$reset_color%} "
 			;;
       main|viins)
-				PROMPT="%{$fg[2B1624]%}[%{$reset_color%}%n/%{$fg[green]%}@%c/%{$fg_bold[magenta]%}INS%{$reset_color%}%{$fg[2B1624]%}]%%%{$reset_color%} "
+				PROMPT="%{$fg[2B1624]%}[%{$reset_color%}%n on ${OSTYPE}/%{$fg[green]%}@%c/%{$fg_bold[magenta]%}INS%{$reset_color%}%{$fg[2B1624]%}]%%%{$reset_color%} "
       ;;
   esac
   zle reset-prompt
@@ -31,7 +38,6 @@ function zle-line-init zle-keymap-select {
 #タイトルバーにカレントディレクトリ
 echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print "/"$1"/"$2}'| rev)\007"
 function chpwd() { echo -ne "\033]0;$(pwd | rev | awk -F \/ '{print "/"$1"/"$2}'| rev)\007"}
-
 
 # ヒストリの設定
 HISTFILE=~/.zsh_history
@@ -44,7 +50,6 @@ SAVEHIST=1000000
 # 2行表示
 PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 %# "
-
 
 # 単語の区切り文字を指定する
 autoload -Uz select-word-style
@@ -86,7 +91,6 @@ function _update_vcs_info_msg() {
     RPROMPT="${vcs_info_msg_0_}"
 }
 add-zsh-hook precmd _update_vcs_info_msg
-
 
 ########################################
 # オプション
@@ -146,9 +150,13 @@ alias mv='mv -i'
 
 alias doshisha='cd ~/Dropbox/doshisha'
 alias projects='cd ~/Dropbox/projects'
+alias programming='cd ~/Dropbox/programming'
 alias desktop='cd ~/Desktop'
 alias ditext='cd ~/Dropbox/DIT/documents/textbook'
 alias unity='cd ~/Unity'
+alias zshrc='vim ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
+alias installer='cd ~/Dropbox/documents/dotfiles && vim installer.sh'
 
 #alias mkdir='mkdir -p'
 

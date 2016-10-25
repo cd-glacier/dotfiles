@@ -1,7 +1,10 @@
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
+
 """"エンコード""""
 set encoding=UTF-8
-set fileencoding=UTF-8
+"set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set termencoding=UTF-8
+set fileformats=unix,dos,mac
 
 """"表示系""""
 " 色付き表示
@@ -36,6 +39,14 @@ set laststatus=2
 "set cmdheight=2
 " コマンドを画面下に表示させる
 "set showcmd
+" タブ、空白、改行の可視化
+"set list
+"set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
+" vue.js
+autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
+" □や○文字が崩れる問題を解決
+"set ambiwidth=double
+
 
 """"操作系""""
 " tabをスペース2個分に
@@ -52,15 +63,36 @@ inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 " 文字がない場所にもカーソルを移動できるようにする
-set virtualedit=all 
+"set virtualedit=all 
 " backspace効かないので
 set backspace=indent,eol,start
 " マウス対応
-set mouse=a
-set ttymouse=xterm2
+"set mouse=a
+"set ttymouse=xterm2
 " j, k による移動を折り返されたテキストでも自然に振る舞うように変更
 nnoremap j gj
 nnoremap k gk
+" w!! でスーパーユーザーとして保存（sudoが使える環境限定）
+cmap w!! w !sudo tee > /dev/null %
+" インクリメンタルサーチ. １文字入力毎に検索を行う
+set incsearch
+" 検索パターンに大文字小文字を区別しない
+set ignorecase
+" 検索パターンに大文字を含んでいたら大文字小文字を区別する
+set smartcase
+" 検索結果をハイライト
+set hlsearch
+" クリップボードからペーストのときインデントしない
+if &term =~ "xterm"
+	let &t_SI .= "\e[?2004h"
+	let &t_EI .= "\e[?2004l"
+	let &pastetoggle = "\e[201~" 
+	function XTermPasteBegin(ret)
+		set paste
+		return a:ret 
+	endfunction
+	inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+endif
 
 
 """"???""""
@@ -68,29 +100,27 @@ nnoremap k gk
 set infercase
 " 対応括弧に<と>のペアを追加
 set matchpairs& matchpairs+=<:>
-
 " vi非互換モード
 set nocompatible
 "辞書ファイルの自動読み込み
 autocmd FileType cs :set dictionary=~/.vim/dict/unity.dict
 
 """"Vundle""""
+" BundleInstall
+" でプラグインのインストール
+
 set nocompatible               " be iMproved
 filetype off                   " required!
-
 " let Vundle manage Vundle
 " required! 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
 " let Vundle manage Vundle
 " required! 
 " Vundle自身を管理対象に加えているヶ所
 " この行を消すとVundle自身を管理出来なくなる。
 Bundle 'gmarik/vundle'
-
 " My Bundles here:
-"
 " 以下にインストールしたいプラグインのgitリポジトリを列挙
 " vimshell
 Bundle 'https://github.com/Shougo/vimshell.git'
@@ -102,8 +132,23 @@ Bundle 'https://github.com/Shougo/vimproc'
 Bundle "https://github.com/vim-airline/vim-airline"
 " vim-airline-theme
 Bundle "https://github.com/vim-airline/vim-airline-themes"
-
+" indent Line
+Bundle "https://github.com/Yggdroot/indentLine"
 filetype plugin indent on     " required!
+" GO LANG
+" vim-go gofmt自動化
+Bundle "https://github.com/fatih/vim-go"
+"gocode	補完
+Bundle "https://github.com/nsf/gocode"
+"godef gd で定義ジャンプ 
+Bundle "https://github.com/rogpeppe/godef"
+" Vue.js
+" syntax hiligth
+"Bundle "https://github.com/posva/vim-vue"
+" Python
+" autopip
+Bundle "https://github.com/tell-k/vim-autopep8"
+
 
 """"vimshell""""
 " ,is: シェルを起動
@@ -128,8 +173,13 @@ let g:airline_branch_prefix = '⭠ '
 let g:airline#extensions#tabline#left_sep = '⮀'
 let g:airline#extensions#tabline#left_alt_sep = '⮀'
 let g:airline#extensions#readonly#symbol = '⭤ '
-
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#readonly#enabled = 0
 let g:airline_section_b = ""
 let g:airline_section_c = "%t %M "
+
+
+
+
+
+
