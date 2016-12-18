@@ -1,4 +1,5 @@
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
+" fish使ってるとエラー出ることがある
+set shell=/bin/zsh
 
 """"エンコード""""
 set encoding=UTF-8
@@ -13,12 +14,12 @@ syntax on
 set number
 " カーソル行の強調
 set cursorline
-" 右下に表示される行・列の番号を表示する 
+" 右下に表示される行・列の番号を表示する
 set ruler
 " 不可視文字を表示
 "set list
 " 検索した文字を強調
-set nohlsearch     
+set nohlsearch
 " タイトル表示
 set title
 " 対応括弧をハイライト表示する 
@@ -32,7 +33,7 @@ hi PmenuSbar ctermbg=2
 hi PmenuThumb ctermfg=3
 " markdownのハイライトを有効にする
 set syntax=markdown
-au BufRead,BufNewFile *.md set filetype=markdown 
+au BufRead,BufNewFile *.md set filetype=markdown
 " ステータスライン
 set laststatus=2
 " メッセージ表示欄
@@ -46,15 +47,14 @@ set laststatus=2
 autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 " □や○文字が崩れる問題を解決
 "set ambiwidth=double
-
+" Scala HighLight
+" map ,st :%!java -jar /home/me/bin/scalariform.jar -f -q +compactControlReadability +alignParameters +alignSingleLineCaseStatements +doubleIndentClassDeclaration +preserveDanglingCloseParenthesis +rewriteArrowSymbols +preserveSpaceBeforeArguments --stdin --stdout <CR>
 
 """"操作系""""
 " tabをスペース2個分に
 set tabstop=2
 " vimが自動で生成するtab幅をスペース2個に
 set shiftwidth=2
-" escapeをCNRL-cに
-inoremap <C-c> <Esc>      
 " 入力モード中に素早くJJと入力した場合はESCとみなす
 inoremap jj <Esc>
 " INSERTモードでもhjkl移動を可能に
@@ -82,18 +82,19 @@ set ignorecase
 set smartcase
 " 検索結果をハイライト
 set hlsearch
+" クリップボードにコピー
+set clipboard+=unnamed
 " クリップボードからペーストのときインデントしない
 if &term =~ "xterm"
 	let &t_SI .= "\e[?2004h"
 	let &t_EI .= "\e[?2004l"
-	let &pastetoggle = "\e[201~" 
+	let &pastetoggle = "\e[201~"
 	function XTermPasteBegin(ret)
 		set paste
-		return a:ret 
+		return a:ret
 	endfunction
 	inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
-
 
 """"???""""
 " 補完の際の大文字小文字の区別しない
@@ -106,9 +107,6 @@ set nocompatible
 autocmd FileType cs :set dictionary=~/.vim/dict/unity.dict
 
 """"Vundle""""
-" BundleInstall
-" でプラグインのインストール
-
 set nocompatible               " be iMproved
 filetype off                   " required!
 " let Vundle manage Vundle
@@ -129,26 +127,34 @@ Bundle 'https://github.com/Shougo/vimshell.git'
 " make -f make_~~~~.mak
 Bundle 'https://github.com/Shougo/vimproc'
 " vim-airline
-Bundle "https://github.com/vim-airline/vim-airline"
+Bundle 'https://github.com/vim-airline/vim-airline'
 " vim-airline-theme
-Bundle "https://github.com/vim-airline/vim-airline-themes"
+Bundle 'https://github.com/vim-airline/vim-airline-themes'
 " indent Line
-Bundle "https://github.com/Yggdroot/indentLine"
+Bundle 'https://github.com/Yggdroot/indentLine'
 filetype plugin indent on     " required!
 " GO LANG
 " vim-go gofmt自動化
-Bundle "https://github.com/fatih/vim-go"
+Bundle 'https://github.com/fatih/vim-go'
 "gocode	補完
-Bundle "https://github.com/nsf/gocode"
+Bundle 'https://github.com/nsf/gocode'
 "godef gd で定義ジャンプ 
-Bundle "https://github.com/rogpeppe/godef"
+Bundle 'https://github.com/rogpeppe/godef'
 " Vue.js
 " syntax hiligth
-"Bundle "https://github.com/posva/vim-vue"
+"Bundle 'https://github.com/posva/vim-vue'
 " Python
 " autopip
-Bundle "https://github.com/tell-k/vim-autopep8"
-
+Bundle 'https://github.com/tell-k/vim-autopep8'
+" Scala
+" sytax highlight
+Bundle 'https://github.com/derekwyatt/vim-scala'
+" ES6 syntax highlight
+Bundle 'othree/yajs.vim' 
+" vim-esformatter
+Bundle 'millermedeiros/vim-esformatter'
+" jsxで保存時にesformatter
+autocmd BufWritePre *.jsx Esformatter
 
 """"vimshell""""
 " ,is: シェルを起動
@@ -177,9 +183,5 @@ let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#readonly#enabled = 0
 let g:airline_section_b = ""
 let g:airline_section_c = "%t %M "
-
-
-
-
 
 
