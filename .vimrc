@@ -136,6 +136,7 @@ filetype plugin indent on     " required!
 " GO LANG
 " vim-go gofmt自動化
 Bundle 'https://github.com/fatih/vim-go'
+autocmd BufWritePre *.go GoImports 
 "gocode	補完
 Bundle 'https://github.com/nsf/gocode'
 "godef gd で定義ジャンプ 
@@ -155,6 +156,9 @@ Bundle 'othree/yajs.vim'
 Bundle 'millermedeiros/vim-esformatter'
 " jsxで保存時にesformatter
 autocmd BufWritePre *.jsx Esformatter
+autocmd BufWritePre *.js Esformatter
+" NERDTree
+Bundle "scrooloose/nerdtree"
 
 """"vimshell""""
 " ,is: シェルを起動
