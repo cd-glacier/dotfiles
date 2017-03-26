@@ -6,7 +6,6 @@ set -x PATH $PATH $GOPATH/bin
 set -x PATH $PATH /usr/local/src/scala/bin
 set -x SCALA_HOME /usr/local/src/scala
 
-rvm default
 ## vi mode
 fish_vi_key_bindings
 
@@ -45,15 +44,6 @@ end
 function cd 
 	builtin cd $argv; and ls
 end
-
-# alias
-## rmでゴミ箱に入れる
-alias rm='rmtrash'
-## 開発場所
-alias g-hyoga="cd ~/Dropbox/dev/src/github.com/g-hyoga"
-alias vgdojo="cd ~/Dropbox/dev/src/github.com/VG-Tech-Dojo"
-## 同志社
-alias doshisha="cd ~/Dropbox/doshisha"
 
 # peco * ghq
 function tl
