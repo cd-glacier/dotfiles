@@ -1,5 +1,5 @@
 " fish使ってるとエラー出ることがある
-set shell=/bin/zsh
+set shell=/bin/bash
 
 """"エンコード""""
 set encoding=UTF-8
