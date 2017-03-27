@@ -13,6 +13,7 @@ fish_vi_key_bindings
 function fish_mode_prompt 
 end
 
+# ubuntuで使うと消える
 ## prompt
 function fish_prompt 
 	if test "$fish_key_bindings" = "fish_vi_key_bindings"
