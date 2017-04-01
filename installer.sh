@@ -1,46 +1,41 @@
-#homebrew
+# mac用
+
+# homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #brew cask
 brew install caskroom/cask/brew-cask
 
-#terminal
+# font
+git clone git@github.com:tonsky/FiraCode.git
+cp FiraCode/distr/ttf/FiraCode-Medium.ttf ~/Library/Fonts/
+rm -rf FiraCode
+
+# terminal
 brew cask install iterm2
 
+# tool
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install shiftit
+brew cask install sketch
+brew cask install evernote
+brew cask install slack
+
+# programming
 brew cask install sublime-text
-brew cask install	atom 
+brew cask install intellij-edea
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install racket
 
-#java
-brew cask install java
-brew cask install eclipse-java
+# shell
+brew install fish
+brew install tmux
 
-#MySQL
-brew install mysql
-
-#bundler
-brew install gpg2
-gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-\curl -sSL https://get.rvm.io | bash
-
-gem install bundler
-gem install eventmachine -- --with-cppflags="-I/usr/local/opt/openssl/include"
-
-#pyenv
-brew install pyenv
-echo 'if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi' > ~/.bash_profile
-
-#opencv
-brew install -v cmake
-brew tap homebrew/science
-brew install opencv
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages/:$PYTHONPATH"
-
-#tex
-brew install ghostscript
-
-
-
-
+# vimrc tmux fish
+git clone https://github.com/g-hyoga/dotfiles.git
+cp dotfiles/.vimrc ~/
+cp dotfiles/.tmux.conf ~/
+fish && exit
+cp dotfiles/config.fish ~/.config/fish/

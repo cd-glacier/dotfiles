@@ -1,11 +1,3 @@
-## 
-set -x GOPATH $HOME/Dropbox/dev
-set -x GOROOT /usr/local/go
-set -x PATH $PATH $GOROOT/bin
-set -x PATH $PATH $GOPATH/bin
-set -x PATH $PATH /usr/local/src/scala/bin
-set -x SCALA_HOME /usr/local/src/scala
-
 ## vi mode
 fish_vi_key_bindings
 
@@ -27,7 +19,7 @@ function fish_prompt
 			case visual
 				set_color --bold magenta white
 			end
-		echo (prompt_pwd) ">><(( ○> .○⚪︎ "
+		echo (prompt_pwd) ">><(( ○> "
 	end
 end
 
