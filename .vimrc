@@ -49,6 +49,8 @@ autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 "set ambiwidth=double
 " Scala HighLight
 " map ,st :%!java -jar /home/me/bin/scalariform.jar -f -q +compactControlReadability +alignParameters +alignSingleLineCaseStatements +doubleIndentClassDeclaration +preserveDanglingCloseParenthesis +rewriteArrowSymbols +preserveSpaceBeforeArguments --stdin --stdout <CR>
+" spell check
+setlocal spell spelllang=en_us
 
 """"操作系""""
 " tabをスペース2個分に
@@ -141,6 +143,8 @@ autocmd BufWritePre *.go GoImports
 Bundle 'https://github.com/nsf/gocode'
 "godef gd で定義ジャンプ 
 Bundle 'https://github.com/rogpeppe/godef'
+" godebug
+Bundle 'https://github.com/jodosha/vim-godebug'
 " Vue.js
 " syntax hiligth
 "Bundle 'https://github.com/posva/vim-vue'
@@ -159,6 +163,9 @@ autocmd BufWritePre *.jsx Esformatter
 autocmd BufWritePre *.js Esformatter
 " NERDTree
 Bundle "scrooloose/nerdtree"
+" color schema tender.vim
+Bundle "jacoborus/tender.vim"
+colorscheme tender
 
 """"vimshell""""
 " ,is: シェルを起動
@@ -174,7 +181,7 @@ set guifont=Ricty\ Regular\ for\ Powerline:h14
 let g:Powerline_symbols = 'fancy'
 set t_Co=256
 " theme
-let g:airline_theme='sol'
+let g:airline_theme='tender'
 "let g:airline_theme='papercolor'
 let g:airline_left_sep = '⮀'
 let g:airline_right_sep = '⮂'
