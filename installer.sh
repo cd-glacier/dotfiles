@@ -24,10 +24,11 @@ brew cask install slack
 brew cask install skype
 
 # programming
+brew install neovim/neovim/neovim
 brew cask install sublime-text
 brew cask install intellij-edea
-brew cask install virtualbox
-brew cask install vagrant
+#brew cask install virtualbox
+#brew cask install vagrant
 brew cask install racket
 
 # shell
