@@ -21,6 +21,7 @@ brew cask install shiftit
 brew cask install sketch
 brew cask install evernote
 brew cask install slack
+brew cask install skype
 
 # programming
 brew cask install sublime-text
