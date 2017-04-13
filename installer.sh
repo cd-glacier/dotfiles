@@ -26,10 +26,11 @@ brew cask install skype
 # programming
 brew install neovim/neovim/neovim
 brew cask install sublime-text
-brew cask install intellij-edea
+brew cask install intellij-idea
 #brew cask install virtualbox
 #brew cask install vagrant
 brew cask install racket
+brew install docker
 
 # shell
 brew install fish
