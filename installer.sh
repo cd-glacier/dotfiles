@@ -36,6 +36,7 @@ brew install docker
 brew install fish
 brew install tmux
 brew install ghq peco
+brew install reattach-to-user-namespace
 
 # vimrc tmux fish
 git clone https://github.com/g-hyoga/dotfiles.git
