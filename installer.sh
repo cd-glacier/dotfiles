@@ -30,7 +30,7 @@ brew cask install intellij-idea
 #brew cask install virtualbox
 #brew cask install vagrant
 brew cask install racket
-brew install docker
+brew cask install docker
 
 # shell
 brew install fish
