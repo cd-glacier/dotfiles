@@ -48,7 +48,7 @@ autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 " □や○文字が崩れる問題を解決
 "set ambiwidth=double
 " Scala HighLight
-" map ,st :%!java -jar /home/me/bin/scalariform.jar -f -q +compactControlReadability +alignParameters +alignSingleLineCaseStatements +doubleIndentClassDeclaration +preserveDanglingCloseParenthesis +rewriteArrowSymbols +preserveSpaceBeforeArguments --stdin --stdout <CR>
+"map ,st :%!java -jar /home/me/bin/scalariform.jar -f -q +compactControlReadability +alignParameters +alignSingleLineCaseStatements +doubleIndentClassDeclaration +preserveDanglingCloseParenthesis +rewriteArrowSymbols +preserveSpaceBeforeArguments --stdin --stdout <CR>
 " spell check
 " setlocal spell spelllang=en_us
 
@@ -105,8 +105,6 @@ set infercase
 set matchpairs& matchpairs+=<:>
 " vi非互換モード
 set nocompatible
-"辞書ファイルの自動読み込み
-autocmd FileType cs :set dictionary=~/.vim/dict/unity.dict
 
 """"Vundle""""
 set nocompatible               " be iMproved
@@ -173,6 +171,20 @@ Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
 " ruby debugger
 Bundle "http://github.com/astashov/vim-ruby-debugger"
+" Haskell
+Bundle "neovimhaskell/haskell-vim"
+let g:haskell_indent_if = 3
+let g:haskell_indent_case = 2
+let g:haskell_indent_let = 4
+let g:haskell_indent_where = 6
+let g:haskell_indent_before_where = 2
+let g:haskell_indent_after_bare_where = 2
+let g:haskell_indent_do = 3
+let g:haskell_indent_in = 1
+let g:haskell_indent_guard = 2
+let g:haskell_indent_case_alternative = 1
+let g:cabal_indent_section = 2
+Bundle "itchyny/vim-haskell-indent"
 
 """"vimshell""""
 " ,is: シェルを起動
@@ -189,14 +201,19 @@ let g:Powerline_symbols = 'fancy'
 set t_Co=256
 " theme
 let g:airline_theme='tender'
-"let g:airline_theme='papercolor'
-let g:airline_left_sep = '⮀'
-let g:airline_right_sep = '⮂'
-let g:airline_linecolumn_prefix = '⭡'
-let g:airline_branch_prefix = '⭠ '
-let g:airline#extensions#tabline#left_sep = '⮀'
-let g:airline#extensions#tabline#left_alt_sep = '⮀'
-let g:airline#extensions#readonly#symbol = '⭤ '
+"let g:airline_left_sep = 'I'
+let g:airline_left_sep = 'I'
+"let g:airline_right_sep = '⮂'
+let g:airline_right_sep = 'I'
+"let g:airline_linecolumn_prefix = '⭡'
+let g:airline_linecolumn_prefix = 'I'
+"let g:airline_branch_prefix = '⭠ '
+let g:airline_branch_prefix = 'I'
+"let g:airline#extensions#tabline#left_sep = '⮀'
+let g:airline#extensions#tabline#left_sep = 'I'
+"let g:airline#extensions#tabline#left_alt_sep = '⮀'
+let g:airline#extensions#tabline#left_alt_sep = 'I'
+"let g:airline#extensions#readonly#symbol = '⭤ '
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#readonly#enabled = 0
 let g:airline_section_b = ""
