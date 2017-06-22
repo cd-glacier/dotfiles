@@ -48,7 +48,7 @@ autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 " □や○文字が崩れる問題を解決
 "set ambiwidth=double
 " Scala HighLight
-"map ,st :%!java -jar /home/me/bin/scalariform.jar -f -q +compactControlReadability +alignParameters +alignSingleLineCaseStatements +doubleIndentClassDeclaration +preserveDanglingCloseParenthesis +rewriteArrowSymbols +preserveSpaceBeforeArguments --stdin --stdout <CR>
+map ,st :%!java -jar /home/me/bin/scalariform.jar -f -q +compactControlReadability +alignParameters +alignSingleLineCaseStatements +doubleIndentClassDeclaration +preserveDanglingCloseParenthesis +rewriteArrowSymbols +preserveSpaceBeforeArguments --stdin --stdout <CR>
 " spell check
 " setlocal spell spelllang=en_us
 
@@ -152,6 +152,8 @@ Bundle 'https://github.com/tell-k/vim-autopep8'
 " Scala
 " sytax highlight
 Bundle 'https://github.com/derekwyatt/vim-scala'
+" scalaファイル読み込み時にsetf scala
+au BufNewFile,BufRead *.scala setf scala
 " ES6 syntax highlight
 Bundle 'othree/yajs.vim' 
 " vim-esformatter
