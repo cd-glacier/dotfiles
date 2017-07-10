@@ -44,4 +44,9 @@ function tl
 	cd $dist
 end
 
+# pecoでdoshishaファイルに移動
+function doshisha
+	find ~/Dropbox/doshisha -type d | xargs ls -dF | peco | read dist
+	cd $dist
+end
 
