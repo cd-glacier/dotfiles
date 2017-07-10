@@ -44,9 +44,14 @@ function tl
 	cd $dist
 end
 
-# pecoでdoshishaファイルに移動
+# pecoで指定ディレクトリ以下のファイルに検索して移動
 function doshisha
-	find ~/Dropbox/doshisha -type d | peco | read dist
+	#ディレクトリ名で検索
+	#find ~/Dropbox/doshisha -type d | peco | read dist
+	# ファイル名で検索
+	find ~/Dropbox/doshisha -type f | peco | read dist
+	dirname "$dist" | read dist
+	cd $dist
 end
 
 
