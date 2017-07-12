@@ -47,12 +47,17 @@ end
 # pecoで指定ディレクトリ以下のファイルに検索して移動
 function doshisha
 	#ディレクトリ名で検索
-	#find ~/Dropbox/doshisha -type d | peco | read dist
-	# ファイル名で検索
-	find ~/Dropbox/doshisha -type f | peco | read dist
-	dirname "$dist" | read dist
+	find ~/Dropbox/doshisha -type d | peco | read dist
+	ファイル名で検索
+	#find ~/Dropbox/doshisha -type f | peco | read dist
+	#dirname "$dist" | read dist
 	cd $dist
 end
 
+# current dirから検索して移動
+function move 
+	find . -type d | peco | read dist
+	cd $dist
+end
 
 
