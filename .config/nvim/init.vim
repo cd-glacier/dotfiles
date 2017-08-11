@@ -98,13 +98,15 @@ if &term =~ "xterm"
 	inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
-""""???""""
+"""others"""
 " 補完の際の大文字小文字の区別しない
 set infercase
 " 対応括弧に<と>のペアを追加
 set matchpairs& matchpairs+=<:>
 " vi非互換モード
 set nocompatible
+" json format
+autocmd BufWritePre *.json :execute '%!python -m json.tool'
 
 """"Vundle""""
 set nocompatible               " be iMproved
@@ -160,7 +162,7 @@ Bundle 'othree/yajs.vim'
 Bundle 'millermedeiros/vim-esformatter'
 " jsxで保存時にesformatter
 autocmd BufWritePre *.jsx Esformatter
-autocmd BufWritePre *.js Esformatter
+" autocmd BufWritePre *.js Esformatter
 " NERDTree
 Bundle "scrooloose/nerdtree"
 " color schema tender.vim
@@ -187,6 +189,9 @@ let g:haskell_indent_guard = 2
 let g:haskell_indent_case_alternative = 1
 let g:cabal_indent_section = 2
 Bundle "itchyny/vim-haskell-indent"
+" vim-json
+Bundle "elzr/vim-json"
+let g:vim_json_syntax_conceal = 0
 
 """"vimshell""""
 " ,is: シェルを起動
