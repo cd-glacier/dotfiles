@@ -1,3 +1,8 @@
+## environment variables
+# golang
+#set -x PATH ~/go/bin $PATH
+#set -x GOPATH $HOME/go
+
 ## vi mode
 fish_vi_key_bindings
 
