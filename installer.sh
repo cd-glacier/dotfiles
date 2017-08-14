@@ -18,6 +18,7 @@ brew cask install iterm2
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install shiftit
+brew cask install hyperswitch
 brew cask install sketch
 brew cask install evernote
 brew cask install slack
