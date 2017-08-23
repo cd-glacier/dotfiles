@@ -162,7 +162,7 @@ Bundle 'othree/yajs.vim'
 Bundle 'millermedeiros/vim-esformatter'
 " jsxで保存時にesformatter
 autocmd BufWritePre *.jsx Esformatter
-" autocmd BufWritePre *.js Esformatter
+autocmd BufWritePre *.js Esformatter
 " NERDTree
 Bundle "scrooloose/nerdtree"
 " color schema tender.vim
@@ -192,6 +192,9 @@ Bundle "itchyny/vim-haskell-indent"
 " vim-json
 Bundle "elzr/vim-json"
 let g:vim_json_syntax_conceal = 0
+" deoplete
+Bundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_at_startup = 1
 
 """"vimshell""""
 " ,is: シェルを起動
