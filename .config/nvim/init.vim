@@ -108,97 +108,91 @@ set nocompatible
 " json format
 autocmd BufWritePre *.json :execute '%!python -m json.tool'
 
-""""Vundle""""
-set nocompatible               " be iMproved
-filetype off                   " required!
-" let Vundle manage Vundle
-" required! 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" let Vundle manage Vundle
-" required! 
-" Vundle自身を管理対象に加えているヶ所
-" この行を消すとVundle自身を管理出来なくなる。
-Bundle 'gmarik/vundle'
-" My Bundles here:
-" 以下にインストールしたいプラグインのgitリポジトリを列挙
-" vimshell
-Bundle 'https://github.com/Shougo/vimshell.git'
-" vimshell使うのに必要
-" cd ~/.vim/bundle/vimproc
-" make -f make_~~~~.mak
-Bundle 'https://github.com/Shougo/vimproc'
-" vim-airline
-Bundle 'https://github.com/vim-airline/vim-airline'
-" vim-airline-theme
-Bundle 'https://github.com/vim-airline/vim-airline-themes'
-" indent Line
-Bundle 'https://github.com/Yggdroot/indentLine'
-filetype plugin indent on     " required!
-" GO LANG
-" vim-go gofmt自動化
-Bundle 'https://github.com/fatih/vim-go'
-autocmd BufWritePre *.go GoImports 
-"gocode	補完
-Bundle 'https://github.com/nsf/gocode'
-"godef gd で定義ジャンプ 
-Bundle 'https://github.com/rogpeppe/godef'
-" godebug
-Bundle 'https://github.com/jodosha/vim-godebug'
-" Vue.js
-" syntax hiligth
-"Bundle 'https://github.com/posva/vim-vue'
-" Python
-" autopip
-Bundle 'https://github.com/tell-k/vim-autopep8'
-" Scala
-" sytax highlight
-Bundle 'https://github.com/derekwyatt/vim-scala'
-" scalaファイル読み込み時にsetf scala
-au BufNewFile,BufRead *.scala setf scala
-" ES6 syntax highlight
-Bundle 'othree/yajs.vim' 
-" vim-esformatter
-Bundle 'millermedeiros/vim-esformatter'
-" jsxで保存時にesformatter
-autocmd BufWritePre *.jsx Esformatter
-autocmd BufWritePre *.js Esformatter
-" NERDTree
-Bundle "scrooloose/nerdtree"
-" color schema tender.vim
-Bundle "jacoborus/tender.vim"
-colorscheme tender
-" 括弧補完
-Bundle "cohama/lexima.vim"
-" markdown
-Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
-" ruby debugger
-Bundle "http://github.com/astashov/vim-ruby-debugger"
-" Haskell
-Bundle "neovimhaskell/haskell-vim"
-let g:haskell_indent_if = 3
-let g:haskell_indent_case = 2
-let g:haskell_indent_let = 4
-let g:haskell_indent_where = 6
-let g:haskell_indent_before_where = 2
-let g:haskell_indent_after_bare_where = 2
-let g:haskell_indent_do = 3
-let g:haskell_indent_in = 1
-let g:haskell_indent_guard = 2
-let g:haskell_indent_case_alternative = 1
-let g:cabal_indent_section = 2
-Bundle "itchyny/vim-haskell-indent"
-" vim-json
-Bundle "elzr/vim-json"
-let g:vim_json_syntax_conceal = 0
-" deoplete
-Bundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
-""""vimshell""""
-" ,is: シェルを起動
-nnoremap <silent> ,is :VimShell<CR>
+" Required:
+set runtimepath+=/Users/glacier/.config/dein/./repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('/Users/glacier/.config/dein/.')
+  call dein#begin('/Users/glacier/.config/dein/.')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/glacier/.config/dein/./repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here:
+ 	" vim config 
+	" call dein#add('Shougo/neosnippet.vim')
+  " call dein#add('Shougo/neosnippet-snippets')
+	
+	" vim-airline
+  call dein#add('vim-airline/vim-airline')
+	" vim-airline-themes
+  call dein#add('vim-airline/vim-airline-themes')
+	" indentLine
+  call dein#add('Yggdroot/indentLine')
+	filetype plugin indent on     " required!
+	" NERDTree
+	call dein#add("scrooloose/nerdtree")
+	" color schema tender.vim
+	call dein#add("jacoborus/tender.vim")
+	colorscheme tender
+	" 括弧補完
+	call dein#add("cohama/lexima.vim")
+	" markdown
+	call dein#add('godlygeek/tabular')
+	call dein#add('plasticboy/vim-markdown')
+	" vim-json
+	call dein#add("elzr/vim-json")
+	let g:vim_json_syntax_conceal = 0
+	" deoplete
+	call dein#add('Shougo/deoplete.nvim')
+	let g:deoplete#enable_at_startup = 1
+
+	" go lang
+	" vim-go
+	call dein#add('fatih/vim-go')
+	autocmd BufWritePre *.go GoImports 
+	"gocode	補完
+	call dein#add('https://github.com/nsf/gocode')
+	"godef gd で定義ジャンプ 
+	call dein#add('https://github.com/rogpeppe/godef')
+	
+	" Scala
+	" sytax highlight
+	call dein#add('https://github.com/derekwyatt/vim-scala')
+	" scalaファイル読み込み時にsetf scala
+	au BufNewFile,BufRead *.scala setf scala
+
+	" JavaScript
+	" ES6 syntax highlight
+	call dein#add('othree/yajs.vim') 
+	" vim-esformatter
+	call dein#add('millermedeiros/vim-esformatter')
+	" jsxで保存時にesformatter
+	autocmd BufWritePre *.jsx Esformatter
+	autocmd BufWritePre *.js Esformatter
+	
+  " You can specify revision/branch/tag.
+  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
 
 """"vim-airline""""
 let g:airline_section_a = airline#section#create(['mode','','branch'])
@@ -229,4 +223,5 @@ let g:airline#extensions#readonly#enabled = 0
 let g:airline_section_b = ""
 let g:airline_section_c = "%t %M "
 
+"End dein Scripts-------------------------
 
