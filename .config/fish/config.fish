@@ -1,7 +1,7 @@
-## environment variables
-# golang
-#set -x PATH ~/go/bin $PATH
-#set -x GOPATH $HOME/go
+set -x GOPATH $HOME/Dropbox/dev
+#set -x GOROOT /usr/local/go
+set -x PATH $PATH $GOROOT/bin
+set -x PATH $PATH $GOPATH/bin
 
 ## vi mode
 fish_vi_key_bindings
@@ -44,16 +44,16 @@ function cd
 end
 
 # peco * ghq
-function tl
+function github
 	ghq list --full-path | peco | read dist
 	cd $dist
 end
 
-# pecoで指定ディレクトリ以下のファイルに検索して移動
+# pecoでdoshishaファイルに移動
 function doshisha
-	#ディレクトリ名で検索
+	#ディレクトリ名だけ
 	find ~/Dropbox/doshisha -type d | peco | read dist
-	ファイル名で検索
+	# ファイル名
 	#find ~/Dropbox/doshisha -type f | peco | read dist
 	#dirname "$dist" | read dist
 	cd $dist
@@ -63,6 +63,12 @@ end
 function move 
 	find . -type d | peco | read dist
 	cd $dist
+end
+
+# current dirから検索してnvim
+function fvim 
+	find . -type f | peco | read file
+	nvim $file
 end
 
 
