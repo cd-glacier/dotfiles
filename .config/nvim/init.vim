@@ -140,7 +140,6 @@ if dein#load_state('/Users/glacier/.config/dein/.')
 	call dein#add("scrooloose/nerdtree")
 	" color schema tender.vim
 	call dein#add("jacoborus/tender.vim")
-	colorscheme tender
 	" 括弧補完
 	call dein#add("cohama/lexima.vim")
 	" markdown
@@ -152,6 +151,9 @@ if dein#load_state('/Users/glacier/.config/dein/.')
 	" deoplete
 	call dein#add('Shougo/deoplete.nvim')
 	let g:deoplete#enable_at_startup = 1
+	" cuto ctagsa
+	call dein#add("soramugi/auto-ctags.vim")
+  let g:auto_ctags = 1
 
 	" go lang
 	" vim-go
@@ -223,5 +225,7 @@ let g:airline#extensions#readonly#enabled = 0
 let g:airline_section_b = ""
 let g:airline_section_c = "%t %M "
 
+" finally called
+colorscheme tender
 "End dein Scripts-------------------------
 
