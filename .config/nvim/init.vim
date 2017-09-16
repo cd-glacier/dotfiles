@@ -135,7 +135,6 @@ if dein#load_state('/Users/glacier/.config/dein/.')
   call dein#add('vim-airline/vim-airline-themes')
 	" indentLine
   call dein#add('Yggdroot/indentLine')
-	filetype plugin indent on     " required!
 	" NERDTree
 	call dein#add("scrooloose/nerdtree")
 	" color schema tender.vim
@@ -147,18 +146,16 @@ if dein#load_state('/Users/glacier/.config/dein/.')
 	call dein#add('plasticboy/vim-markdown')
 	" vim-json
 	call dein#add("elzr/vim-json")
-	let g:vim_json_syntax_conceal = 0
 	" deoplete
 	call dein#add('Shougo/deoplete.nvim')
-	let g:deoplete#enable_at_startup = 1
 	" cuto ctagsa
 	call dein#add("soramugi/auto-ctags.vim")
-  let g:auto_ctags = 1
+	" auto indent
+	call dein#add("Chiel92/vim-autoformat")
 
 	" go lang
 	" vim-go
 	call dein#add('fatih/vim-go')
-	autocmd BufWritePre *.go GoImports 
 	"gocode	補完
 	call dein#add('https://github.com/nsf/gocode')
 	"godef gd で定義ジャンプ 
@@ -167,18 +164,17 @@ if dein#load_state('/Users/glacier/.config/dein/.')
 	" Scala
 	" sytax highlight
 	call dein#add('https://github.com/derekwyatt/vim-scala')
-	" scalaファイル読み込み時にsetf scala
-	au BufNewFile,BufRead *.scala setf scala
-
+	
 	" JavaScript
 	" ES6 syntax highlight
 	call dein#add('othree/yajs.vim') 
 	" vim-esformatter
 	call dein#add('millermedeiros/vim-esformatter')
-	" jsxで保存時にesformatter
-	autocmd BufWritePre *.jsx Esformatter
-	autocmd BufWritePre *.js Esformatter
-	
+
+	" swift
+	call dein#add('landaire/deoplete-swift')
+	call dein#add('keith/swift.vim')
+
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
@@ -226,6 +222,27 @@ let g:airline_section_b = ""
 let g:airline_section_c = "%t %M "
 
 " finally called
+let g:vim_json_syntax_conceal = 0
+filetype plugin indent on     " required!
+let g:deoplete#enable_at_startup = 1
+let g:auto_ctags = 1
+autocmd BufWritePre *.go GoImports 
+" scalaファイル読み込み時にsetf scala
+au BufNewFile,BufRead *.scala setf scala
+" scala fmt	
+noremap <F5> :Autoformat<CR>
+let g:formatdef_scalafmt = "'scalafmt --stdin'"
+let g:formatters_scala = ['scalafmt']
+autocmd BufWritePre *.scala Autoformat 
+" jsxで保存時にesformatter
+autocmd BufWritePre *.jsx Esformatter
+autocmd BufWritePre *.js Esformatter
+" swift
+let g:deoplete#sources#swift#daemon_autostart = 1
+let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
+
 colorscheme tender
+
+
 "End dein Scripts-------------------------
 
