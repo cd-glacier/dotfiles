@@ -2803,7 +2803,7 @@ g:airline_statusline_funcrefs	.config/dein/repos/github.com/vim-airline/vim-airl
 g:airline_theme	.config/dein/repos/github.com/vim-airline/vim-airline/t/airline.vim	/^let g:airline_theme = 'dark'$/;"	v
 g:airline_theme	.config/dein/repos/github.com/vim-airline/vim-airline/t/builder.vim	/^let g:airline_theme = 'dark'$/;"	v
 g:airline_theme	.config/dein/repos/github.com/vim-airline/vim-airline/t/highlighter.vim	/^let g:airline_theme = 'dark'$/;"	v
-g:airline_theme	.config/nvim/init.vim	/^let g:airline_theme='tender'$/;"	v
+g:airline_theme	.config/nvim/init.vim	/^let g:airline_theme='hybrid'$/;"	v
 g:auto_ctags	.config/nvim/init.vim	/^let g:auto_ctags = 1$/;"	v
 g:colors_name	.config/dein/repos/github.com/jacoborus/tender.vim/colors/tender.vim	/^let g:colors_name="tender"$/;"	v
 g:count	.config/dein/repos/github.com/vim-airline/vim-airline/t/util.vim	/^    let g:count = 0$/;"	v

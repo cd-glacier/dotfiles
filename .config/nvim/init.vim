@@ -97,6 +97,8 @@ if &term =~ "xterm"
 	endfunction
 	inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
+" escape遅いの回避
+set ttimeoutlen=10
 
 """others"""
 " 補完の際の大文字小文字の区別しない
@@ -137,8 +139,8 @@ if dein#load_state('/Users/glacier/.config/dein/.')
   call dein#add('Yggdroot/indentLine')
 	" NERDTree
 	call dein#add("scrooloose/nerdtree")
-	" color schema tender.vim
-	call dein#add("jacoborus/tender.vim")
+	" color schema w0ng/vim-hybrid
+	call dein#add("w0ng/vim-hybrid")
 	" 括弧補完
 	call dein#add("cohama/lexima.vim")
 	" markdown
@@ -202,7 +204,7 @@ set guifont=Ricty\ Regular\ for\ Powerline:h14
 let g:Powerline_symbols = 'fancy'
 set t_Co=256
 " theme
-let g:airline_theme='tender'
+let g:airline_theme='hybrid'
 "let g:airline_left_sep = 'I'
 let g:airline_left_sep = 'I'
 "let g:airline_right_sep = '⮂'
@@ -241,7 +243,8 @@ autocmd BufWritePre *.js Esformatter
 let g:deoplete#sources#swift#daemon_autostart = 1
 let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 
-colorscheme tender
+colorscheme hybrid
+set background=dark
 
 
 "End dein Scripts-------------------------
