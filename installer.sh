@@ -26,12 +26,14 @@ brew cask install skype
 
 # programming
 brew install neovim/neovim/neovim
+brew install python3
+pip3 install neovim
 brew cask install sublime-text
 brew cask install intellij-idea
 #brew cask install virtualbox
 #brew cask install vagrant
 brew cask install racket
-brew cask install docker
+#brew cask install docker
 
 # shell
 brew install fish
