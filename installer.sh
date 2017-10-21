@@ -41,6 +41,10 @@ brew install tmux
 brew install ghq peco
 brew install reattach-to-user-namespace
 
+# .config
+mkdir ~/.config
+
+
 # vimrc tmux fish
 git clone https://github.com/g-hyoga/dotfiles.git
 cp dotfiles/.vimrc ~/

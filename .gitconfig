@@ -1,0 +1,7 @@
+[user]
+	email = hyoga0216@gmail.com
+	name = g-hyoga
+[ghq]
+	root = /Users/glacier/Dropbox/dev/src/
+[core]
+    excludesfile = /Users/glacier/.gitignore_global
