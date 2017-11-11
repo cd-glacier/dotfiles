@@ -54,6 +54,7 @@ map ,st :%!java -jar /home/me/bin/scalariform.jar -f -q +compactControlReadabili
 
 """"操作系""""
 " tabをスペース2個分に
+set expandtab
 set tabstop=2
 " vimが自動で生成するtab幅をスペース2個に
 set shiftwidth=2
@@ -109,6 +110,9 @@ set matchpairs& matchpairs+=<:>
 set nocompatible
 " json format
 autocmd BufWritePre *.json :execute '%!python -m json.tool'
+" 文字化け対策
+set ttimeout
+set ttimeoutlen=50
 
 "dein Scripts-----------------------------
 if &compatible
@@ -116,7 +120,7 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/glacier/.config/dein/./repos/github.com/Shougo/dein.vim
+set runtimepath+=/Users/glacier/.config/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
 if dein#load_state('/Users/glacier/.config/dein/.')
@@ -151,7 +155,7 @@ if dein#load_state('/Users/glacier/.config/dein/.')
 	" deoplete
 	call dein#add('Shougo/deoplete.nvim')
 	" cuto ctagsa
-	call dein#add("soramugi/auto-ctags.vim")
+  "	call dein#add("soramugi/auto-ctags.vim")
 	" auto indent
 	call dein#add("Chiel92/vim-autoformat")
 
@@ -195,7 +199,7 @@ syntax enable
 "endif
 
 """"vim-airline""""
-let g:airline_section_a = airline#section#create(['mode','','branch'])
+" let g:airline_section_a = airline#section#create(['mode','','branch'])
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#tab_nr_type = 1
@@ -240,7 +244,7 @@ autocmd BufWritePre *.scala Autoformat
 autocmd BufWritePre *.jsx Esformatter
 autocmd BufWritePre *.js Esformatter
 " swift
-let g:deoplete#sources#swift#daemon_autostart = 1
+" let g:deoplete#sources#swift#daemon_autostart = 1
 let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 
 colorscheme hybrid
