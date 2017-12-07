@@ -1,0 +1,4 @@
+
+nnoremap \r :action RunClass<CR>
+inoremap jj <Esc>
+
