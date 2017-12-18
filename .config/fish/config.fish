@@ -91,6 +91,7 @@ function gch
 end
 
 function ga
+  echo git add .
   git add .
 end
 
@@ -100,6 +101,7 @@ end
 
 function gco
   pre_git_commit
+  echo git commit
   git commit
 end
 
@@ -110,6 +112,7 @@ function gp
 end
 
 function gl
+  echo git log
   git log
 end
 
