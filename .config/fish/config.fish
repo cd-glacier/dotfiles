@@ -11,7 +11,11 @@ function fish_mode_prompt
 end
 
 # git
-set -x base origin
+switch (echo $USER)
+case glacier
+  set -x base origin
+case '*'
+  set -x base develop 
 
 # ubuntuで使うと消える
 ## prompt
