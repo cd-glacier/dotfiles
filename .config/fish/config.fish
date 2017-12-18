@@ -10,6 +10,9 @@ fish_vi_key_bindings
 function fish_mode_prompt 
 end
 
+# git
+set -x base origin
+
 # ubuntuで使うと消える
 ## prompt
 function fish_prompt 
@@ -28,14 +31,14 @@ function fish_prompt
 	end
 end
 
-#gitのbranch名出す
+#gitのbranch名の抽出
 function git_branch
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 end
 
 #右prompt
 function fish_right_prompt
-	echo (git_branch)
+	echo [(git_branch)]
 end
 
 ## cd後にls 
@@ -72,20 +75,41 @@ function fvim
 	nvim $file
 end
 
-
-# peco * git checkout
-function gc
-   git branch -a | peco | tr -d ' ' | read branch
-   echo $branch
-   if [ $branch ]
-       if contains $branch "remotes/"
-           set -l b (echo $branch | awk -F'/' '{print $3}')
-           git checkout -b $b $branch
-       else
-           git checkout $branch
-       end
-   end
-   commandline -f repaint
+# git, github
+function gch
+  git branch -a | peco | tr -d ' ' | read branch
+  echo $branch
+  if [ $branch ]
+      if contains $branch "remotes/"
+          set -l b (echo $branch | awk -F'/' '{print $3}')
+          git checkout -b $b $branch
+      else
+          git checkout $branch
+      end
+  end
+  commandline -f repaint
 end
 
+function ga
+  git add .
+end
+
+function pre_git_commit
+  echo pre
+end
+
+function gco
+  pre_git_commit
+  git commit
+end
+
+function gp
+  set branch (git_branch)
+  echo git push $base $branch
+  git push $base $branch
+end
+
+function gl
+  git log
+end
 
