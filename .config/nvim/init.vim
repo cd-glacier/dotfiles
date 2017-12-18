@@ -109,7 +109,7 @@ set matchpairs& matchpairs+=<:>
 " vi非互換モード
 set nocompatible
 " json format
-autocmd BufWritePre *.json :execute '%!python -m json.tool'
+" autocmd BufWritePre *.json :execute '%!python -m json.tool'
 " 文字化け対策
 set ttimeout
 set ttimeoutlen=50
@@ -120,16 +120,16 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/glacier/.config/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/Users/h000940/workspace/dotfiles/.config/./repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/glacier/.config/dein/.')
-  call dein#begin('/Users/glacier/.config/dein/.')
+if dein#load_state('/Users/h000940/workspace/dotfiles/.config/.')
+  call dein#begin('/Users/h000940/workspace/dotfiles/.config/.')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/glacier/.config/dein/./repos/github.com/Shougo/dein.vim')
-
+  call dein#add('/Users/h000940/workspace/dotfiles/.config/./repos/github.com/Shougo/dein.vim')
+  
   " Add or remove your plugins here:
   " vim config 
   " call dein#add('Shougo/neosnippet.vim')
