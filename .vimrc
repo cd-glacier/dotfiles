@@ -108,91 +108,91 @@ set nocompatible
 "辞書ファイルの自動読み込み
 autocmd FileType cs :set dictionary=~/.vim/dict/unity.dict
 
-""""Vundle""""
-set nocompatible               " be iMproved
-filetype off                   " required!
-" let Vundle manage Vundle
-" required! 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" let Vundle manage Vundle
-" required! 
-" Vundle自身を管理対象に加えているヶ所
-" この行を消すとVundle自身を管理出来なくなる。
-Bundle 'gmarik/vundle'
-" My Bundles here:
-" 以下にインストールしたいプラグインのgitリポジトリを列挙
-" vimshell
-Bundle 'https://github.com/Shougo/vimshell.git'
-" vimshell使うのに必要
-" cd ~/.vim/bundle/vimproc
-" make -f make_~~~~.mak
-Bundle 'https://github.com/Shougo/vimproc'
-" vim-airline
-Bundle 'https://github.com/vim-airline/vim-airline'
-" vim-airline-theme
-Bundle 'https://github.com/vim-airline/vim-airline-themes'
-" indent Line
-Bundle 'https://github.com/Yggdroot/indentLine'
-filetype plugin indent on     " required!
-" GO LANG
-" vim-go gofmt自動化
-Bundle 'https://github.com/fatih/vim-go'
-autocmd BufWritePre *.go GoImports 
-"gocode	補完
-Bundle 'https://github.com/nsf/gocode'
-"godef gd で定義ジャンプ 
-Bundle 'https://github.com/rogpeppe/godef'
-" godebug
-Bundle 'https://github.com/jodosha/vim-godebug'
-" Vue.js
-" syntax hiligth
-"Bundle 'https://github.com/posva/vim-vue'
-" Python
-" autopip
-Bundle 'https://github.com/tell-k/vim-autopep8'
-" Scala
-" sytax highlight
-Bundle 'https://github.com/derekwyatt/vim-scala'
-" ES6 syntax highlight
-Bundle 'othree/yajs.vim' 
-" vim-esformatter
-Bundle 'millermedeiros/vim-esformatter'
-" jsxで保存時にesformatter
-autocmd BufWritePre *.jsx Esformatter
-autocmd BufWritePre *.js Esformatter
-" NERDTree
-Bundle "scrooloose/nerdtree"
-" color schema tender.vim
-Bundle "jacoborus/tender.vim"
-colorscheme tender
-
-""""vimshell""""
-" ,is: シェルを起動
-nnoremap <silent> ,is :VimShell<CR>
-
-""""vim-airline""""
-let g:airline_section_a = airline#section#create(['mode','','branch'])
-"let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-set guifont=Ricty\ Regular\ for\ Powerline:h14
-let g:Powerline_symbols = 'fancy'
-set t_Co=256
-" theme
-let g:airline_theme='tender'
-"let g:airline_theme='papercolor'
-let g:airline_left_sep = '⮀'
-let g:airline_right_sep = '⮂'
-let g:airline_linecolumn_prefix = '⭡'
-let g:airline_branch_prefix = '⭠ '
-let g:airline#extensions#tabline#left_sep = '⮀'
-let g:airline#extensions#tabline#left_alt_sep = '⮀'
-let g:airline#extensions#readonly#symbol = '⭤ '
-let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#readonly#enabled = 0
-let g:airline_section_b = ""
-let g:airline_section_c = "%t %M "
+"""""Vundle""""
+"set nocompatible               " be iMproved
+"filetype off                   " required!
+"" let Vundle manage Vundle
+"" required! 
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
+"" let Vundle manage Vundle
+"" required! 
+"" Vundle自身を管理対象に加えているヶ所
+"" この行を消すとVundle自身を管理出来なくなる。
+"Bundle 'gmarik/vundle'
+"" My Bundles here:
+"" 以下にインストールしたいプラグインのgitリポジトリを列挙
+"" vimshell
+"Bundle 'https://github.com/Shougo/vimshell.git'
+"" vimshell使うのに必要
+"" cd ~/.vim/bundle/vimproc
+"" make -f make_~~~~.mak
+"Bundle 'https://github.com/Shougo/vimproc'
+"" vim-airline
+"Bundle 'https://github.com/vim-airline/vim-airline'
+"" vim-airline-theme
+"Bundle 'https://github.com/vim-airline/vim-airline-themes'
+"" indent Line
+"Bundle 'https://github.com/Yggdroot/indentLine'
+"filetype plugin indent on     " required!
+"" GO LANG
+"" vim-go gofmt自動化
+"Bundle 'https://github.com/fatih/vim-go'
+"autocmd BufWritePre *.go GoImports 
+""gocode	補完
+"Bundle 'https://github.com/nsf/gocode'
+""godef gd で定義ジャンプ 
+"Bundle 'https://github.com/rogpeppe/godef'
+"" godebug
+"Bundle 'https://github.com/jodosha/vim-godebug'
+"" Vue.js
+"" syntax hiligth
+""Bundle 'https://github.com/posva/vim-vue'
+"" Python
+"" autopip
+"Bundle 'https://github.com/tell-k/vim-autopep8'
+"" Scala
+"" sytax highlight
+"Bundle 'https://github.com/derekwyatt/vim-scala'
+"" ES6 syntax highlight
+"Bundle 'othree/yajs.vim' 
+"" vim-esformatter
+"Bundle 'millermedeiros/vim-esformatter'
+"" jsxで保存時にesformatter
+"autocmd BufWritePre *.jsx Esformatter
+"autocmd BufWritePre *.js Esformatter
+"" NERDTree
+"Bundle "scrooloose/nerdtree"
+"" color schema tender.vim
+"Bundle "jacoborus/tender.vim"
+"colorscheme tender
+"
+"""""vimshell""""
+"" ,is: シェルを起動
+"nnoremap <silent> ,is :VimShell<CR>
+"
+"""""vim-airline""""
+"let g:airline_section_a = airline#section#create(['mode','','branch'])
+""let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#show_buffers = 0
+"let g:airline#extensions#tabline#tab_nr_type = 1
+"let g:airline#extensions#tabline#fnamemod = ':t'
+"set guifont=Ricty\ Regular\ for\ Powerline:h14
+"let g:Powerline_symbols = 'fancy'
+"set t_Co=256
+"" theme
+"let g:airline_theme='tender'
+""let g:airline_theme='papercolor'
+"let g:airline_left_sep = '⮀'
+"let g:airline_right_sep = '⮂'
+"let g:airline_linecolumn_prefix = '⭡'
+"let g:airline_branch_prefix = '⭠ '
+"let g:airline#extensions#tabline#left_sep = '⮀'
+"let g:airline#extensions#tabline#left_alt_sep = '⮀'
+"let g:airline#extensions#readonly#symbol = '⭤ '
+"let g:airline#extensions#branch#enabled = 0
+"let g:airline#extensions#readonly#enabled = 0
+"let g:airline_section_b = ""
+"let g:airline_section_c = "%t %M "
 
 

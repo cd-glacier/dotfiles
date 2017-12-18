@@ -33,7 +33,7 @@ brew cask install intellij-idea
 #brew cask install virtualbox
 #brew cask install vagrant
 brew cask install racket
-#brew cask install docker
+brew cask install docker
 
 # shell
 brew install fish
@@ -41,13 +41,6 @@ brew install tmux
 brew install ghq peco
 brew install reattach-to-user-namespace
 
-# .config
-mkdir ~/.config
+#fisher man
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
-
-# vimrc tmux fish
-git clone https://github.com/g-hyoga/dotfiles.git
-cp dotfiles/.vimrc ~/
-cp dotfiles/.tmux.conf ~/
-#fish && exit
-cp dotfiles/config.fish ~/.config/fish/
