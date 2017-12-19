@@ -16,6 +16,7 @@ case glacier
   set -x base origin
 case '*'
   set -x base develop 
+end
 
 # ubuntuで使うと消える
 ## prompt
