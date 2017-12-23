@@ -121,3 +121,8 @@ function gl
   git log
 end
 
+function gs
+  echo git status
+  git status
+end
+

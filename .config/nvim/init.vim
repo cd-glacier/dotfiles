@@ -109,7 +109,7 @@ set matchpairs& matchpairs+=<:>
 " vi非互換モード
 set nocompatible
 " json format
-autocmd BufWritePre *.json :execute '%!python -m json.tool'
+" autocmd BufWritePre *.json :execute '%!python -m json.tool'
 " 文字化け対策
 set ttimeout
 set ttimeoutlen=50
@@ -151,7 +151,7 @@ if dein#load_state('/Users/glacier/.config/dein/.')
   call dein#add('godlygeek/tabular')
   call dein#add('plasticboy/vim-markdown')
   " vim-json
-  call dein#add("elzr/vim-json")
+  " call dein#add("elzr/vim-json")
   " deoplete
   call dein#add('Shougo/deoplete.nvim')
   " cuto ctagsa
@@ -220,8 +220,8 @@ let g:formatdef_scalafmt = "'scalafmt --stdin'"
 let g:formatters_scala = ['scalafmt']
 autocmd BufWritePre *.scala Autoformat 
 " jsxで保存時にesformatter
-autocmd BufWritePre *.jsx Esformatter
-autocmd BufWritePre *.js Esformatter
+" autocmd BufWritePre *.jsx Esformatter
+" autocmd BufWritePre *.js Esformatter
 " swift
 " let g:deoplete#sources#swift#daemon_autostart = 1
 let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']

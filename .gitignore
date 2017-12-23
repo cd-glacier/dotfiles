@@ -4,4 +4,4 @@ tag
 .config/dein/*
 .config/repos/*
 .config/.cache/*
-
+.config/dein/.cache/*
