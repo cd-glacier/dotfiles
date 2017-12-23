@@ -1,5 +1,6 @@
 .DS_Store
-tag
+tags
+tags.lock
 .ctags
 .config/dein/*
 .config/repos/*

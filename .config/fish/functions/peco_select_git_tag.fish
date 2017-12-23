@@ -1,1 +1,7 @@
-/Users/glacier/.config/fisherman/peco_select_git_misc/functions/peco_select_git_tag.fish
+function peco_select_git_tag
+  git tag | peco | awk '{print $1}' | read foo
+
+  if [ $foo ]
+    commandline -a $foo
+  end
+end

@@ -1,1 +1,7 @@
-/Users/glacier/.config/fisherman/peco_select_git_misc/functions/peco_select_git_file.fish
+function peco_select_git_file
+  git ls-files | peco | read foo
+
+  if [ $foo ]
+    commandline -a $foo
+  end
+end
