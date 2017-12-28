@@ -1,4 +1,6 @@
 
 nnoremap \r :action RunClass<CR>
+nnoremap \d :action DebugClass<CR>
+nnoremap \b :action ToggleLineBreakpoint<CR>
 inoremap jj <Esc>
 
