@@ -1,7 +1,16 @@
-set -x GOPATH $HOME/Dropbox/dev
-#set -x GOROOT /usr/local/go
-set -x PATH $PATH $GOROOT/bin
-set -x PATH $PATH $GOPATH/bin
+set GITCOMMIT_MESSAGE_FILE ".gitcommit_message"
+set GITCOMMIT_MESSAGE_PATH ~
+
+switch (echo $USER)
+  case glacier
+    set -x GOPATH $HOME/Dropbox/dev
+    #set -x GOROOT /usr/local/go
+    set -x PATH $PATH $GOROOT/bin
+    set -x PATH $PATH $GOPATH/bin
+  case '*'
+    git config --global commit.template "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
+  end
+
 
 ## vi mode
 fish_vi_key_bindings
@@ -94,6 +103,19 @@ end
 
 function pre_git_commit
   echo pre
+  switch (echo $USER)
+  case glacier
+    
+  case '*'
+    echo format java
+    ./bin/mvn.sh formatter:format
+
+    echo creating gitcommit_message file 
+    set branch (git_branch)
+    string split -r -m1 - $branch | read commit_template
+    touch "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
+    echo "$commit_template-" > "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
+  end
 end
 
 function gco $argv
