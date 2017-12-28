@@ -1,4 +1,4 @@
-
+# 初期設定
 switch (echo $USER)
   case glacier
     set -x GOPATH $HOME/Dropbox/dev
