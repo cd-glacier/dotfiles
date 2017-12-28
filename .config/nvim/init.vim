@@ -51,6 +51,8 @@ autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 map ,st :%!java -jar /home/me/bin/scalariform.jar -f -q +compactControlReadability +alignParameters +alignSingleLineCaseStatements +doubleIndentClassDeclaration +preserveDanglingCloseParenthesis +rewriteArrowSymbols +preserveSpaceBeforeArguments --stdin --stdout <CR>
 " spell check
 " setlocal spell spelllang=en_us
+" set colorを制限して重くなるのを回避
+set synmaxcol=200
 
 """"操作系""""
 " tabをスペース2個分に
@@ -232,5 +234,6 @@ set background=dark
 
 "End dein Scripts-------------------------
 
+" fish使いたい
 set sh=fish
 
