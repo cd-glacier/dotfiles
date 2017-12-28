@@ -10,14 +10,6 @@ fish_vi_key_bindings
 function fish_mode_prompt 
 end
 
-# git
-switch (echo $USER)
-case glacier
-  set -x base origin
-case '*'
-  set -x base develop 
-end
-
 # ubuntuで使うと消える
 ## prompt
 function fish_prompt 
@@ -104,21 +96,21 @@ function pre_git_commit
   echo pre
 end
 
-function gco
+function gco $argv
   pre_git_commit
   echo git commit
-  git commit
+  git commit $argv
 end
 
 function gp
   set branch (git_branch)
-  echo git push $base $branch
-  git push $base $branch
+  echo git push origin $branch
+  git push origin $branch
 end
 
 function gl
   echo git log
-  git log
+  git log $argv
 end
 
 function gs
