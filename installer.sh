@@ -7,9 +7,16 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install caskroom/cask/brew-cask
 
 # font
+## firaCode
 git clone git@github.com:tonsky/FiraCode.git
 cp FiraCode/distr/ttf/FiraCode-Medium.ttf ~/Library/Fonts/
 rm -rf FiraCode
+## powerline code
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
 
 # terminal
 brew cask install iterm2
@@ -33,7 +40,7 @@ brew cask install intellij-idea
 #brew cask install virtualbox
 #brew cask install vagrant
 brew cask install racket
-brew cask install docker
+brew cask install docker #docker for mac
 
 # shell
 brew install fish
@@ -44,3 +51,4 @@ brew install reattach-to-user-namespace
 #fisher man
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fisher tamanugi/peco_select_git_misc
+

@@ -106,6 +106,8 @@ set ttimeoutlen=10
 """others"""
 " 補完の際の大文字小文字の区別しない
 set infercase
+" ex modeでの補完
+set wildmode=longest:full,full
 " 対応括弧に<と>のペアを追加
 set matchpairs& matchpairs+=<:>
 " vi非互換モード
