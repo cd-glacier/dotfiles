@@ -6,3 +6,4 @@ tags.lock
 .config/repos/*
 .config/.cache/*
 .config/dein/.cache/*
+.config/wireshark
