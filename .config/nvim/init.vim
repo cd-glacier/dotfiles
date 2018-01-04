@@ -153,7 +153,7 @@ if dein#load_state('/Users/glacier/.config/dein/.')
   call dein#add("cohama/lexima.vim")
   " markdown
   call dein#add('godlygeek/tabular')
-  call dein#add('plasticboy/vim-markdown')
+  " call dein#add('plasticboy/vim-markdown')
   " vim-json
   " call dein#add("elzr/vim-json")
   " deoplete
