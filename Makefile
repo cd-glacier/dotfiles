@@ -2,6 +2,10 @@
 build:
 	sh installer.sh
 
+dein:
+	cd .config/dein;\
+	sh installer.sh .
+	
 link:
 	ln -sf $(PWD)/.config ~/.config
 	ln -sf $(PWD)/.tmux.conf ~/.tmux.conf
