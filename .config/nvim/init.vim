@@ -123,16 +123,22 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-" Required:
-set runtimepath+=/Users/glacier/.config/dein/repos/github.com/Shougo/dein.vim
+" ~/.config/deinで
+" sh installer.sh .
+" したと仮定
+let deinroot = "/Users/" . $USER . "/.config/dein/."
+let $DEIN_PATH= deinroot . "/repos/github.com/Shougo/dein.vim"
 
 " Required:
-if dein#load_state('/Users/glacier/.config/dein/.')
-  call dein#begin('/Users/glacier/.config/dein/.')
+set runtimepath+=$DEIN_PATH
+
+" Required:
+if dein#load_state(deinroot)
+  call dein#begin(deinroot)
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/glacier/.config/dein/./repos/github.com/Shougo/dein.vim')
+  call dein#add($DEIN_PATH)
 
   " Add or remove your plugins here:
   " vim config 
