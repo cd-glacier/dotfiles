@@ -1,6 +1,10 @@
 
-build:
+setup: install terminal-setup
+
+install:
 	sh installer.sh
+
+terminal-setup: dein link
 
 dein:
 	cd .config/dein;\
