@@ -1,4 +1,4 @@
-# Dotdotdot
+# DotDotDot
 
 my dotfile and setup shell for mac
 
@@ -18,7 +18,7 @@ install my favorite tool and setup my terminal environment
 make terminal-setup
 ```
 
-setup my settting for...
+setup my setting for...
 
  * neovim
  * fish shell
