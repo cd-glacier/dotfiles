@@ -9,9 +9,10 @@ function pre_git_commit
 
     echo creating gitcommit_message file 
     set branch (git_branch)
-    string split -r -m1 - $branch | read commit_template
+    set list (string split -m2 - $branch)
+    set commit_template "$list[1]-$list[2]-"
     touch "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
-    echo "$commit_template-" > "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
+    echo "$commit_template" > "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
   end
 end
 
