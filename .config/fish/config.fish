@@ -15,6 +15,9 @@ switch (echo $USER)
     set -x GITCOMMIT_MESSAGE_FILE ".gitcommit_message"
     set -x GITCOMMIT_MESSAGE_PATH ~
     git config --global commit.template "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
+
+    alias mysql="kubectl exec -it mysql-0 -- /opt/cybozu/mysql/bin/mysql"
+    set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
   end
 
 # vi modeではなんか[I]みたいなの出るからオーバーライド

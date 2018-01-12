@@ -20,7 +20,7 @@ make terminal-setup
 
 setup my setting for...
 
- * neovim
+ * neovim with dein
  * fish shell
  * tmux
  * peco
