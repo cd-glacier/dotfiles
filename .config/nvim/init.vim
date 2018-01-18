@@ -221,7 +221,7 @@ let g:vim_json_syntax_conceal = 0
 filetype plugin indent on     " required!
 let g:deoplete#enable_at_startup = 1
 let g:auto_ctags = 1
-autocmd BufWritePre *.go GoImports 
+let g:go_fmt_command = "goimports"
 " scalaファイル読み込み時にsetf scala
 au BufNewFile,BufRead *.scala setf scala
 " scala fmt	
