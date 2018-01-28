@@ -18,6 +18,7 @@ switch (echo $USER)
 
     alias mysql="kubectl exec -it mysql-0 -- /opt/cybozu/mysql/bin/mysql"
     set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
+    set -x PATH $PATH $HOME/.nodebrew/current/bin
   end
 
 # vi modeではなんか[I]みたいなの出るからオーバーライド
