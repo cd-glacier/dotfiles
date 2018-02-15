@@ -1,6 +1,14 @@
 
-nnoremap \r :action RunClass<CR>
-nnoremap \d :action DebugClass<CR>
-nnoremap \b :action ToggleLineBreakpoint<CR>
 inoremap jj <Esc>
+
+nnoremap \r :action Run<CR>
+nnoremap \rc :action RunClass<CR>
+
+nnoremap \d :action Debug<CR>
+nnoremap \dc :action DebugClass<CR>
+
+nnoremap \refactor Refactorings.QuickListPopupAction 
+
+nnoremap \b :action ToggleLineBreakpoint<CR>
+
 
