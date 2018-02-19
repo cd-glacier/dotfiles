@@ -53,6 +53,8 @@ map ,st :%!java -jar /home/me/bin/scalariform.jar -f -q +compactControlReadabili
 " setlocal spell spelllang=en_us
 " set colorを制限して重くなるのを回避
 set synmaxcol=200
+" haskell indent
+autocmd Filetype haskell setlocal ts=4 sts=4 sw=4 expandtab
 
 """"操作系""""
 " tabをスペース2個分に
@@ -193,6 +195,11 @@ if dein#load_state(deinroot)
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+  " haskell
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+  call dein#add('eagletmt/neco-ghc')
+  call dein#add('eagletmt/ghcmod-vim')
 
   " Required:
   call dein#end()

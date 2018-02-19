@@ -6,7 +6,7 @@ switch (echo $USER)
     #set -x GOROOT /usr/local/go
     set -x PATH $PATH $GOROOT/bin
     set -x PATH $PATH $GOPATH/bin
-   
+
     # gitcommit_message
     git config --global commit.template ""
     git config --global --remove-section commit
