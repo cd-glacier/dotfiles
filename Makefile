@@ -19,3 +19,6 @@ link:
 	ln -sf $(PWD)/.ideavimrc ~/.ideavimrc
 	ln -sf $(PWD)/.zshrc ~/.zshrc
 
+gitignore_global:
+	echo "[core] excludesfile = /Users/glacier/.gitignore_global" >> ~/.gitconfig
+
