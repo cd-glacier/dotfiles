@@ -7,6 +7,6 @@ tags.lock
 .config/.cache/*
 .config/dein/.cache/*
 .config/dein/repos/*
-.config/wireshark
+.config/wireshark/
 .config/gcloud/
 
