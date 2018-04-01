@@ -1,0 +1,101 @@
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]] # color schema
+repo = 'w0ng/vim-hybrid'
+hook_add = '''
+  colorscheme hybrid
+  set background=dark
+'''
+
+[[plugins]] # 括弧補完
+repo = "cohama/lexima.vim"
+
+[[plugins]] # markdown
+repo = 'godlygeek/tabular'
+
+[[plugins]] # markdown
+repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+'''
+
+[[plugins]] # auto indent
+repo = "Chiel92/vim-autoformat"
+
+[[plugins]]
+repo = 'fatih/vim-go'
+hook_add = '''
+  let g:go_fmt_command = "goimports"
+'''
+
+[[plugins]] # go補完
+repo = 'nsf/gocode'
+
+[[plugins]] # 定義jump
+repo = 'rogpeppe/godef'
+
+
+[[plugins]] # highlight
+repo = 'derekwyatt/vim-scala'
+hook_add = '''
+  " scalaファイル読み込み時にsetf scala
+  au BufNewFile,BufRead *.scala setf scala
+  let g:auto_ctags = 1
+  let g:formatdef_scalafmt = "'scalafmt --stdin'"
+  let g:formatters_scala = ['scalafmt']
+  " scala fmt	
+  autocmd BufWritePre *.scala Autoformat 
+'''
+
+[[plugins]] # syntax highlight
+repo = 'othree/yajs.vim'
+
+[[plugins]] # esformatter
+repo = 'millermedeiros/vim-esformatter'
+hook_add = '''
+  " jsxで保存時にesformatter
+  " autocmd BufWritePre *.jsx Esformatter
+  " autocmd BufWritePre *.js Esformatter
+'''
+
+[[plugins]]
+repo = 'landaire/deoplete-swift'
+hook_add = '''
+  let g:airline_theme='bubblegum'
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#branch#enabled = 0
+  let g:airline#extensions#readonly#enabled = 0
+  let g:airline_section_c = ''
+'''
+
+[[plugins]]
+repo = 'keith/swift.vim'
+hook_add = '''
+  " swift
+  " let g:deoplete#sources#swift#daemon_autostart = 1
+  let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
+'''
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+
+[[plugins]]
+repo = 'eagletmt/neco-ghc'
+
+[[plugins]]
+repo = 'eagletmt/ghcmod-vim'
+
