@@ -3,7 +3,6 @@ set shell=/bin/bash
 
 """"エンコード""""
 set encoding=UTF-8
-"set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set termencoding=UTF-8
 set fileformats=unix,dos,mac
 
@@ -16,8 +15,6 @@ set number
 set cursorline
 " 右下に表示される行・列の番号を表示する
 set ruler
-" 不可視文字を表示
-"set list
 " 検索した文字を強調
 set nohlsearch
 " タイトル表示
@@ -41,8 +38,8 @@ set laststatus=2
 " コマンドを画面下に表示させる
 "set showcmd
 " タブ、空白、改行の可視化
-"set list
-"set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
+set list
+set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
 " vue.js
 autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 " □や○文字が崩れる問題を解決
@@ -67,11 +64,6 @@ set tabstop=2
 set shiftwidth=2
 " 入力モード中に素早くJJと入力した場合はESCとみなす
 inoremap jj <Esc>
-" INSERTモードでもhjkl移動を可能に
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
 " 文字がない場所にもカーソルを移動できるようにする
 "set virtualedit=all 
 " backspace効かないので
@@ -84,7 +76,7 @@ nnoremap j gj
 nnoremap k gk
 " w!! でスーパーユーザーとして保存（sudoが使える環境限定）
 cmap w!! w !sudo tee > /dev/null %
-" インクリメンタルサーチ. １文字入力毎に検索を行う
+" インクリメンタルサーチ. 1文字入力毎に検索を行う
 set incsearch
 " 検索パターンに大文字小文字を区別しない
 set ignorecase
@@ -140,14 +132,8 @@ set runtimepath+=$DEIN_PATH
 " Required:
 if dein#load_state(deinroot)
   call dein#begin(deinroot)
-
-  " Let dein manage dein
-  " Required:
   call dein#add($DEIN_PATH)
-
   call dein#load_toml("~/.config/nvim/deim.toml")
-
-  " Required:
   call dein#end()
   call dein#save_state()
 endif
