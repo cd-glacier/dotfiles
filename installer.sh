@@ -35,11 +35,12 @@ brew cask install slack
 brew install neovim/neovim/neovim
 brew install python3
 pip3 install neovim
+pip3 install neovim --upgrade
 brew cask install sublime-text
 brew cask install intellij-idea
 #brew cask install virtualbox
 #brew cask install vagrant
-brew cask install racket
+#brew cask install racket
 brew cask install docker #docker for mac
 
 # shell

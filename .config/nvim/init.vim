@@ -74,6 +74,11 @@ set backspace=indent,eol,start
 " j, k による移動を折り返されたテキストでも自然に振る舞うように変更
 nnoremap j gj
 nnoremap k gk
+" INSERTモードでもhjkl移動を可能に
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 " w!! でスーパーユーザーとして保存（sudoが使える環境限定）
 cmap w!! w !sudo tee > /dev/null %
 " インクリメンタルサーチ. 1文字入力毎に検索を行う
@@ -125,6 +130,7 @@ endif
 " したと仮定
 let deinroot = "/Users/" . $USER . "/.config/dein/."
 let $DEIN_PATH= deinroot . "/repos/github.com/Shougo/dein.vim"
+let s:toml = "~/.config/nvim/deim.toml"
 
 " Required:
 set runtimepath+=$DEIN_PATH
@@ -133,7 +139,7 @@ set runtimepath+=$DEIN_PATH
 if dein#load_state(deinroot)
   call dein#begin(deinroot)
   call dein#add($DEIN_PATH)
-  call dein#load_toml("~/.config/nvim/deim.toml")
+  call dein#load_toml(s:toml, {'lazy': 0})
   call dein#end()
   call dein#save_state()
 endif
@@ -141,6 +147,7 @@ endif
 " Required:
 filetype plugin indent on
 syntax enable
+let g:deoplete#enable_at_startup = 1
 
 "End dein Scripts-------------------------
 
