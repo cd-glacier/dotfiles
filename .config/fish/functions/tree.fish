@@ -1,4 +1,4 @@
 
 function tree
- log --graph --oneline --decorate=full
+ git log --graph --oneline --decorate=full
 end
