@@ -1,5 +1,5 @@
 
-setup: install terminal-setup gitignore_global apply-local-setting
+setup: install terminal-setup gitignore_global git_commit_editor apply-local-setting
 
 install:
 	sh installer.sh
@@ -21,6 +21,9 @@ link:
 
 gitignore_global:
 	echo "[core] excludesfile = /Users/glacier/.gitignore_global" >> ~/.gitconfig
+
+git_commit_editor:
+	git config --global core.editor 'nvim -c "set fenc=utf-8"'
 
 apply-local-setting:
 	sh ./bin/apply-local-setting.sh
