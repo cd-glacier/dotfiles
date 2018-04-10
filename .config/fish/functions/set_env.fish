@@ -1,0 +1,1 @@
+/Users/glacier/.local_setting/fish/functions/init/set_env.fish
