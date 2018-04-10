@@ -1,21 +1,4 @@
-# 初期設定
-switch (echo $USER)
-  case glacier
-    # Golang
-    set -x GOPATH $HOME/Dropbox/dev
-    #set -x GOROOT /usr/local/go
-    set -x PATH $PATH $GOROOT/bin
-    set -x PATH $PATH $GOPATH/bin
-
-    # gitcommit_message
-    git config --global commit.template ""
-    git config --global --remove-section commit
-  case '*'
-    # gitcommit_message
-    set -x GITCOMMIT_MESSAGE_FILE ".gitcommit_message"
-    set -x GITCOMMIT_MESSAGE_PATH ~
-    git config --global commit.template "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
-end
+call_local_functions
 
 # vi modeではなんか[I]みたいなの出るからオーバーライド
 function fish_mode_prompt 

@@ -10,8 +10,14 @@ for function in *.fish; do
 done
 
 cd $LOCAL_SETTING_PATH/fish/functions/init
+touch call_local_functions.fish
 for initFunc in *.fish; do
   echo $PWD/$initFunc
   ln -sf $PWD/$initFunc ~/.config/fish/functions/$intiFunc
-  echo ${initFunc%.*} >> ~/.config/fish/config.fish
+  createInitFunc(${initFunc%.*})
 done
+
+function createInitFunc($func) {
+  echo $func > call_local_functions.fish
+}
+
