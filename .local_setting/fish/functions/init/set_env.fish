@@ -14,4 +14,6 @@ function set_env
   #set GITCOMMIT_MESSAGE_FILE ".gitcommit_message"
   #set GITCOMMIT_MESSAGE_PATH ~
   #git config --global commit.template "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
+
+  git config --global core.editor 'nvim -c "set fenc=utf-8"'
 end
