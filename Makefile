@@ -25,4 +25,5 @@ gitignore_global:
 apply-local-setting:
 	sh ./bin/apply-local-setting.sh
 
-
+g-hyoga_setting:
+	ln -sf (PWD)/.local_setting ~/.local_setting
