@@ -10,19 +10,26 @@ fish_vi_key_bindings
 # ubuntuで使うと消える
 ## prompt
 function fish_prompt 
+  if [ $status -eq 0 ]
+    set fish_face ">><(( o> "
+  else 
+    set fish_face ">><(( x> "
+  end
+
 	if test "$fish_key_bindings" = "fish_vi_key_bindings"
 		switch $fish_bind_mode
-			case default
-				set_color --bold red white
-			case insert
-				set_color --bold green white
-			case replace-one
-				set_color --bold green white
-			case visual
-				set_color --bold magenta white
-			end
-		echo (prompt_pwd) ">><(( ○> "
-	end
+		case default
+			set_color --bold red white
+		case insert
+			set_color --bold green white
+		case replace-one
+			set_color --bold green white
+		case visual
+			set_color --bold magenta white
+		end
+  end
+
+  echo (prompt_pwd) $fish_face
 end
 
 #gitのbranch名の抽出
