@@ -1,5 +1,5 @@
 
-setup: install terminal-setup
+setup: install terminal-setup apply-local-setting g-hyoga_setting
 
 install:
 	sh installer.sh
@@ -31,5 +31,4 @@ apply-local-setting:
 
 g-hyoga_setting: 
 	ln -sf $(PWD)/.local_setting ~/.local_setting
-
 
