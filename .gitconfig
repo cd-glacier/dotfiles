@@ -1,7 +1,9 @@
 [user]
-	email = hyoga0216@gmail.com
-	name = g-hyoga
+  email = hyoga0216@gmail.com
+  name = g-hyoga
 [ghq]
-	root = /Users/glacier/Dropbox/dev/src/
+  root = /Users/glacier/Dropbox/dev/src/
 [core]
-    excludesfile = /Users/glacier/.gitignore_global
+  excludesfile = /Users/glacier/.gitignore_global
+  editor = nvim -c \"set fenc=utf-8\"
+
