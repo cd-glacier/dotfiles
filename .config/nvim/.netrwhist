@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/glacier/.config'
-let g:netrw_dirhist_2='/Users/glacier/.config/dein'
-let g:netrw_dirhist_3='/Users/glacier/Dropbox/dev/src/github.com/g-hyoga/dotfiles/.git'
-let g:netrw_dirhist_4='/Users/glacier/Dropbox/dev/src/github.com/g-hyoga/dotfiles/.config'
-let g:netrw_dirhist_5='/Users/glacier/Dropbox/dev/src/github.com/g-hyoga/dotfiles/.config/dein'
-let g:netrw_dirhist_6='/Users/glacier/Dropbox/dev/src/github.com/g-hyoga/dotfiles/.config/dein/repos'
-let g:netrw_dirhist_7='/Users/glacier/Dropbox/dev/src/github.com/g-hyoga/dotfiles/.config/dein/repos/github.com'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/glacier/Dropbox/dev/src/github.com/g-hyoga/dotfiles/.config/nvim'
