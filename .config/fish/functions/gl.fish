@@ -1,6 +1,6 @@
 function gl
-  echo git log
-  git log $argv
+  echo git log tree
+  git log --graph --oneline --decorate=full
 end
 
 
