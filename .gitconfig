@@ -7,3 +7,5 @@
   excludesfile = /Users/glacier/.gitignore_global
   editor = nvim -c \"set fenc=utf-8\"
 
+[ghq]
+  root = /Users/nis-hyoga/Dropbox/dev/src/

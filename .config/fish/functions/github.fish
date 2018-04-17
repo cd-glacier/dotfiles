@@ -1,1 +1,1 @@
-/Users/glacier/.local_setting/fish/functions/github.fish
+/Users/nis-hyoga/.local_setting/fish/functions/github.fish
