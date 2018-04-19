@@ -24,4 +24,5 @@ function set_env
   set -g EM_CONFIG /Users/nis-hyoga/.emscripten
   set -g EMSCRIPTEN /Users/nis-hyoga/Dropbox/dev/src/github.com/juj/emsdk/emscripten/incoming
   set -g BINARYEN_ROOT /Users/nis-hyoga/Dropbox/dev/src/github.com/juj/emsdk/binaryen/master_64bit_binaryen
+  set PATH $PATH /Users/nis-hyoga/Dropbox/dev/src/github.com/WebAssembly/wabt/bin
 end
