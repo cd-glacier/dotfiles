@@ -15,4 +15,13 @@ function set_env
   #set GITCOMMIT_MESSAGE_PATH ~
   #git config --global commit.template "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
 
+  # web assembly
+  set PATH $PATH /Users/nis-hyoga/Dropbox/dev/src/github.com/juj/emsdk/clang/fastcomp/build_incoming_64/bin
+  set PATH $PATH /Users/nis-hyoga/Dropbox/dev/src/github.com/juj/emsdk/node/8.9.1_64bit/bin
+  set PATH $PATH /Users/nis-hyoga/Dropbox/dev/src/github.com/juj/emsdk/emscripten/incoming
+  set PATH $PATH /Users/nis-hyoga/Dropbox/dev/src/github.com/juj/emsdk/binaryen/master_64bit_binaryen/bin
+  set -g EMSDK /Users/nis-hyoga/Dropbox/dev/src/github.com/juj/emsdk
+  set -g EM_CONFIG /Users/nis-hyoga/.emscripten
+  set -g EMSCRIPTEN /Users/nis-hyoga/Dropbox/dev/src/github.com/juj/emsdk/emscripten/incoming
+  set -g BINARYEN_ROOT /Users/nis-hyoga/Dropbox/dev/src/github.com/juj/emsdk/binaryen/master_64bit_binaryen
 end
