@@ -16,7 +16,6 @@ link:
 	ln -sf $(PWD)/.gitignore ~/.gitignore
 	ln -sf $(PWD)/.gitignore_global ~/.gitignore_global
 	ln -sf $(PWD)/.ideavimrc ~/.ideavimrc
-	ln -sf $(PWD)/.gitconfig ~/.gitconfig
 
 unlink:
 	unlink ~/.config
@@ -27,6 +26,7 @@ unlink:
 	unlink ~/.gitconfig
 
 apply-local-setting:
+	ln -sf $(PWD)/.gitconfig ~/.gitconfig
 	sh ./bin/apply-local-setting.sh
 
 g-hyoga_setting: 

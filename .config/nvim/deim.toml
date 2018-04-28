@@ -3,7 +3,13 @@ repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
-
+hook_add = '''
+  let g:airline_theme='bubblegum'
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#branch#enabled = 0
+  let g:airline#extensions#readonly#enabled = 0
+  let g:airline_section_c = ''
+'''
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
@@ -74,13 +80,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'landaire/deoplete-swift'
-hook_add = '''
-  let g:airline_theme='bubblegum'
-  let g:airline_powerline_fonts = 1
-  let g:airline#extensions#branch#enabled = 0
-  let g:airline#extensions#readonly#enabled = 0
-  let g:airline_section_c = ''
-'''
 
 [[plugins]]
 repo = 'keith/swift.vim'
@@ -98,4 +97,10 @@ repo = 'eagletmt/neco-ghc'
 
 [[plugins]]
 repo = 'eagletmt/ghcmod-vim'
+
+[[plugins]]
+repo = 'rhysd/vim-wasm'
+
+[[plugins]]
+repo = 'rhysd/open-pdf.vim'
 

@@ -15,3 +15,7 @@ lang
 function
 uri
 hoge
+func
+param
+i32
+IoT
