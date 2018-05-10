@@ -1,9 +1,11 @@
 .DS_Store
 .ctags
+.config/compiz-1/
 .confih/dconf/
 .config/dein/
-.config/dein/repos/
-.config/dein/.cache/
+.config/enchant/
+.config/evolution/
+.config/fcitx/
 .config/fish/fishd.*
 .config/gcloud/
 .config/google-chrome/

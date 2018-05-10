@@ -90,7 +90,8 @@ set smartcase
 " 検索結果をハイライト
 set hlsearch
 " クリップボードにコピー
-set clipboard+=unnamed
+set clipboard&
+set clipboard^=unnamedplus
 " クリップボードからペーストのときインデントしない
 if &term =~ "xterm"
   let &t_SI .= "\e[?2004h"
@@ -132,8 +133,6 @@ let deinroot = "/home/" . $USER . "/.config/dein/."
 let $DEIN_PATH= deinroot . "/repos/github.com/Shougo/dein.vim"
 let s:toml = "~/.config/nvim/deim.toml"
 
-echo "HOGE"
-echo $DEIN_PATH
 " Required:
 set runtimepath+=$DEIN_PATH
 

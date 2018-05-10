@@ -18,6 +18,7 @@ sudo apt-get install fish
 sudo apt-get install -y neovim
 sudo apt-get install -y python3-dev python3-pip
 pip3 install -U pip3
+pip3 install --upgrade neovim
 
 # peco
 sudo wget "https://github.com/peco/peco/releases/download/v0.5.1/peco_linux_386.tar.gz"
@@ -28,6 +29,9 @@ sudo cp peco /usr/local/bin
 cd ..
 sudo rm -rf peco_linux_386
 sudo rm -rf peco_linux_386.tar.gz
+
+# xclip
+sudo apt-get install --assume-yes xclip
 
 # font
 if [ ! -d ~./fonts ]; then
