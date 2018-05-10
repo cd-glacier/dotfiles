@@ -1,10 +1,12 @@
 .DS_Store
 .ctags
+.confih/dconf/
 .config/dein/
 .config/dein/repos/
 .config/dein/.cache/
 .config/fish/fishd.*
 .config/gcloud/
+.config/google-chrome/
 .config/repos/
 .config/wireshark/
 .config/.cache/

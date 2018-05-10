@@ -32,3 +32,11 @@ apply-local-setting:
 g-hyoga_setting: 
 	ln -sf $(PWD)/.local_setting ~/.local_setting
 
+
+install-for-ubuntu:
+	sh ./bin/installer-for-ubuntu.sh
+
+terminal-setup-for-ubuntu: install-for-ubuntu dein
+
+
+
