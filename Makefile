@@ -1,15 +1,8 @@
+init: install-for-ubuntu link dein local-setting apply-local-setting
 
-setup: install terminal-setup apply-local-setting g-hyoga_setting
+install-for-ubuntu:
+	sh ./bin/installer-for-ubuntu.sh
 
-install:
-	sh installer.sh
-
-terminal-setup: dein link
-
-dein:
-	cd .config/dein;\
-	sh ./installer.sh .
-	
 link: 
 	ln -sf $(PWD)/.config ~/.config
 	ln -sf $(PWD)/.tmux.conf ~/.tmux.conf
@@ -25,18 +18,13 @@ unlink:
 	unlink ~/.ideavimrc
 	unlink ~/.gitconfig
 
+dein:
+	cd .config/dein;\
+	sh ./installer.sh .
+	
+local-setting: 
+	ln -sf $(PWD)/.local_setting ~/.local_setting
+	
 apply-local-setting:
 	ln -sf $(PWD)/.gitconfig ~/.gitconfig
 	sh ./bin/apply-local-setting.sh
-
-g-hyoga_setting: 
-	ln -sf $(PWD)/.local_setting ~/.local_setting
-
-
-install-for-ubuntu:
-	sh ./bin/installer-for-ubuntu.sh
-
-terminal-setup-for-ubuntu: install-for-ubuntu dein
-
-
-

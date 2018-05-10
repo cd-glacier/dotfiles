@@ -1,16 +1,22 @@
-.DS_Store
-.ctags
-.config/compiz-1/
-.confih/dconf/
-.config/dein/
-.config/enchant/
-.config/evolution/
-.config/fcitx/
-.config/fish/fishd.*
-.config/gcloud/
+# https://qiita.com/Hi-king/items/a8485557095692f1bf13
+## .gitignore ##
+# ignore all
+*
+!*/
+
+.config/dein/.cache/
+.config/dein/repos/
 .config/google-chrome/
-.config/repos/
-.config/wireshark/
-.config/.cache/
-tags
-tags.lock
+
+# allow any
+!.config/dein/installer.sh
+!.config/fish/functions/*.fish
+!.config/fish/config.fish
+!.config/nvim/spell/*.add
+!.config/nvim/deim.toml
+!.config/nvim/init.vim
+!.config/peco/config.json
+!Makefile
+!README.md
+!bin/
+
