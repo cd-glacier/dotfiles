@@ -1,10 +1,17 @@
+
 sudo apt get update
+
 ##### pre-install ##### sudo apt-get install software-properties-common
 sudo apt-get install build-essential
 
 ##### add repository #####
+# neovim
 sudo add-apt-repository ppa:neovim-ppa/unstable
+# fish
 sudo apt-add-repository ppa:fish-shell/release-2
+# chrome
+sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
 sudo apt-get update
 
@@ -43,20 +50,31 @@ sudo rm -rf peco_linux_386.tar.gz
 # xclip
 sudo apt-get install --assume-yes xclip
 
+# chrome
+sudo apt-get install -y google-chrome-stable
+
+# Dropbox
+sudo apt-get install -y nautilus-dropbox
+
+# Mozc
+sudo apt-get install -y ibus-mozc
+killall ibus-daemon
+ibus-daemon -d -x &
+
 # font
 if [ ! -d ~./fonts ]; then
   mkdir ~/.fonts
+  ## firacode
+  git clone https://github.com/tonsky/FiraCode.git
+  cp FiraCode/distr/ttf/FiraCode-Medium.ttf ~/.fonts
+  rm -rf FiraCode
+  ## powerline font
+  git clone https://github.com/powerline/fonts.git --depth=1
+  cd fonts
+  ./install.sh
+  cd ..
+  sudo rm -rf fonts
 fi
-## firacode
-git clone https://github.com/tonsky/FiraCode.git
-cp FiraCode/distr/ttf/FiraCode-Medium.ttf ~/.fonts
-rm -rf FiraCode
-## powerline font
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd ..
-sudo rm -rf fonts
 
 ##### post-install #####
 sudo apt autoremove
