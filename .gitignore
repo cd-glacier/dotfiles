@@ -16,6 +16,8 @@
 !.config/nvim/deim.toml
 !.config/nvim/init.vim
 !.config/peco/config.json
+!.Xmodmap
+!.Xmodmap_default
 !Makefile
 !README.md
 !bin/

@@ -1,0 +1,8 @@
+
+keycode 134 = Super_L NoSymbol Super_L
+
+keycode 133 = Mode_switch
+keysym h = h H Left
+keysym l = l L Right
+keysym k = k K Up
+keysym j = j J Down
