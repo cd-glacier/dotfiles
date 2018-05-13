@@ -1,1 +1,7 @@
-/Users/glacier/.local_setting/fish/functions/github.fish
+# peco * ghq
+function github
+  ghq list --full-path | peco | read dist
+  commandline $dist
+end
+
+

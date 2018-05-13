@@ -1,14 +1,22 @@
-init: install-for-ubuntu link dein local-setting apply-local-setting
+init: install-for-ubuntu link dein
 
 install-for-ubuntu:
 	sh ./bin/installer-for-ubuntu.sh
 
 link: 
-	ln -sf $(PWD)/.config ~/.config
+	rm -rf ~/.config/dein
+	rm -rf ~/.config/fish
+	rm -rf ~/.config/nvim
+	rm -rf ~/.config/peco
+	ln -sf $(PWD)/.config/dein ~/.config/dein
+	ln -sf $(PWD)/.config/fish ~/.config/fish
+	ln -sf $(PWD)/.config/nvim ~/.config/nvim
+	ln -sf $(PWD)/.config/peco ~/.config/peco
 	ln -sf $(PWD)/.tmux.conf ~/.tmux.conf
 	ln -sf $(PWD)/.gitignore ~/.gitignore
 	ln -sf $(PWD)/.gitignore_global ~/.gitignore_global
 	ln -sf $(PWD)/.ideavimrc ~/.ideavimrc
+	ln -sf $(PWD)/.gitconfig ~/.gitconfig
 
 unlink:
 	unlink ~/.config
@@ -22,9 +30,3 @@ dein:
 	cd .config/dein;\
 	sh ./installer.sh .
 	
-local-setting: 
-	ln -sf $(PWD)/.local_setting ~/.local_setting
-	
-apply-local-setting:
-	ln -sf $(PWD)/.gitconfig ~/.gitconfig
-	sh ./bin/apply-local-setting.sh

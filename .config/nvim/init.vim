@@ -5,6 +5,7 @@ set shell=/bin/bash
 set encoding=UTF-8
 set termencoding=UTF-8
 set fileformats=unix,dos,mac
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 
 """"表示系""""
 " 色付き表示
@@ -90,8 +91,7 @@ set smartcase
 " 検索結果をハイライト
 set hlsearch
 " クリップボードにコピー
-set clipboard&
-set clipboard^=unnamedplus
+set clipboard+=unnamed
 " クリップボードからペーストのときインデントしない
 if &term =~ "xterm"
   let &t_SI .= "\e[?2004h"

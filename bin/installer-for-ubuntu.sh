@@ -61,6 +61,9 @@ sudo apt-get install -y ibus-mozc
 killall ibus-daemon
 ibus-daemon -d -x &
 
+# tmux
+sudo apt install -y tmux
+
 # font
 if [ ! -d ~./fonts ]; then
   mkdir ~/.fonts
