@@ -1,4 +1,4 @@
-init: install-for-ubuntu link dein
+init: install-for-ubuntu link dein xmodmap
 
 install-for-ubuntu:
 	sh ./bin/installer-for-ubuntu.sh
@@ -29,4 +29,7 @@ unlink:
 dein:
 	cd .config/dein;\
 	sh ./installer.sh .
+
+xmodmap:
+	xmodmap ./.Xmodmap
 	
