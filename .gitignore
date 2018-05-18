@@ -22,8 +22,8 @@ common/.config/google-chrome/
 !common/.ideavimrc
 !common/.tmux.conf
 !mac/bin/installer.sh
+!mac/Makefile
 !ubuntu/bin/installer.sh
-!ubuntu/Makefile
 !ubuntu/Makefile
 !ubuntu/.Xmodmap
 !ubuntu/.Xmodmap_default
