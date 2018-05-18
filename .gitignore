@@ -4,21 +4,26 @@
 *
 !*/
 
-.config/dein/.cache/
-.config/dein/repos/
-.config/google-chrome/
+common/.config/dein/.cache/
+common/.config/dein/repos/
+common/.config/google-chrome/
 
 # allow any
-!.config/dein/installer.sh
-!.config/fish/functions/*.fish
-!.config/fish/config.fish
-!.config/nvim/spell/*.add
-!.config/nvim/deim.toml
-!.config/nvim/init.vim
-!.config/peco/config.json
-!.Xmodmap
-!.Xmodmap_default
+!common/.config/dein/installer.sh
+!common/.config/fish/functions/*.fish
+!common/.config/fish/config.fish
+!common/.config/nvim/spell/*.add
+!common/.config/nvim/deim.toml
+!common/.config/nvim/init.vim
+!common/.config/peco/config.json
+!common/.gitconfig
+!common/.gitignore_global
+!common/.ideavimrc
+!common/.tmux.conf
+!ubuntu/.Xmodmap
+!ubuntu/.Xmodmap_default
 !Makefile
 !README.md
-!bin/
+!ubuntu/bin/installer.sh
+!mac/bin/installer.sh
 
