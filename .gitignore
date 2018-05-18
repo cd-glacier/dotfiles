@@ -9,6 +9,7 @@ common/.config/dein/repos/
 common/.config/google-chrome/
 
 # allow any
+!bin/install.sh
 !common/.config/dein/installer.sh
 !common/.config/fish/functions/*.fish
 !common/.config/fish/config.fish
@@ -20,10 +21,12 @@ common/.config/google-chrome/
 !common/.gitignore_global
 !common/.ideavimrc
 !common/.tmux.conf
+!mac/bin/installer.sh
+!ubuntu/bin/installer.sh
+!ubuntu/Makefile
+!ubuntu/Makefile
 !ubuntu/.Xmodmap
 !ubuntu/.Xmodmap_default
 !Makefile
 !README.md
-!ubuntu/bin/installer.sh
-!mac/bin/installer.sh
 
