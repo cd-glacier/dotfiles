@@ -1,6 +1,11 @@
 
-keycode 134 = Super_L NoSymbol Super_L
+keycode 66 = Control_L
+clear Lock
+add Control = Control_L
+keycode 117 = Caps_Lock
+add Lock = Caps_Lock
 
+keycode 134 = Super_L NoSymbol Super_L
 keycode 133 = Mode_switch
 keysym h = h H Left
 keysym l = l L Right
