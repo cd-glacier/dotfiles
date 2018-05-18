@@ -24,6 +24,7 @@ common/.config/google-chrome/
 !mac/bin/installer.sh
 !mac/Makefile
 !ubuntu/bin/installer.sh
+!ubuntu/bin/run-xmodmap.sh
 !ubuntu/Makefile
 !ubuntu/.Xmodmap
 !ubuntu/.Xmodmap_default
