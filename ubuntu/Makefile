@@ -33,11 +33,10 @@ unlink:
 	unlink ~/.Xmodmap
 	sudo unlink /etc/profile.d/run-xmodmap.sh
 
-
 dein:
 	cd ../common/.config/dein;\
 	sh ./installer.sh .
 
 xmodmap:
-	xmodmap ./.Xmodmap
+	xmodmap ~/.Xmodmap
 

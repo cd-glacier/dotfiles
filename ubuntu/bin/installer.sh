@@ -1,7 +1,8 @@
 
 sudo apt get update
 
-##### pre-install ##### sudo apt-get install software-properties-common
+##### pre-install ##### 
+sudo apt-get install software-properties-common
 sudo apt-get install build-essential
 
 ##### add repository #####
