@@ -1,5 +1,5 @@
 # DotDotDot
-My dotfile and setup shell for ubuntu
+My dotfile and setup shell for ubuntu and mac
 
 ## setup
 
@@ -9,12 +9,6 @@ make init
 
 Install my favorite tool and setup my terminal environment
 
-
-## setup only terminal
-
-```sh
-make terminal-setup
-```
 
 Setup my setting for...
 
