@@ -49,7 +49,3 @@ brew install tmux
 brew install ghq peco
 brew install reattach-to-user-namespace
 
-#fisher man
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
-fisher tamanugi/peco_select_git_misc
-
