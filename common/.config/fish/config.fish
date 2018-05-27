@@ -1,10 +1,4 @@
 
-# Golang
-set -g GOPATH $HOME/Dropbox/dev
-#set GOROOT /usr/local/go
-set PATH $PATH $GOROOT/bin
-set PATH $PATH $GOPATH/bin
-
 # gitcommit_message
 #git config --global commit.template ""
 #git config --global --remove-section commit
@@ -14,6 +8,7 @@ set PATH $PATH $GOPATH/bin
 #set GITCOMMIT_MESSAGE_PATH ~
 #git config --global commit.template "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
 
+##### vi mode #####
 # vi modeではなんか[I]みたいなの出るからオーバーライド
 function fish_mode_prompt 
 end
@@ -21,7 +16,8 @@ end
 ## vi mode
 fish_vi_key_bindings
 
-# ubuntuで使うと消える
+##### prompt #####
+
 ## prompt
 function fish_prompt 
   if [ $status -eq 0 ]
