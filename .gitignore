@@ -23,9 +23,11 @@ common/.config/google-chrome/
 !common/.tmux.conf
 !mac/bin/installer.sh
 !mac/Makefile
+!mac/.tmux.conf
 !ubuntu/bin/installer.sh
 !ubuntu/bin/run-xmodmap.sh
 !ubuntu/Makefile
+!ubuntu/.tmux.conf
 !ubuntu/.Xmodmap
 !ubuntu/.Xmodmap_default
 !Makefile
