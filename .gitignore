@@ -10,6 +10,7 @@ common/.config/google-chrome/
 
 # allow any
 !bin/install.sh
+!common/keymap.c
 !common/.config/dein/installer.sh
 !common/.config/fish/functions/*.fish
 !common/.config/fish/config.fish
