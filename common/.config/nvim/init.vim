@@ -92,7 +92,7 @@ set smartcase
 " 検索結果をハイライト
 set hlsearch
 " クリップボードにコピー
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 " クリップボードからペーストのときインデントしない
 if &term =~ "xterm"
   let &t_SI .= "\e[?2004h"
