@@ -1,6 +1,5 @@
 " fish使ってるとエラー出ることがある
 set shell=/bin/bash
-
 """"エンコード""""
 set encoding=UTF-8
 set termencoding=UTF-8
@@ -56,6 +55,8 @@ hi SpellBad cterm=underline
 set synmaxcol=200
 " haskell indent
 autocmd Filetype haskell setlocal ts=4 sts=4 sw=4 expandtab
+" 括弧の対応色の色
+let loaded_matchparen = 1
 
 """"操作系""""
 " tabをスペース2個分に

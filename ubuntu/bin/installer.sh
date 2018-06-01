@@ -14,6 +14,9 @@ sudo apt-add-repository ppa:fish-shell/release-2
 sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
+# racket
+sudo add-apt-repository ppa:plt/racket
+
 sudo apt-get update
 
 ##### install #####
@@ -80,6 +83,11 @@ if [ ! -d ~./fonts ]; then
   sudo rm -rf fonts
 fi
 
+# racket
+sudo install -y racket
+sudo apt install ppa-purge && sudo ppa-purge ppa:plt/racket
+
+done
 ##### post-install #####
 sudo apt autoremove
 
