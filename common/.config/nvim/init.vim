@@ -130,7 +130,7 @@ endif
 " ~/.config/deinで
 " sh installer.sh .
 " したと仮定
-let deinroot = "/Users/" . $USER . "/.config/dein/."
+let deinroot = "~/.config/dein/."
 let $DEIN_PATH= deinroot . "/repos/github.com/Shougo/dein.vim"
 let s:toml = "~/.config/nvim/deim.toml"
 
