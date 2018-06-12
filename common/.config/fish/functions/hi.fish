@@ -1,5 +1,5 @@
 
 function hi
-  commandline (history | peco)
+  commandline (history | peco __--prompt " history >><(( o> ")
 end
 
