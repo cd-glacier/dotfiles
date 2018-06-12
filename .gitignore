@@ -10,7 +10,6 @@ common/.config/google-chrome/
 
 # allow any
 !bin/install.sh
-!common/keymap.c
 !common/.config/dein/installer.sh
 !common/.config/fish/functions/*.fish
 !common/.config/fish/config.fish
@@ -22,6 +21,9 @@ common/.config/google-chrome/
 !common/.gitignore_global
 !common/.ideavimrc
 !common/.tmux.conf
+!keyboards/lets_split/glacier/config.h
+!keyboards/lets_split/glacier/keymap.c
+!keyboards/lets_split/glacier/rules.mk
 !mac/bin/installer.sh
 !mac/Makefile
 !mac/.tmux.conf
