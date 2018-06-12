@@ -16,5 +16,3 @@ function gd
   
   git diff $first_commit_id[1] $second_commit_id[1] -- $selected_file
 end
-
-
