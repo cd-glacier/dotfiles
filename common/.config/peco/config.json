@@ -1,8 +1,13 @@
 {
-    "keymap": {
-        "C-b": "peco.ScrollPageUp",
-        "C-f": "peco.ScrollPageDown",
-        "C-j": "peco.SelectDown",
-        "C-k": "peco.SelectUp"
-    }
+  "Action": {
+    "select.OneLine": [
+      "peco.ToggleRangeMode",
+      "peco.ToggleRangeMode"
+    ]
+  },
+  "Keymap": {
+    "C-l": "select.OneLine",
+    "C-j": "peco.SelectDown",
+    "C-k": "peco.SelectUp"
+  }
 }
