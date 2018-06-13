@@ -5,9 +5,12 @@ function gd
   set first_commit_id (string split -m1 ' ' $commits[1])
   set second_commit_id (string split -m1 ' ' $commits[2])
 
-  git diff --name-only $first_commit_id[1] $second_commit_id[1] \
-  | peco --prompt "you want to see >><(( o> " \
-  | read selected_file
+  set selected_files ( \
+    git diff --name-only $first_commit_id[1] $second_commit_id[1] \
+    | peco --prompt "you want to see >><(( o> " \
+  )
   
-  git diff $first_commit_id[1] $second_commit_id[1] -- $selected_file
+  for file in $selected_files
+    git diff $first_commit_id[1] $second_commit_id[1] -- $file
+  end
 end
