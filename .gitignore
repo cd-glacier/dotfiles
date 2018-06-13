@@ -26,6 +26,7 @@ common/.config/google-chrome/
 !keyboards/lets_split/glacier/rules.mk
 !mac/bin/installer.sh
 !mac/Makefile
+!mac/.bash_profile
 !mac/.tmux.conf
 !ubuntu/bin/installer.sh
 !ubuntu/bin/run-xmodmap.sh

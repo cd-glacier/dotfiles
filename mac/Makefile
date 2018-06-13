@@ -16,9 +16,11 @@ link: delete
 	ln -sf $(PWD)/../common/.gitconfig ~/.gitconfig
 	ln -sf $(PWD)/../common/.gitignore_global ~/.gitignore_global
 	ln -sf $(PWD)/../common/.ideavimrc ~/.ideavimrc
+	ln -sf $(PWD)/.bash_profile ~/.bash_profile
 	ln -sf $(PWD)/.tmux.conf ~/.tmux.conf
 
 unlink:
+	unlink ~/.bash_profile
 	unlink ~/.config/dein
 	unlink ~/.config/fish
 	unlink ~/.config/nvim
