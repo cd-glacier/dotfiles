@@ -33,6 +33,7 @@ common/.config/google-chrome/
 !ubuntu/bin/installer.sh
 !ubuntu/bin/run-xmodmap.sh
 !ubuntu/Makefile
+!ubuntu/.bash_profile
 !ubuntu/.tmux.conf
 !ubuntu/.Xmodmap
 !ubuntu/.Xmodmap_default
