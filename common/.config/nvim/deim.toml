@@ -27,12 +27,6 @@ hook_add = '''
 [[plugins]] # 括弧補完
 repo = "cohama/lexima.vim"
 
-[[plugins]] # markdown
-repo = 'godlygeek/tabular'
-
-[[plugins]] # markdown
-repo = 'plasticboy/vim-markdown'
-
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
@@ -41,19 +35,6 @@ hook_add = '''
 
 [[plugins]] # auto indent
 repo = "Chiel92/vim-autoformat"
-
-[[plugins]]
-repo = 'fatih/vim-go'
-hook_add = '''
-  let g:go_fmt_command = "goimports"
-'''
-
-[[plugins]] # go補完
-repo = 'nsf/gocode'
-
-[[plugins]] # 定義jump
-repo = 'rogpeppe/godef'
-
 
 [[plugins]] # highlight
 repo = 'derekwyatt/vim-scala'

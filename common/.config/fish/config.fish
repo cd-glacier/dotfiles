@@ -1,13 +1,4 @@
 
-# gitcommit_message
-#git config --global commit.template ""
-#git config --global --remove-section commit
-
-# gitcommit_message
-#set GITCOMMIT_MESSAGE_FILE ".gitcommit_message"
-#set GITCOMMIT_MESSAGE_PATH ~
-#git config --global commit.template "$GITCOMMIT_MESSAGE_PATH/$GITCOMMIT_MESSAGE_FILE"
-
 ##### vi mode #####
 # vi modeではなんか[I]みたいなの出るからオーバーライド
 function fish_mode_prompt 
