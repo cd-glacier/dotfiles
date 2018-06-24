@@ -133,6 +133,7 @@ endif
 let deinroot = "~/.config/dein/."
 let $DEIN_PATH= deinroot . "/repos/github.com/Shougo/dein.vim"
 let s:toml = "~/.config/nvim/deim.toml"
+let s:rubytoml = "~/.config/nvim/ruby.toml"
 
 " Required:
 set runtimepath+=$DEIN_PATH
@@ -142,6 +143,7 @@ if dein#load_state(deinroot)
   call dein#begin(deinroot)
   call dein#add($DEIN_PATH)
   call dein#load_toml(s:toml, {'lazy': 0})
+  call dein#load_toml(s:rubytoml, {'lazy': 1})
   call dein#end()
   call dein#save_state()
 endif
