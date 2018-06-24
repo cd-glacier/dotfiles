@@ -22,13 +22,13 @@ rm -rf fonts
 brew cask install iterm2
 
 # tool
-brew cask install dropbox
-brew cask install google-chrome
+#brew cask install dropbox
+#brew cask install google-chrome
 brew cask install shiftit
 brew cask install hyperswitch
-brew cask install sketch
-brew cask install evernote
-brew cask install slack
+#brew cask install sketch
+#brew cask install evernote
+#brew cask install slack
 # brew cask install skype
 
 # programming
@@ -37,7 +37,7 @@ brew install python3
 pip3 install neovim
 pip3 install neovim --upgrade
 brew cask install sublime-text
-brew cask install intellij-idea
+#brew cask install intellij-idea
 #brew cask install virtualbox
 #brew cask install vagrant
 #brew cask install racket
@@ -49,3 +49,5 @@ brew install tmux
 brew install ghq peco
 brew install reattach-to-user-namespace
 
+# ruby
+brew install ctags

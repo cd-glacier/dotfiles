@@ -1,7 +1,8 @@
-tags
-.tags_lock
 .DS_Store
-*.swp
 .ctags
 .idea/*
+*.swp
+.tags_lock
+tags
+vendor/bundler/
 

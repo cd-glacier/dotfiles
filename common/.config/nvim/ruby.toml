@@ -1,0 +1,9 @@
+[[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+
+[[plugins]]
+repo = 'szw/vim-tags'
+hook_add = '''
+let g:vim_tags_project_tags_command = "ctags -f tags -R {OPTIONS} {DIRECTORY} 2>/dev/null"
+let g:vim_tags_gems_tags_command = "ctags -R -f Gemfile.lock.tags `bundle show --paths` 2>/dev/null"
+'''
