@@ -34,7 +34,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   //Tap once for Esc, twice for Caps Lock
   [TD_LBRACKET] = ACTION_TAP_DANCE_DOUBLE (KC_LPRN, KC_LBRC),
   [TD_RBRACKET] = ACTION_TAP_DANCE_DOUBLE (KC_RPRN, KC_RBRC),
-  [TD_MINUS] = ACTION_TAP_DANCE_DOUBLE (KC_UNDS, KC_MINS),
+  [TD_CBRACKET] = ACTION_DANCE_DOUBLE (KC_LCBR, KC_RBRC), 
+  [TD_MINUS] = ACTION_TAP_DANCE_DOUBLE (KC_MINS, KC_UNDS),
   [TD_PLUS] = ACTION_TAP_DANCE_DOUBLE (KC_EQL, KC_PLUS)
 };
 
@@ -49,16 +50,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Ctrl |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |  "   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Shift |
+ * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  | - _  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Esc  | - _  | Alt  | GUI  |Lower |Space |Enter |Raise | GUI  | Alt  | + =  | Esc  |
+ * | Esc  |   _  | Alt  | GUI  |Lower |Space |Enter |Raise | GUI  | Alt  | {  } | = +  |
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_ortho_4x12(
-   KC_TAB,  KC_Q,          KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,         KC_BSPC, \
-   KC_LCTL, KC_A,          KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,      KC_QUOT, \
-   KC_LSFT, KC_Z,          KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,      KC_RSFT, \
-   KC_ESC,  TD(TD_MINUS),  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_ENT,  RAISE,   KC_RGUI, KC_RALT, TD(TD_PLUS),  KC_ESC\
+   KC_TAB,  KC_Q,     KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,             KC_BSPC, \
+   KC_LCTL, KC_A,     KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,          KC_QUOT, \
+   KC_LSFT, KC_Z,     KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          TD(TD_MINUS), \
+   KC_ESC,  KC_UNDS,  KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_ENT,  RAISE,   KC_RGUI, KC_RALT, TD(TD_CBRACKET),  TD(TD_PLUS)\
 ),
 
 /* Lower
