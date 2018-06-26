@@ -107,6 +107,8 @@ if &term =~ "xterm"
 endif
 " escape遅いの回避
 set ttimeoutlen=10
+" tabnewをTに
+command T tabnew
 
 """others"""
 " 補完の際の大文字小文字の区別しない
