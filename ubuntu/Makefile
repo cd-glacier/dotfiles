@@ -1,3 +1,8 @@
+LINKED_COMMON_FILES = .config/dein .config/fish .config/nvim .config/peco .gitignore_global .ideavimrc
+LINKED_LOCAL_FILES = .bash_profile .tmux.conf .Xmodmap
+LINKED_FILES += $(LINKED_COMMON_FILES)
+LINKED_FILES += $(LINKED_LOCAL_FILES)
+
 init: install link dein xmodmap
 
 install:
@@ -9,28 +14,17 @@ delete:
 	if [ -d ~/.config/nvim ]; then rm -rf ~/.config/nvim; fi
 
 link: delete
-	ln -sf $(PWD)/../common/.config/dein ~/.config/dein
-	ln -sf $(PWD)/../common/.config/fish ~/.config/fish
-	ln -sf $(PWD)/../common/.config/nvim ~/.config/nvim
-	ln -sf $(PWD)/../common/.config/peco ~/.config/peco
-	ln -sf $(PWD)/../common/.gitconfig ~/.gitconfig
-	ln -sf $(PWD)/../common/.gitignore_global ~/.gitignore_global
-	ln -sf $(PWD)/../common/.ideavimrc ~/.ideavimrc
-	ln -sf $(PWD)/.tmux.conf ~/.tmux.conf
-	ln -sf $(PWD)/.Xmodmap ~/.Xmodmap
-	sudo ln -sf $(PWD)/bin/run-xmodmap.sh /etc/profile.d/
+	for file in $(LINKED_COMMON_FILES); do \
+		ln -sf $(PWD)/../common/$$file ~/$$file; \
+	done
+	for file in $(LINKED_LOCAL_FILES); do \
+		ln -sf $(PWD)/$$file ~/$$file; \
+	done
 
 unlink:
-	unlink ~/.config/dein
-	unlink ~/.config/fish
-	unlink ~/.config/nvim
-	unlink ~/.config/peco
-	unlink ~/.tmux.conf
-	unlink ~/.gitconfig
-	unlink ~/.gitignore_global
-	unlink ~/.ideavimrc
-	unlink ~/.Xmodmap
-	sudo unlink /etc/profile.d/run-xmodmap.sh
+	for file in $(LINKED_FILES); do \
+		unlink ~/$$file; \
+	done
 
 dein:
 	cd ../common/.config/dein;\
