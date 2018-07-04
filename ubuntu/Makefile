@@ -32,4 +32,3 @@ dein:
 
 xmodmap:
 	xmodmap ~/.Xmodmap
-
