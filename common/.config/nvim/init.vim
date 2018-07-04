@@ -58,6 +58,9 @@ set synmaxcol=200
 autocmd Filetype haskell setlocal ts=4 sts=4 sw=4 expandtab
 " 括弧の対応色の色
 let loaded_matchparen = 1
+" cursor guide
+set cursorline
+set cursorcolumn
 
 """"操作系""""
 " tabをスペース2個分に
@@ -159,7 +162,4 @@ syntax enable
 let g:deoplete#enable_at_startup = 1
 
 "End dein Scripts-------------------------
-
-" fish使いたい
-set sh=fish
 
