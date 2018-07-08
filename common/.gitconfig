@@ -6,9 +6,5 @@
   editor = nvim -c \"set fenc=utf-8\"
 [ghq] # mymac
   root = /Users/glacier/Dropbox/dev/src/
-  root = /Users/glacier/Dropbox/tmp-work/
-  root = /Users/glacier/Dropbox/doshisha/
 [ghq] #nislab
   root = /Users/nis-hyoga/Dropbox/dev/src/
-  root = /Users/nis-hyoga/Dropbox/tmp-work/
-  root = /Users/nis-hyoga/Dropbox/doshisha/

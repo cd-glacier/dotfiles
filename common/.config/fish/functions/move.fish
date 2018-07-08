@@ -1,6 +1,7 @@
-# current dirから検索して移動
+set TARGETS ~/Dropbox/tmp-work ~/Dropbox/doshisha
+
 function move 
-	find . -type d | peco --prompt " go to >><(( o> " | read dist
+  find $TARGETS -type d | peco --prompt " go to >><(( o> " | read dist
 	cd $dist
 end
 
