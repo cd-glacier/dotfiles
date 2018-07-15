@@ -87,6 +87,14 @@ fi
 sudo install -y racket
 sudo apt install ppa-purge && sudo ppa-purge ppa:plt/racket
 
+# go
+sudo apt-get install -y golang-go
+go get -u github.com/golang/dep/cmd/dep
+
+# ghq
+go get github.com/motemen/ghq
+cd $GOROOT/github.com/motemen/ghq && make install
+
 done
 ##### post-install #####
 sudo apt autoremove

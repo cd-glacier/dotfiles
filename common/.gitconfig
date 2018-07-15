@@ -4,7 +4,5 @@
 [core]
   excludesfile = /Users/glacier/.gitignore_global
   editor = nvim -c \"set fenc=utf-8\"
-[ghq] # mymac
-  root = /Users/glacier/Dropbox/dev/src/
 [ghq] #nislab
-  root = /Users/nis-hyoga/Dropbox/dev/src/
+  root = ~/Dropbox/dev/src/
