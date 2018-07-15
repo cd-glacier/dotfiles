@@ -95,6 +95,23 @@ go get -u github.com/golang/dep/cmd/dep
 go get github.com/motemen/ghq
 cd $GOROOT/github.com/motemen/ghq && make install
 
+# docker
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key list | grep docker -n1
+read --prompt="what is your apt key(last 8 symbols):" key
+sudo apt-key fingerprint $key
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt-get update
+sudo apt-get install docker-ce
+
 done
 ##### post-install #####
 sudo apt autoremove
