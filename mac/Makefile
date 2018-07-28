@@ -29,3 +29,6 @@ unlink:
 dein:
 	cd ../common/.config/dein;\
 	sh ./installer.sh .
+
+gitconfig:
+		ln -sf $(PWD)/../common/.gitconfig ~/.gitconfig; \

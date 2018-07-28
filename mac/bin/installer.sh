@@ -51,3 +51,9 @@ brew install reattach-to-user-namespace
 
 # ruby
 brew install ctags
+
+# qmk
+brew tap osx-cross/avr
+brew install avr-gcc
+brew install avrdude
+
