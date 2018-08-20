@@ -43,3 +43,6 @@ function fish_right_prompt
 	echo [(git_branch)]
 end
 
+##### alias #####
+alias lg="lazygit"
+
