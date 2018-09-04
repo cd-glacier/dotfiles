@@ -1,5 +1,5 @@
 function gch
-  git branch -a | peco --prompt " git checkout to >><(( o> " | tr -d ' ' | read branch
+  git branch -a | fzf --reverse | tr -d ' ' | read branch
   echo $branch
   if [ $branch ]
       if contains $branch "remotes/"
@@ -11,3 +11,4 @@ function gch
   end
   commandline -f repaint
 end
+

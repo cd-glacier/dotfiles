@@ -1,3 +1,7 @@
+# fzf * ghq
 function github
-  cd (ghq list -p | peco --prompt " move to git repository >><(( o>")
+  ghq list --full-path | fzf --reverse --border --preview 'cat {}/README.md' --preview-window down:20 | read dist
+  commandline $dist
 end
+
+

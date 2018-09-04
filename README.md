@@ -15,7 +15,7 @@ Setup my setting for...
  * neovim with dein
  * fish shell
  * tmux
- * peco
+ * fzf
  * git
  * ideavim
 

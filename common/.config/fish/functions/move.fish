@@ -1,7 +1,7 @@
-set TARGETS ~/Dropbox/tmp-work ~/Dropbox/doshisha
+set TARGETS ~/workspace
 
-function move 
-  find $TARGETS -type d | peco --prompt " go to >><(( o> " | read dist
+function move
+  find $TARGETS -type d | fzfcat --preview 'cd {} && tree -L 3' | read dist
 	cd $dist
 end
 

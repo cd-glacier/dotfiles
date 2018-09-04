@@ -46,7 +46,7 @@ brew cask install docker #docker for mac
 # shell
 brew install fish
 brew install tmux
-brew install ghq peco
+brew install ghq fzf
 brew install reattach-to-user-namespace
 
 # ruby

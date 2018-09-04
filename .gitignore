@@ -18,7 +18,6 @@ common/.config/google-chrome/
 !common/.config/nvim/go.toml
 !common/.config/nvim/ruby.toml
 !common/.config/nvim/init.vim
-!common/.config/peco/config.json
 !common/.gitconfig
 !common/.gitignore_global
 !common/.ideavimrc

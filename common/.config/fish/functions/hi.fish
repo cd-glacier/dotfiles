@@ -1,5 +1,5 @@
 
 function hi
-  commandline (history | peco --prompt " history >><(( o> ")
+  commandline (history | fzfsmall)
 end
 

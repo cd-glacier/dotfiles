@@ -1,7 +1,7 @@
 .PHONY: help
 .DEFAULT_GOAL := help
 
-LINKED_COMMON_FILES = .config/dein .config/fish .config/nvim .config/peco .gitignore_global .ideavimrc
+LINKED_COMMON_FILES = .config/dein .config/fish .config/nvim .gitignore_global .ideavimrc
 LINKED_LOCAL_FILES = .bash_profile .tmux.conf
 LINKED_FILES += $(LINKED_COMMON_FILES)
 LINKED_FILES += $(LINKED_LOCAL_FILES)
