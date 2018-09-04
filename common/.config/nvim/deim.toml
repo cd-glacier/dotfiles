@@ -100,3 +100,18 @@ repo = 'rogpeppe/godef'
 
 [[plugins]] # visualize end space
 repo = 'ntpeters/vim-better-whitespace'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+merged = '0'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_add = '''
+  nmap ; :Buffers
+  nmap ' :Files
+  nmap a :Ag
+'''
+
