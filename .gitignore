@@ -14,7 +14,7 @@ common/.config/google-chrome/
 !common/.config/fish/functions/*.fish
 !common/.config/fish/config.fish
 !common/.config/nvim/spell/*.add
-!common/.config/nvim/deim.toml
+!common/.config/nvim/dein.toml
 !common/.config/nvim/go.toml
 !common/.config/nvim/ruby.toml
 !common/.config/nvim/init.vim

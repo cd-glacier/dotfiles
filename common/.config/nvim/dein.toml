@@ -112,6 +112,6 @@ depends = 'fzf'
 hook_add = '''
   nmap ; :Buffers
   nmap ' :Files
-  nmap a :Ag
+  nmap ,a :Ag
 '''
 
