@@ -98,3 +98,5 @@ repo = 'nsf/gocode'
 [[plugins]] # 定義jump
 repo = 'rogpeppe/godef'
 
+[[plugins]] # visualize end space
+repo = 'ntpeters/vim-better-whitespace'
