@@ -1,6 +1,6 @@
 # fzf * ghq
 function github
-  ghq list --full-path | fzf --reverse --border --preview 'cat {}/README.md' --preview-window down:20 | read dist
+  ghq list --full-path | fzfcat --preview 'bat --color always {}/README.md' | read dist
   commandline $dist
 end
 
