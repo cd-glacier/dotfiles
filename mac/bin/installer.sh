@@ -48,6 +48,7 @@ brew install fish
 brew install tmux
 brew install ghq fzf
 brew install reattach-to-user-namespace
+brew install bat
 
 # ruby
 brew install ctags
