@@ -12,7 +12,5 @@ function gl
     git diff --name-only $first_commit_id[1] $second_commit_id[1] \
     | fzfcat --preview 'git diff --color=always $first_commit_id $second_commit_id -- {}'
   end
-
-
 end
 

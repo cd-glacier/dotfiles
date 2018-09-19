@@ -1,7 +1,7 @@
 
 ##### vi mode #####
 # vi modeではなんか[I]みたいなの出るからオーバーライド
-function fish_mode_prompt 
+function fish_mode_prompt
 end
 
 ## vi mode
@@ -10,10 +10,10 @@ fish_vi_key_bindings
 ##### prompt #####
 
 ## prompt
-function fish_prompt 
+function fish_prompt
   if [ $status -eq 0 ]
     set fish_face ">><(( o> "
-  else 
+  else
     set fish_face ">><(( x> "
   end
 
@@ -42,7 +42,4 @@ end
 function fish_right_prompt
 	echo [(git_branch)]
 end
-
-##### alias #####
-alias lg="lazygit"
 
