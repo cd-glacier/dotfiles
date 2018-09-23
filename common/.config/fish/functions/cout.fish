@@ -1,4 +1,4 @@
-function gch
+function cout
   git branch -a | fzf --reverse | tr -d ' ' | read branch
   echo $branch
   if [ $branch ]

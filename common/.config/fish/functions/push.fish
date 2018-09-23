@@ -1,4 +1,4 @@
-function gp
+function push
   echo git push origin (git_branch)
   if [ (git_branch) = "master" ]
    read --prompt="echo 'Your branch is master. push origin master? (Y/n):'" yn

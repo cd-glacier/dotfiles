@@ -1,4 +1,4 @@
-function gs
+function gstatus
   echo git status
   git status
 end
