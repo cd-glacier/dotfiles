@@ -7,19 +7,21 @@ hook_add = '''
   let g:airline_theme='bubblegum'
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#branch#enabled = 0
-  let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#readonly#enabled = 0
+  let g:airline#extensions#tabline#enabled = 1
   let g:airline_section_c = ''
 '''
-
-[[plugins]]
-repo = 'Yggdroot/indentLine'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
-repo = 'MarSoft/nerdtree-grep-plugin'
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+  let g:indent_guides_enable_on_vim_startup = 1
+  let g:indent_guides_auto_colors = 0
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
+'''
 
 [[plugins]] # color schema
 repo = 'w0ng/vim-hybrid'
@@ -31,60 +33,8 @@ hook_add = '''
 [[plugins]] # 括弧補完
 repo = "cohama/lexima.vim"
 
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-  let g:deoplete#enable_at_startup = 1
-'''
-
 [[plugins]] # auto indent
 repo = "Chiel92/vim-autoformat"
-
-[[plugins]] # highlight
-repo = 'derekwyatt/vim-scala'
-hook_add = '''
-  " scalaファイル読み込み時にsetf scala
-  au BufNewFile,BufRead *.scala setf scala
-  let g:auto_ctags = 1
-  let g:formatdef_scalafmt = "'scalafmt --stdin'"
-  let g:formatters_scala = ['scalafmt']
-  " scala fmt	
-  autocmd BufWritePre *.scala Autoformat 
-'''
-
-[[plugins]] # syntax highlight
-repo = 'othree/yajs.vim'
-
-[[plugins]] # esformatter
-repo = 'millermedeiros/vim-esformatter'
-hook_add = '''
-  " jsxで保存時にesformatter
-  " autocmd BufWritePre *.jsx Esformatter
-  " autocmd BufWritePre *.js Esformatter
-'''
-
-[[plugins]]
-repo = 'landaire/deoplete-swift'
-
-[[plugins]]
-repo = 'keith/swift.vim'
-hook_add = '''
-  " swift
-  " let g:deoplete#sources#swift#daemon_autostart = 1
-  let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
-'''
-
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-
-[[plugins]]
-repo = 'eagletmt/neco-ghc'
-
-[[plugins]]
-repo = 'eagletmt/ghcmod-vim'
-
-[[plugins]]
-repo = 'rhysd/vim-wasm'
 
 [[plugins]]
 repo = 'fatih/vim-go'
@@ -98,7 +48,28 @@ repo = 'nsf/gocode'
 [[plugins]] # 定義jump
 repo = 'rogpeppe/godef'
 
-[[plugins]] # visualize end space
+[[plugins]] # syntax highlight
+repo = 'othree/yajs.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]] # haskell
+repo = 'eagletmt/neco-ghc'
+
+[[plugins]] # haskell
+repo = 'eagletmt/ghcmod-vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+  let g:python_host_prog='/usr/bin/python'
+  let g:python3_host_prog='/opt/brew/bin/python3'
+'''
+
+[[plugins]] # 末尾spaceの可視化
 repo = 'ntpeters/vim-better-whitespace'
 
 [[plugins]]
@@ -113,5 +84,11 @@ hook_add = '''
   nmap ; :Buffers
   nmap ' :Files
   nmap ,a :Ag
+'''
+
+[[plugins]] # snake_case CamelCaseのmotionに対応
+repo = 'chaoren/vim-wordmotion'
+hook_add = '''
+  let g:wordmotion_spaces = '_-.'
 '''
 
