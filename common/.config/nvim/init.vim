@@ -20,8 +20,8 @@ set ruler
 set nohlsearch
 " タイトル表示
 set title
-" 対応括弧をハイライト表示する 
-set showmatch 
+" 対応括弧をハイライト表示する
+set showmatch
 " 対応括弧の表示秒数を3秒にする
 set matchtime=3
 "ポップアップバーの色
@@ -39,7 +39,7 @@ set laststatus=2
 " コマンドを画面下に表示させる
 "set showcmd
 " タブ、空白、改行の可視化
-set list
+" set list
 set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
 " vue.js
 autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
@@ -49,7 +49,7 @@ autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 map ,st :%!java -jar /home/me/bin/scalariform.jar -f -q +compactControlReadability +alignParameters +alignSingleLineCaseStatements +doubleIndentClassDeclaration +preserveDanglingCloseParenthesis +rewriteArrowSymbols +preserveSpaceBeforeArguments --stdin --stdout <CR>
 " spell check
 set spelllang+=cjk
-set spell 
+set spell
 hi clear SpellBad
 hi SpellBad cterm=underline
 " set colorを制限して重くなるのを回避
@@ -58,7 +58,7 @@ set synmaxcol=200
 autocmd Filetype haskell setlocal ts=4 sts=4 sw=4 expandtab
 " 括弧の対応色の色
 let loaded_matchparen = 1
-" cursor guide
+" cursor line
 set cursorline
 set cursorcolumn
 
@@ -71,7 +71,7 @@ set shiftwidth=2
 " 入力モード中に素早くJJと入力した場合はESCとみなす
 inoremap jj <Esc>
 " 文字がない場所にもカーソルを移動できるようにする
-"set virtualedit=all 
+"set virtualedit=all
 " backspace効かないので
 set backspace=indent,eol,start
 " マウス対応
@@ -110,8 +110,12 @@ if &term =~ "xterm"
 endif
 " escape遅いの回避
 set ttimeoutlen=10
-" tabnewをTに
+" vim-tagsのjumpをgdに
+nnoremap gd g<C-]>
+" 新しいtabのコマンドをTに
 command T tabnew
+" json format with jq
+command JQ %!jq '.'
 
 """others"""
 " 補完の際の大文字小文字の区別しない
@@ -128,6 +132,18 @@ set nocompatible
 set ttimeout
 set ttimeoutlen=50
 
+function! <SID>AutoProjectRootCD()
+  try
+    if &ft != 'help'
+      ProjectRootCD
+    endif
+  catch
+    " Silently ignore invalid buffers
+  endtry
+endfunction
+
+autocmd BufEnter * call <SID>AutoProjectRootCD()
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -138,9 +154,8 @@ endif
 " したと仮定
 let deinroot = "~/.config/dein/."
 let $DEIN_PATH= deinroot . "/repos/github.com/Shougo/dein.vim"
-let s:toml = "~/.config/nvim/deim.toml"
-let s:rubytoml = "~/.config/nvim/ruby.toml"
-let s:gotoml = "~/.config/nvim/go.toml"
+let s:toml = "~/.config/nvim/dein.toml"
+let s:ruby = "~/.config/nvim/ruby.toml"
 
 " Required:
 set runtimepath+=$DEIN_PATH
@@ -150,8 +165,7 @@ if dein#load_state(deinroot)
   call dein#begin(deinroot)
   call dein#add($DEIN_PATH)
   call dein#load_toml(s:toml, {'lazy': 0})
-  call dein#load_toml(s:gotoml, {'lazy': 1})
-  call dein#load_toml(s:rubytoml, {'lazy': 2})
+  call dein#load_toml(s:ruby, {'lazy': 1})
   call dein#end()
   call dein#save_state()
 endif
@@ -159,7 +173,6 @@ endif
 " Required:
 filetype plugin indent on
 syntax enable
-let g:deoplete#enable_at_startup = 1
 
 "End dein Scripts-------------------------
 
