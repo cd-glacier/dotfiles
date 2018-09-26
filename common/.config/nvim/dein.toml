@@ -48,6 +48,14 @@ repo = 'nsf/gocode'
 [[plugins]] # 定義jump
 repo = 'rogpeppe/godef'
 
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+hook_add = '''
+  let g:syntastic_mode_map = { 'mode': 'passive',
+    \ 'active_filetypes': ['go'] }
+  let g:syntastic_go_checkers = ['go', 'golint']
+'''
+
 [[plugins]] # syntax highlight
 repo = 'othree/yajs.vim'
 
@@ -66,7 +74,7 @@ repo = 'Shougo/deoplete.nvim'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
   let g:python_host_prog='/usr/bin/python'
-  let g:python3_host_prog='/opt/brew/bin/python3'
+  let g:python3_host_prog='/usr/local/bin/python3'
 '''
 
 [[plugins]] # 末尾spaceの可視化
