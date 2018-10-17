@@ -52,6 +52,11 @@ brew install bat
 
 # ruby
 brew install ctags
+gem install soloargraph
+
+# go
+brew install go
+go get -u github.com/sourcegraph/go-langserver
 
 # qmk
 brew tap osx-cross/avr

@@ -4,13 +4,16 @@ repo = 'vim-airline/vim-airline'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
-  let g:airline_theme='bubblegum'
+  let g:airline_theme='distinguished'
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#branch#enabled = 0
   let g:airline#extensions#readonly#enabled = 0
   let g:airline#extensions#tabline#enabled = 1
   let g:airline_section_c = ''
 '''
+
+[[plugins]]
+repo = 'edkolev/tmuxline.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -35,18 +38,6 @@ repo = "cohama/lexima.vim"
 
 [[plugins]] # auto indent
 repo = "Chiel92/vim-autoformat"
-
-[[plugins]]
-repo = 'fatih/vim-go'
-hook_add = '''
-  let g:go_fmt_command = "goimports"
-'''
-
-[[plugins]] # go補完
-repo = 'nsf/gocode'
-
-[[plugins]] # 定義jump
-repo = 'rogpeppe/godef'
 
 [[plugins]]
 repo = 'vim-syntastic/syntastic'
@@ -98,5 +89,27 @@ hook_add = '''
 repo = 'chaoren/vim-wordmotion'
 hook_add = '''
   let g:wordmotion_spaces = '_-.'
+'''
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = '''
+  set hidden
+
+  let g:LanguageClient_serverCommands = {
+      \ 'ruby': ['solargraph', 'stdio'],
+      \ 'go': ['go-langserver', 'stdio'],
+      \ }
+
+  " Or map each action separately
+  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+  nnoremap <C-t> <C-o>
+
+  " go
+  autocmd BufWritePre *.go :execute '%!goimports'
+  autocmd BufWritePre *.go :call LanguageClient_textDocument_formatting()
 '''
 
