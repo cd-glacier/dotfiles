@@ -20,3 +20,7 @@ param
 i32
 IoT
 qmk
+FuncDecl
+ast
+dir
+ident
