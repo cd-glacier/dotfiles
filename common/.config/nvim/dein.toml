@@ -80,15 +80,21 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-  nmap ; :Buffers
+  nmap " :Buffers
   nmap ' :Files
-  nmap ,a :Ag
+  nmap 'a :Ag
 '''
 
 [[plugins]] # snake_case CamelCaseのmotionに対応
 repo = 'chaoren/vim-wordmotion'
 hook_add = '''
   let g:wordmotion_spaces = '_-.'
+'''
+
+[[plugins]]
+repo = 'fatih/vim-go'
+hook_add = '''
+  let g:go_fmt_command = "goimports"
 '''
 
 [[plugins]]
@@ -99,17 +105,15 @@ hook_add = '''
   set hidden
 
   let g:LanguageClient_serverCommands = {
-      \ 'ruby': ['solargraph', 'stdio'],
       \ 'go': ['go-langserver', 'stdio'],
+      \ 'ruby': ['solargraph', 'stdio'],
+      \ 'sh': ['bash-language-server', 'start'],
       \ }
 
   " Or map each action separately
   nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
   nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+  nnoremap 'rn :call LanguageClient#textDocument_rename()<CR>
   nnoremap <C-t> <C-o>
-
-  " go
-  autocmd BufWritePre *.go :execute '%!goimports'
-  autocmd BufWritePre *.go :call LanguageClient_textDocument_formatting()
 '''
 

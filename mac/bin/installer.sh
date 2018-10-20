@@ -58,6 +58,10 @@ gem install soloargraph
 brew install go
 go get -u github.com/sourcegraph/go-langserver
 
+# sh LSP
+brew install yarn
+yarn global add bash-language-server
+
 # qmk
 brew tap osx-cross/avr
 brew install avr-gcc
