@@ -4,16 +4,13 @@ repo = 'vim-airline/vim-airline'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
-  let g:airline_theme='distinguished'
+  let g:airline_theme='nova'
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#branch#enabled = 0
   let g:airline#extensions#readonly#enabled = 0
   let g:airline#extensions#tabline#enabled = 1
   let g:airline_section_c = ''
 '''
-
-[[plugins]]
-repo = 'edkolev/tmuxline.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -27,10 +24,10 @@ hook_add = '''
 '''
 
 [[plugins]] # color schema
-repo = 'w0ng/vim-hybrid'
+repo = 'trevordmiller/nova-vim'
 hook_add = '''
-  colorscheme hybrid
-  set background=dark
+  colorscheme nova
+  " set background=dark
 '''
 
 [[plugins]] # 括弧補完
@@ -105,7 +102,6 @@ hook_add = '''
   set hidden
 
   let g:LanguageClient_serverCommands = {
-      \ 'go': ['go-langserver', 'stdio'],
       \ 'ruby': ['solargraph', 'stdio'],
       \ 'sh': ['bash-language-server', 'start'],
       \ }
