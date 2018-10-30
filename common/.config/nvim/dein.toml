@@ -1,4 +1,7 @@
 [[plugins]]
+repo = 'g-hyoga/rich-go-syntax-highlighter'
+
+[[plugins]]
 repo = 'vim-airline/vim-airline'
 
 [[plugins]] # color schema
@@ -91,6 +94,9 @@ hook_add = '''
 [[plugins]]
 repo = 'fatih/vim-go'
 hook_add = '''
+  let g:go_highlight_functions = 1
+  let g:go_highlight_methods = 1
+  let g:go_highlight_structs = 1
   let g:go_fmt_command = "goimports"
 '''
 
@@ -104,6 +110,9 @@ hook_add = '''
   let g:LanguageClient_serverCommands = {
       \ 'ruby': ['solargraph', 'stdio'],
       \ 'sh': ['bash-language-server', 'start'],
+      \ 'dockerfile': ['docker-langserver', '--stdio'],
+      \ 'javascript': ['node', '$GOPATH/src/github.com/sourcegraph/javascript-typescript-langserver/lib/language-server-stdio'],
+      \ 'yaml': ['node', '$GOPATH/src/github.com/redhat-developer/yaml-language-server/out/server/src/server.js', '--stdio'],
       \ }
 
   " Or map each action separately
@@ -112,4 +121,3 @@ hook_add = '''
   nnoremap 'rn :call LanguageClient#textDocument_rename()<CR>
   nnoremap <C-t> <C-o>
 '''
-

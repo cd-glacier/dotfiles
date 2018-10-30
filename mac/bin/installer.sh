@@ -1,5 +1,7 @@
 # mac用
 
+CURRENT_PATH=$(PWD)
+
 # homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -42,6 +44,10 @@ brew cask install sublime-text
 #brew cask install vagrant
 #brew cask install racket
 brew cask install docker #docker for mac
+brew install yarn
+
+# programming language
+brew install go
 
 # shell
 brew install fish
@@ -50,17 +56,30 @@ brew install ghq fzf
 brew install reattach-to-user-namespace
 brew install bat
 
+# LSP
 # ruby
-brew install ctags
 gem install soloargraph
 
 # go
-brew install go
 go get -u github.com/sourcegraph/go-langserver
 
-# sh LSP
-brew install yarn
+# bash
 yarn global add bash-language-server
+
+# Dockerfile
+yarn global add dockerfile-language-server-nodejs
+
+# js/ts
+ghq get https://github.com/sourcegraph/javascript-typescript-langserver.git && \
+  cd $GOPATH/src/github.com/sourcegraph/javascript-typescript-langserver && \
+  yarn build && \
+  cd $CURRENT_PATH
+
+# yaml
+ghq get https://github.com/redhat-developer/yaml-language-server.git && \
+  cd $GOPATH/src/github.com/redhat-developer/yaml-language-server/ && \
+  yarn && yarn run compile && \
+  cd $CURRENT_PATH
 
 # qmk
 brew tap osx-cross/avr
