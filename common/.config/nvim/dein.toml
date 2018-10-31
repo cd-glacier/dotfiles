@@ -1,5 +1,5 @@
-[[plugins]]
-repo = 'g-hyoga/rich-go-syntax-highlighter'
+#[[plugins]]
+#repo = 'g-hyoga/rich-go-syntax-highlighter'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
@@ -64,7 +64,7 @@ repo = 'eagletmt/ghcmod-vim'
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
-  let g:python_host_prog='/usr/bin/python'
+  let g:python_host_prog='/usr/local/bin/python2'
   let g:python3_host_prog='/usr/local/bin/python3'
 '''
 
@@ -121,3 +121,18 @@ hook_add = '''
   nnoremap 'rn :call LanguageClient#textDocument_rename()<CR>
   nnoremap <C-t> <C-o>
 '''
+
+[[plugins]]
+repo = "let-def/vimbufsync"
+on_ft = "coq"
+
+[[plugins]]
+repo = "the-lambda-church/coquille"
+on_ft = "coq"
+depends = ["vimbufsync"]
+hook_source = """
+  let CoqIDE_coqtop = '/usr/local/bin/coqtop'
+  nmap <silent> J :CoqNext<CR>
+  nmap <silent> K :CoqUndo<CR>
+  nmap <silent> L :CoqToCursor<CR>
+"""
