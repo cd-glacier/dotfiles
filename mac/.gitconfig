@@ -2,7 +2,7 @@
   email = hyoga0216@gmail.com
   name = g-hyoga
 [core]
-  excludesfile = /Users/glacier/.gitignore_global
+  excludesfile = ~/.gitignore_global
   editor = nvim -c \"set fenc=utf-8\"
-[ghq] #nislab
+[ghq]
   root = ~/Dropbox/dev/src/

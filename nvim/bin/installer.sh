@@ -27,7 +27,7 @@ echo "----- link files -----"
 LINK_FILES=(.config/dein .config/nvim)
 
 for file in ${LINK_FILES[@]}; do \
-  unlink ~/$file
+  unlink ~/$file&>/dev/null
 
 	ln -sf $(PWD)/nvim/$file ~/$file; \
 done

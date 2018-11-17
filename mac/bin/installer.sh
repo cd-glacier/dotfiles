@@ -1,88 +1,50 @@
-# mac用
+#!bin/bash
 
-CURRENT_PATH=$(PWD)
+echo "##### install mac app #####"
 
-# homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if test -z $(brew --prefix); then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install caskroom/cask/brew-cask
+fi
 
-#brew cask
-brew install caskroom/cask/brew-cask
+echo "----- install iterm -----"
+if [ -d /Applications/iTerm.app/ ]; then
+  echo "iterm already exists"
+else
+  brew cask install iterm2
+fi
 
-# font
-## firaCode
-git clone git@github.com:tonsky/FiraCode.git
-cp FiraCode/distr/ttf/FiraCode-Medium.ttf ~/Library/Fonts/
-rm -rf FiraCode
-## powerline code
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd ..
-rm -rf fonts
+echo "----- install other tools -----"
+if [ ! -d /Applications/Dropbox.app ]; then
+  brew cask install dropbox
+fi
+if [ ! -d "/Applications/Google Chrome.app" ]; then
+  brew cask install google-chrome
+fi
+if [ ! -d "/Applications/ShiftIt.app" ]; then
+  brew cask install shiftit
+fi
+if [ ! -d "/Applications/HyperSwitch.app" ]; then
+  brew cask install hyperswitch
+fi
+if [ ! -d "/Applications/Evernote.app" ]; then
+  brew cask install evernote
+fi
+if [ ! -d "/Applications/Slack.app" ]; then
+  brew cask install slack
+fi
 
-# terminal
-brew cask install iterm2
+if [ ! -d "/Applications/Docker.app" ]; then
+  brew cask install docker
+fi
 
-# tool
-#brew cask install dropbox
-#brew cask install google-chrome
-brew cask install shiftit
-brew cask install hyperswitch
-#brew cask install sketch
-#brew cask install evernote
-#brew cask install slack
-#brew cask install skype
+echo "----- install qmk dependencies -----"
+if [ -z $(which avr-gcc) ]; then
+  brew tap osx-cross/avr
+  brew install avr-gcc
+  brew install avrdude
+else
+  echo "qmk dependencies already exists"
+fi
 
-# programming
-brew install neovim/neovim/neovim
-brew install python3
-pip3 install neovim
-pip3 install neovim --upgrade
-brew cask install sublime-text
-#brew cask install intellij-idea
-#brew cask install virtualbox
-#brew cask install vagrant
-#brew cask install racket
-brew cask install docker #docker for mac
-brew install yarn
-
-# programming language
-brew install go
-
-# shell
-brew install fish
-brew install tmux
-brew install ghq fzf
-brew install reattach-to-user-namespace
-brew install bat
-
-# LSP
-# ruby
-gem install soloargraph
-
-# go
-go get -u github.com/sourcegraph/go-langserver
-
-# bash
-yarn global add bash-language-server
-
-# Dockerfile
-yarn global add dockerfile-language-server-nodejs
-
-# js/ts
-ghq get https://github.com/sourcegraph/javascript-typescript-langserver.git && \
-  cd $GOPATH/src/github.com/sourcegraph/javascript-typescript-langserver && \
-  yarn build && \
-  cd $CURRENT_PATH
-
-# yaml
-ghq get https://github.com/redhat-developer/yaml-language-server.git && \
-  cd $GOPATH/src/github.com/redhat-developer/yaml-language-server/ && \
-  yarn && yarn run compile && \
-  cd $CURRENT_PATH
-
-# qmk
-brew tap osx-cross/avr
-brew install avr-gcc
-brew install avrdude
-
+echo "##### finish to install mac apps #####"

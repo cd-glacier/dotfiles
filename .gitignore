@@ -6,17 +6,27 @@
 
 nvim/.config/dein/.cache/
 nvim/.config/dein/repos/
-langserver/
 
 # allow
 !Makefile
 !README.md
+
 !nvim/bin/*.sh
 !nvim/.config/dein/installer.sh
 !nvim/.config/nvim/init.vim
 !nvim/.config/nvim/dein.toml
 !nvim/.config/nvim/spell/en.utf-8.add
+
 !fish/bin/*.sh
 !fish/.config/fish/config.fish
 !fish/.config/fish/functions/*.fish
+
+!mac/bin/*.sh
+!mac/.bash_profile
+!mac/.gitconfig
+!mac/.gitignore_global
+!mac/.ideavimrc
+!mac/.tmux.conf
+!mac/.vimrc
+
 

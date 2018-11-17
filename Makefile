@@ -1,4 +1,4 @@
-.PHONY: help nvim fish
+.PHONY: help nvim fish mac
 .DEFAULT_GOAL := help
 
 clean: ## delete auto created file and directory
@@ -9,6 +9,15 @@ nvim: ## install and setup neovim
 
 fish: ## install and setup fish
 	bash ./fish/bin/installer.sh
+
+mac: ## install mac app
+	bash ./mac/bin/installer.sh
+
+terminal: ## setup terminal setting
+	bash ./mac/bin/terminal-setup.sh
+
+git: ## setup gitconfig and so on...
+	bash ./mac/bin/git-setup.sh
 
 help: ## show help to make
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

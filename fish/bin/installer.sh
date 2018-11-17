@@ -14,7 +14,7 @@ echo "----- link fish -----"
 LINK_FILES=(.config/fish)
 
 for file in ${LINK_FILES[@]}; do \
-  unlink ~/$file
+  unlink ~/$file&>/dev/null
 
 	ln -sf $(PWD)/fish/$file ~/$file; \
 done
