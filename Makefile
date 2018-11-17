@@ -1,6 +1,9 @@
 .PHONY: help nvim
 .DEFAULT_GOAL := help
 
+clean: ## delete auto created file and directory
+	rm -rf ./langserver
+
 nvim: ## install and setup neovim
 	bash ./nvim/bin/init.sh
 
