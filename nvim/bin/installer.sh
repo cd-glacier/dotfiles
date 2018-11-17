@@ -32,4 +32,4 @@ for file in ${LINK_FILES[@]}; do \
 	ln -sf $(PWD)/nvim/$file ~/$file; \
 done
 
-
+echo "##### finish to setup neovim #####"
