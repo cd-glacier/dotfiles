@@ -12,6 +12,8 @@ syntax on
 " 行番号の表示
 set number
 autocmd ColorScheme * highlight LineNr ctermfg=10
+" カーソル行の強調
+set cursorline
 " 右下に表示される行・列の番号を表示する
 set ruler
 " 検索した文字を強調
@@ -130,40 +132,32 @@ set nocompatible
 set ttimeout
 set ttimeoutlen=50
 
-function! <SID>AutoProjectRootCD()
-  try
-    if &ft != 'help'
-      ProjectRootCD
-    endif
-  catch
-    " Silently ignore invalid buffers
-  endtry
-endfunction
-
-autocmd BufEnter * call <SID>AutoProjectRootCD()
+let CoqIDE_coqtop = "/usr/local/bin/coqtop"
+filetype plugin on
 
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
 endif
 
-" ~/.config/deinで
-" sh installer.sh .
-" したと仮定
-let deinroot = "~/.config/dein/."
-let $DEIN_PATH= deinroot . "/repos/github.com/Shougo/dein.vim"
-let s:toml = "~/.config/nvim/dein.toml"
-let s:ruby = "~/.config/nvim/ruby.toml"
+" Required:
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+let s:toml = "~/.vim/dein.toml"
 
 " Required:
-set runtimepath+=$DEIN_PATH
+if dein#load_state('~/.vim/dein/')
+  call dein#begin('~/.vim/dein/')
 
-" Required:
-if dein#load_state(deinroot)
-  call dein#begin(deinroot)
-  call dein#add($DEIN_PATH)
+  " Let dein manage dein
+  " Required:
+  call dein#add('~/.vim/dein//repos/github.com/Shougo/dein.vim')
   call dein#load_toml(s:toml, {'lazy': 0})
-  call dein#load_toml(s:ruby, {'lazy': 1})
+
+  " Add or remove your plugins here like this:
+  "call dein#add('Shougo/neosnippet.vim')
+  "call dein#add('Shougo/neosnippet-snippets')
+
+  " Required:
   call dein#end()
   call dein#save_state()
 endif
@@ -172,43 +166,10 @@ endif
 filetype plugin indent on
 syntax enable
 
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
 "End dein Scripts-------------------------
 
-" http://cohama.hateblo.jp/?page=1376705613
-function! s:get_syn_id(transparent)
-  let synid = synID(line("."), col("."), 1)
-  if a:transparent
-    return synIDtrans(synid)
-  else
-    return synid
-  endif
-endfunction
-function! s:get_syn_attr(synid)
-  let name = synIDattr(a:synid, "name")
-  let ctermfg = synIDattr(a:synid, "fg", "cterm")
-  let ctermbg = synIDattr(a:synid, "bg", "cterm")
-  let guifg = synIDattr(a:synid, "fg", "gui")
-  let guibg = synIDattr(a:synid, "bg", "gui")
-  return {
-        \ "name": name,
-        \ "ctermfg": ctermfg,
-        \ "ctermbg": ctermbg,
-        \ "guifg": guifg,
-        \ "guibg": guibg}
-endfunction
-function! s:get_syn_info()
-  let baseSyn = s:get_syn_attr(s:get_syn_id(0))
-  echo "name: " . baseSyn.name .
-        \ " ctermfg: " . baseSyn.ctermfg .
-        \ " ctermbg: " . baseSyn.ctermbg .
-        \ " guifg: " . baseSyn.guifg .
-        \ " guibg: " . baseSyn.guibg
-  let linkedSyn = s:get_syn_attr(s:get_syn_id(1))
-  echo "link to"
-  echo "name: " . linkedSyn.name .
-        \ " ctermfg: " . linkedSyn.ctermfg .
-        \ " ctermbg: " . linkedSyn.ctermbg .
-        \ " guifg: " . linkedSyn.guifg .
-        \ " guibg: " . linkedSyn.guibg
-endfunction
-command! SyntaxInfo call s:get_syn_info()

@@ -4,38 +4,29 @@
 *
 !*/
 
-common/.config/dein/.cache/
-common/.config/dein/repos/
-common/.config/google-chrome/
+nvim/.config/dein/.cache/
+nvim/.config/dein/repos/
 
-# allow any
-!bin/install.sh
-!common/.config/dein/installer.sh
-!common/.config/fish/functions/*.fish
-!common/.config/fish/config.fish
-!common/.config/nvim/spell/*.add
-!common/.config/nvim/dein.toml
-!common/.config/nvim/go.toml
-!common/.config/nvim/ruby.toml
-!common/.config/nvim/init.vim
-!common/.gitconfig
-!common/.gitignore_global
-!common/.ideavimrc
-!common/.tmux.conf
-!keyboards/lets_split/glacier/config.h
-!keyboards/lets_split/glacier/keymap.c
-!keyboards/lets_split/glacier/rules.mk
-!mac/bin/installer.sh
-!mac/Makefile
-!mac/.bash_profile
-!mac/.tmux.conf
-!ubuntu/bin/installer.sh
-!ubuntu/bin/run-xmodmap.sh
-!ubuntu/Makefile
-!ubuntu/.bashrc
-!ubuntu/.tmux.conf
-!ubuntu/.Xmodmap
-!ubuntu/.Xmodmap_default
+# allow
 !Makefile
 !README.md
+
+!nvim/bin/*.sh
+!nvim/.config/dein/installer.sh
+!nvim/.config/nvim/init.vim
+!nvim/.config/nvim/dein.toml
+!nvim/.config/nvim/spell/en.utf-8.add
+
+!fish/bin/*.sh
+!fish/.config/fish/config.fish
+!fish/.config/fish/functions/*.fish
+
+!mac/bin/*.sh
+!mac/.bash_profile
+!mac/.gitconfig
+!mac/.gitignore_global
+!mac/.ideavimrc
+!mac/.tmux.conf
+!mac/.vimrc
+
 
