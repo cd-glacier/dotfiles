@@ -4,6 +4,11 @@
 *
 !*/
 
+nvim/.config/dein/.cache/
+nvim/.config/dein/repos/
+langserver/
+
+# allow
 !Makefile
 !README.md
 !nvim/bin/*.sh

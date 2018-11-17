@@ -1,0 +1,141 @@
+#[[plugins]]
+#repo = 'g-hyoga/rich-go-syntax-highlighter'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]] # color schema
+repo = 'trevordmiller/nova-vim'
+hook_add = '''
+  colorscheme nova
+  set background=dark
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+  let g:airline_theme='nova'
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#branch#enabled = 0
+  let g:airline#extensions#readonly#enabled = 0
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline_section_c = ''
+'''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+  let g:indent_guides_enable_on_vim_startup = 1
+  let g:indent_guides_start_level = 2
+  let g:indent_guides_guide_size = 1
+'''
+
+[[plugins]] # 括弧補完
+repo = "cohama/lexima.vim"
+
+[[plugins]] # auto indent
+repo = "Chiel92/vim-autoformat"
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+hook_add = '''
+  let g:syntastic_mode_map = { 'mode': 'passive',
+    \ 'active_filetypes': ['go'] }
+  let g:syntastic_go_checkers = ['go', 'golint']
+'''
+
+[[plugins]] # syntax highlight
+repo = 'othree/yajs.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]] # haskell
+repo = 'eagletmt/neco-ghc'
+
+[[plugins]] # haskell
+repo = 'eagletmt/ghcmod-vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+  let g:python_host_prog='/usr/local/bin/python2'
+  let g:python3_host_prog='/usr/local/bin/python3'
+'''
+
+[[plugins]] # 末尾spaceの可視化
+repo = 'ntpeters/vim-better-whitespace'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+merged = '0'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_add = '''
+  nmap " :Buffers
+  nmap ' :Files
+  nmap 'a :Ag
+'''
+
+[[plugins]] # snake_case CamelCaseのmotionに対応
+repo = 'chaoren/vim-wordmotion'
+hook_add = '''
+  let g:wordmotion_spaces = '_-.'
+'''
+
+[[plugins]]
+repo = 'fatih/vim-go'
+hook_add = '''
+  let g:go_highlight_functions = 1
+  let g:go_highlight_methods = 1
+  let g:go_highlight_structs = 1
+  let g:go_fmt_command = "goimports"
+'''
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = '''
+  set hidden
+
+  let g:LanguageClient_serverCommands = {
+      \ 'ruby': ['solargraph', 'stdio'],
+      \ 'sh': ['bash-language-server', 'start'],
+      \ 'dockerfile': ['docker-langserver', '--stdio'],
+      \ 'javascript': ['node', '/langserver/javascript-typescript-langserver/lib/language-server-stdio'],
+      \ 'yaml': ['node', '/langserver/yaml-language-server/out/server/src/server.js', '--stdio'],
+      \ }
+
+  " Or map each action separately
+  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+  nnoremap 'rn :call LanguageClient#textDocument_rename()<CR>
+  nnoremap <C-t> <C-o>
+'''
+
+[[plugins]]
+repo = "let-def/vimbufsync"
+on_ft = "coq"
+hook_add = '''
+  highlight link CheckedByCoq DiffAdd
+'''
+
+[[plugins]]
+repo = "the-lambda-church/coquille"
+on_ft = "coq"
+depends = ["vimbufsync"]
+hook_source = """
+  let CoqIDE_coqtop = '/usr/local/bin/coqtop'
+  nmap <silent> <C-c><C-j> :CoqNext<CR>
+  nmap <silent> <C-c><C-k> :CoqUndo<CR>
+  nmap <silent> <C-c><C-l> :CoqToCursor<CR>
+"""
