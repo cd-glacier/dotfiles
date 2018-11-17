@@ -111,8 +111,8 @@ hook_add = '''
       \ 'ruby': ['solargraph', 'stdio'],
       \ 'sh': ['bash-language-server', 'start'],
       \ 'dockerfile': ['docker-langserver', '--stdio'],
-      \ 'javascript': ['node', '/langserver/javascript-typescript-langserver/lib/language-server-stdio'],
-      \ 'yaml': ['node', '/langserver/yaml-language-server/out/server/src/server.js', '--stdio'],
+      \ 'javascript': ['node', '~/langserver/javascript-typescript-langserver/lib/language-server-stdio'],
+      \ 'yaml': ['node', '~/langserver/yaml-language-server/out/server/src/server.js', '--stdio'],
       \ }
 
   " Or map each action separately

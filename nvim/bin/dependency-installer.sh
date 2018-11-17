@@ -16,8 +16,8 @@ fi
 
 echo "##### install Language Server #####"
 
-if [ ! -e ./langserver ]; then
-  mkdir ./langserver
+if [ ! -d ~/langserver ]; then
+  mkdir ~/langserver
 fi
 
 echo "----- install solargraph -----"
@@ -36,10 +36,10 @@ if test -z $(which docker-langserver); then
 fi
 
 echo "----- install javascript-typescript-langserver -----"
-if test -e $CURRENT_PATH/langserver/javascript-typescript-langserver/lib/language-server-stdio.js; then
+if test -e ~/langserver/javascript-typescript-langserver/lib/language-server-stdio.js; then
   echo "javascript-typescript-langserver already exists"
 else
-  cd "$CURRENT_PATH/langserver" && \
+  cd ~/langserver && \
     git clone https://github.com/sourcegraph/javascript-typescript-langserver.git && \
     cd javascript-typescript-langserver && \
     yarn && yarn build && \
@@ -47,10 +47,10 @@ else
 fi
 
 echo "----- install yaml-language-server -----"
-if test -e $CURRENT_PATH/langserver/yaml-language-server/out/server/src/server.js; then
+if test -e ~/langserver/yaml-language-server/out/server/src/server.js; then
   echo "yaml-language-server already exists"
 else
-  cd "$CURRENT_PATH/langserver" && \
+  cd ~/langserver && \
     git clone https://github.com/redhat-developer/yaml-language-server.git && \
     cd yaml-language-server && \
     yarn && yarn run compile && \
