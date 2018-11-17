@@ -125,6 +125,9 @@ hook_add = '''
 [[plugins]]
 repo = "let-def/vimbufsync"
 on_ft = "coq"
+hook_add = '''
+  highlight link CheckedByCoq DiffAdd
+'''
 
 [[plugins]]
 repo = "the-lambda-church/coquille"
@@ -132,7 +135,7 @@ on_ft = "coq"
 depends = ["vimbufsync"]
 hook_source = """
   let CoqIDE_coqtop = '/usr/local/bin/coqtop'
-  nmap <silent> J :CoqNext<CR>
-  nmap <silent> K :CoqUndo<CR>
-  nmap <silent> L :CoqToCursor<CR>
+  nmap <silent> <C-c><C-j> :CoqNext<CR>
+  nmap <silent> <C-c><C-k> :CoqUndo<CR>
+  nmap <silent> <C-c><C-l> :CoqToCursor<CR>
 """

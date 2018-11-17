@@ -12,8 +12,6 @@ syntax on
 " 行番号の表示
 set number
 autocmd ColorScheme * highlight LineNr ctermfg=10
-" カーソル行の強調
-set cursorline
 " 右下に表示される行・列の番号を表示する
 set ruler
 " 検索した文字を強調
