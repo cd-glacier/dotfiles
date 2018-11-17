@@ -1,6 +1,8 @@
 .PHONY: help nvim fish mac
 .DEFAULT_GOAL := help
 
+init: nvim fish mac terminal git ## setup and install all
+
 clean: ## delete auto created file and directory
 	rm -rf ~/langserver
 

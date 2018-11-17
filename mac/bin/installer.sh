@@ -1,6 +1,6 @@
 #!bin/bash
 
-echo "##### install mac app #####"
+echo "##### install mac apps #####"
 
 if test -z $(brew --prefix); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

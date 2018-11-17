@@ -1,22 +1,34 @@
-# DotDotDot
-My dotfile and setup shell for ubuntu and mac
+# DotDotDot...
+
+setup for...
+
+ * neovim
+ * fish
+ * tmux
+ * mac apps
+ * git env
 
 ## setup
 
 ```sh
-make init 
+make init
 ```
 
-Install my favorite tool and setup my terminal environment
+## setup only neovim
 
+```sh
+make nvim
+```
 
-Setup my setting for...
+## setup only fish 
 
- * neovim with dein
- * fish shell
- * tmux
- * fzf
- * git
- * ideavim
+```sh
+make fish
+```
 
+## help
+
+```sh
+make help
+```
 
