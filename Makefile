@@ -6,6 +6,14 @@ init: nvim fish mac terminal git ## setup and install all
 clean: ## delete auto created file and directory
 	rm -rf ~/langserver
 
+nvim-clean: ## when python3 neovim is broken, run this.
+	rm -rf /usr/local/lib/python3.7/site-packages/
+	brew uninstall --ignore-dependencies python3
+	rm -rf ~/.config/dein/.cache
+	rm -rf ~/.config/dein/cache_nvim
+	brew insall python3
+	pip3 install neovim
+
 nvim: ## install and setup neovim
 	bash ./nvim/bin/installer.sh
 
