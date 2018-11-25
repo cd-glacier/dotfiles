@@ -39,14 +39,6 @@ repo = "cohama/lexima.vim"
 [[plugins]] # auto indent
 repo = "Chiel92/vim-autoformat"
 
-[[plugins]]
-repo = 'vim-syntastic/syntastic'
-hook_add = '''
-  let g:syntastic_mode_map = { 'mode': 'passive',
-    \ 'active_filetypes': ['go'] }
-  let g:syntastic_go_checkers = ['go', 'golint']
-'''
-
 [[plugins]] # syntax highlight
 repo = 'othree/yajs.vim'
 
@@ -123,10 +115,11 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = "let-def/vimbufsync"
-on_ft = "coq"
+repo = 'w0rp/ale'
 hook_add = '''
-  highlight link CheckedByCoq DiffAdd
+  let g:ale_sign_error = '⌶'
+  let g:ale_sign_warning = '▻'
+  highlight link ALEWarningSign Special
 '''
 
 [[plugins]]
@@ -139,3 +132,6 @@ hook_source = """
   nmap <silent> <C-c><C-k> :CoqUndo<CR>
   nmap <silent> <C-c><C-l> :CoqToCursor<CR>
 """
+
+[[plugins]]
+repo = 'amdt/vim-niji'
