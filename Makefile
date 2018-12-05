@@ -11,7 +11,7 @@ nvim-clean: ## when python3 neovim is broken, run this.
 	brew uninstall --ignore-dependencies python3
 	rm -rf ~/.config/dein/.cache
 	rm -rf ~/.config/dein/cache_nvim
-	brew insall python3
+	brew install python3
 	pip3 install neovim
 
 nvim: ## install and setup neovim

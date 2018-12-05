@@ -72,15 +72,15 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-  nmap " :Buffers
-  nmap ' :Files
+  nmap ' :Buffers
+  nmap " :Files
   nmap 'a :Ag
 '''
 
 [[plugins]] # snake_case CamelCaseのmotionに対応
 repo = 'chaoren/vim-wordmotion'
 hook_add = '''
-  let g:wordmotion_spaces = '_-.'
+  let g:wordmotion_spaces = '_-.\n'
 '''
 
 [[plugins]]
@@ -132,6 +132,3 @@ hook_source = """
   nmap <silent> <C-c><C-k> :CoqUndo<CR>
   nmap <silent> <C-c><C-l> :CoqToCursor<CR>
 """
-
-[[plugins]]
-repo = 'amdt/vim-niji'
