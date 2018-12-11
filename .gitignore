@@ -10,6 +10,7 @@ nvim/.config/dein/repos/
 # allow
 !Makefile
 !README.md
+!bin/*.sh
 
 !nvim/bin/*.sh
 !nvim/.config/dein/installer.sh

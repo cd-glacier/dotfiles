@@ -2,7 +2,7 @@
 
 echo "##### setup neovim #####"
 
-if test -z $(brew --prefix); then
+if test -z $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew install caskroom/cask/brew-cask
 fi

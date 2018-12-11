@@ -29,6 +29,9 @@ terminal: ## setup terminal setting
 git: ## setup gitconfig and so on...
 	bash ./mac/bin/git-setup.sh
 
+health: ## check whether my dotfiles are linked
+	bash ./bin/check-health.sh
+
 help: ## show help to make
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
