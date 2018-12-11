@@ -51,8 +51,7 @@ else
   if [ ! -d ~/.config/dein ]; then
     alert "not exists ~/.config/dein"
   else
-    # TODO: want not to depend on installer.sh
-    check_file ~/.config/dein/installer.sh alert
+    check_file ~/.config/dein/installer.sh warn
   fi
 
   echo "----- check ~/.config/fish -----"
