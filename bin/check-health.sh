@@ -60,22 +60,18 @@ else
     alert "not exists ~/.config/fish"
   else
     check_file ~/.config/fish/config.fish alert
-    check_directory ~/.config/fish/functions
+    check_directory ~/.config/fish/functions alert
   fi
 fi
 
 echo "----- check root dotfiles -----"
 NECESSARY_FILES=(.bash_profile .tmux.conf)
 for file in ${NECESSARY_FILES[@]}; do \
-  if [ ! -f ~/$file ]; then
-    alert "not exits $file"
-  fi
+  check_file ~/$file alert
 done
 
 echo "----- check optional root dotfiles -----"
 OPTION_FILES=(.ideavimrc .vimrc .gitconfig .gitignore_global)
 for file in ${OPTION_FILES[@]}; do \
-  if [ ! -f ~/$file ]; then
-    warn "not exits $file"
-  fi
+  check_file ~/$file warn
 done
