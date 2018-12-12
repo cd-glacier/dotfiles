@@ -51,5 +51,5 @@ fi
 # .configディレクトリがなければ
 if ! test -d .config; then
   # do anything
-di
+fi
 ```
