@@ -33,3 +33,5 @@ neovim
 dein
 got
 fn
+tex
+dvi
