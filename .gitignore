@@ -13,6 +13,7 @@ nvim/.config/dein/repos/
 !bin/*.sh
 
 !nvim/bin/*.sh
+!nvim/.config/dein/.gitkeep
 !nvim/.config/nvim/init.vim
 !nvim/.config/nvim/dein.toml
 !nvim/.config/nvim/spell/en.utf-8.add
