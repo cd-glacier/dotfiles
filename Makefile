@@ -1,7 +1,7 @@
-.PHONY: help nvim fish mac
+.PHONY: help nvim fish mac tmux
 .DEFAULT_GOAL := help
 
-init: nvim fish mac terminal git ## setup and install all
+init: nvim fish mac tmux terminal git ## setup and install all
 
 clean: ## delete auto created file and directory
 	rm -rf ~/langserver
@@ -19,6 +19,9 @@ nvim: ## install and setup neovim
 
 fish: ## install and setup fish
 	bash ./fish/bin/installer.sh
+
+tmux: ## install and setup tmux
+	bash ./tmux/bin/installer.sh
 
 mac: ## install mac app
 	bash ./mac/bin/installer.sh

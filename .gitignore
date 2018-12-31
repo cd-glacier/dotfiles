@@ -27,7 +27,7 @@ nvim/.config/dein/repos/
 !mac/.gitconfig
 !mac/.gitignore_global
 !mac/.ideavimrc
-!mac/.tmux.conf
 !mac/.vimrc
 
-
+!tmux/bin/*.sh
+!tmux/.tmux.conf
