@@ -33,7 +33,9 @@ fi
 if [ ! -d "/Applications/Slack.app" ]; then
   brew cask install slack
 fi
-
+if [ ! -d "Applications/Lunar.app" ]; then
+  brew cask install lunar
+fi
 if [ ! -d "/Applications/Docker.app" ]; then
   brew cask install docker
 fi
