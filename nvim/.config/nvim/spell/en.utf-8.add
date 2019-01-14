@@ -33,6 +33,8 @@ neovim
 dein
 got
 fn
+tex
+dvi
 tmux
 pwd
 facebook
