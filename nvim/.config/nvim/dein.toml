@@ -77,12 +77,6 @@ hook_add = '''
   nmap 'a :Ag
 '''
 
-[[plugins]] # snake_case CamelCaseのmotionに対応
-repo = 'chaoren/vim-wordmotion'
-hook_add = '''
-  let g:wordmotion_spaces = '_-.\n'
-'''
-
 [[plugins]]
 repo = 'fatih/vim-go'
 hook_add = '''
