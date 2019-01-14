@@ -52,6 +52,7 @@ else
     alert "not exists ~/.config/dein"
   else
     check_file ~/.config/dein/installer.sh warn
+    warn "~/.config/dein/installer.sh will be download when make nvim."
   fi
 
   echo "----- check ~/.config/fish -----"
