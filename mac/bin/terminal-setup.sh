@@ -1,7 +1,7 @@
 #!bin/bash
 
 echo "##### link terminal setting files ######"
-LINK_FILES=(.bash_profile .ideavimrc .tmux.conf .vimrc)
+LINK_FILES=(.bash_profile .ideavimrc .vimrc)
 
 for file in ${LINK_FILES[@]}; do \
   unlink ~/$file&>/dev/null
