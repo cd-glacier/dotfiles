@@ -26,6 +26,9 @@ tmux: ## install and setup tmux
 mac: ## install mac app
 	bash ./mac/bin/installer.sh
 
+darker-slack: ## this command is not idempotence. Run once.
+	bash ./mac/bin/darker-slack.sh
+
 terminal: ## setup terminal setting
 	bash ./mac/bin/terminal-setup.sh
 
