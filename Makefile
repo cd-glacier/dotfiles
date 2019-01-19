@@ -1,7 +1,7 @@
 .PHONY: help nvim fish mac tmux
 .DEFAULT_GOAL := help
 
-init: nvim fish mac tmux terminal git ## setup and install all
+init: nvim fish mac tmux gitconfig gitignore_global rc health ## setup and install all
 
 clean: ## delete auto created file and directory
 	rm -rf ~/langserver
