@@ -68,7 +68,7 @@ for file in ${NECESSARY_FILES[@]}; do \
 done
 
 echo "----- check optional root dotfiles -----"
-OPTION_FILES=(.ideavimrc .vimrc .gitconfig .gitignore_global)
+OPTION_FILES=(.ideavimrc .vimrc .gitconfig .gitignore_global .pryrc)
 for file in ${OPTION_FILES[@]}; do \
   check_file ~/$file warn
 done

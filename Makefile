@@ -26,14 +26,23 @@ tmux: ## install and setup tmux
 mac: ## install mac app
 	bash ./mac/bin/installer.sh
 
-darker-slack: ## this command is not idempotence. Run once.
+darker-slack: ## this command is not idempotency. Run once.
 	bash ./mac/bin/darker-slack.sh
 
-terminal: ## setup terminal setting
-	bash ./mac/bin/terminal-setup.sh
+gitignore-global: ## link and add gitignore_global to gitconfig
+	unlink ~/.gitignore_global&>/dev/null
+	ln -sf $(PWD)/mac/.gitignore_global ~/.gitignore_global
+	git config --global core.excludesfile ~/.gitignore_global
 
-git: ## setup gitconfig and so on...
-	bash ./mac/bin/git-setup.sh
+rc: ## link .rc files
+	bash ./mac/bin/rc-setup.sh
+
+gitconfig: ## setup gitconfig and so on... Don't run this command without my pc.
+	unlink ~/.gitconfig&>/dev/null
+	ln -sf $(PWD)/mac/.gitconfig ~/.gitconfig
+
+bash: ## link bash_profile Don't run this command without my pc.
+	bash ./mac/bin/bash.sh
 
 health: ## check whether my dotfiles are linked
 	bash ./bin/check-health.sh
