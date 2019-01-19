@@ -21,6 +21,7 @@ nvim/.config/dein/repos/
 !fish/bin/*.sh
 !fish/.config/fish/config.fish
 !fish/.config/fish/functions/*.fish
+fish/.config/fish/functions/adlocal.fish
 
 !mac/bin/*.sh
 !mac/.bash_profile
