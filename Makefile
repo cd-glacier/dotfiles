@@ -3,6 +3,14 @@
 
 init: nvim fish mac tmux gitconfig gitignore_global rc health ## setup and install all
 
+nvim-clean: ## when python3 neovim is broken, run this command.
+	rm -rf /usr/local/lib/python3.7/site-packages/
+	brew uninstall --ignore-dependencies python3
+	rm -rf ~/.config/dein/.cache
+	rm -rf ~/.config/dein/cache_nvim
+	brew install python3
+	pip3 install neovim
+
 clean: ## delete auto created file and directory
 	rm -rf ~/langserver
 
