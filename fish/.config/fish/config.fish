@@ -20,20 +20,10 @@ set __fish_git_prompt_show_informative_status 'yes'
 function fish_prompt
 	set git_user (git config --get user.name)
 
-  set_color red
-  echo -n ❱ ""
-	set_color yellow
-  if test -z $git_user
-  else
-    echo -n $git_user ❱ ""
-  end
-	set_color green
-  echo -n (__fish_git_prompt "%s") ❱ ""
-	set_color blue
-  echo (prompt_pwd)
+  printf "%s%s " (set_color red) "❱"
+  printf "%s%s %s " (set_color yellow) $git_user "❱"
+  printf "%s%s %s "  (set_color green) (__fish_git_prompt "%s") "❱"
+  printf "%s%s\n" (set_color blue) (prompt_pwd)
 
-	set_color magenta
-  echo ❯❯❯ ""
+  printf "%s%s " (set_color magenta) "❯❯❯"
 end
-
-
