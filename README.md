@@ -6,27 +6,40 @@ setup for...
  * fish
  * tmux
  * mac apps
- * git env
+ * gitignore-global
+ * gitconfig
+ * ~rc files
 
-## setup
+## Setup
 
 ```sh
 make init
 ```
 
-## setup only neovim
+## Setup only neovim
 
 ```sh
 make nvim
 ```
 
-## setup only fish 
+## Setup only fish
 
 ```sh
 make fish
 ```
 
-## help
+...
+
+## Make slack to dark
+
+```sh
+make darker-slack
+```
+
+This command do not have idempotency.
+Restart slack after running this command.
+
+## Help
 
 ```sh
 make help
