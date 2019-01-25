@@ -26,7 +26,7 @@ tmux: ## install and setup tmux
 mac: ## install mac app
 	bash ./mac/bin/installer.sh
 
-darker-slack: ## this command is not idempotency. Run once.
+darker-slack: ## this command do not have idempotency. Run once. Restart slack after running this command.
 	bash ./mac/bin/darker-slack.sh
 
 gitignore-global: ## link and add gitignore_global to gitconfig
