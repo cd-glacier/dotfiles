@@ -5,4 +5,4 @@
 .tags_lock
 tags
 vendor/bundler/
-
+pg_*.log
