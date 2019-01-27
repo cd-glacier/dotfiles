@@ -78,3 +78,7 @@ idempotency
 eps
 img
 iframe
+function
+printf
+len
+tput
