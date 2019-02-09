@@ -1,6 +1,3 @@
-#[[plugins]]
-#repo = 'g-hyoga/rich-go-syntax-highlighter'
-
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 
@@ -125,4 +122,10 @@ hook_source = """
   nmap <silent> <C-c><C-j> :CoqNext<CR>
   nmap <silent> <C-c><C-k> :CoqUndo<CR>
   nmap <silent> <C-c><C-l> :CoqToCursor<CR>
+"""
+
+[[plugins]]
+repo = "ruanyl/vim-gh-line"
+hook_add = """
+  let g:gh_line_map = 'ghline'
 """
