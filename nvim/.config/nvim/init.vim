@@ -58,7 +58,7 @@ autocmd Filetype haskell setlocal ts=4 sts=4 sw=4 expandtab
 let loaded_matchparen = 1
 " cursor line
 set cursorline
-set cursorcolumn
+" set cursorcolumn
 
 """"操作系""""
 " tabをスペース2個分に
