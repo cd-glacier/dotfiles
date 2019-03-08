@@ -95,6 +95,7 @@ hook_add = '''
       \ 'sh': ['bash-language-server', 'start'],
       \ 'dockerfile': ['docker-langserver', '--stdio'],
       \ 'javascript': ['node', '~/langserver/javascript-typescript-langserver/lib/language-server-stdio'],
+      \ 'typescript': ['node', '~/langserver/javascript-typescript-langserver/lib/language-server-stdio'],
       \ 'yaml': ['node', '~/langserver/yaml-language-server/out/server/src/server.js', '--stdio'],
       \ }
 
@@ -129,3 +130,6 @@ repo = "ruanyl/vim-gh-line"
 hook_add = """
   let g:gh_line_map = 'ghline'
 """
+
+[[plugins]]
+repo = "leafgarland/typescript-vim"
