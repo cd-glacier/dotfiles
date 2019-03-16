@@ -129,6 +129,7 @@ hook_source = """
 repo = "ruanyl/vim-gh-line"
 hook_add = """
   let g:gh_line_map = 'ghline'
+  let g:gh_github_domain = $GHE_DOMAIN
 """
 
 [[plugins]]

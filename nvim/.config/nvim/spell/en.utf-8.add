@@ -89,3 +89,7 @@ https
 eslint
 v2
 webpacker
+jsx
+webpack
+cli
+jquery
