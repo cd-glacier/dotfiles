@@ -3,7 +3,7 @@
 echo "##### install font #####"
 
 echo "----- install FiraCode -----"
-if [ -e ~/Library/Fonts/FiraCode-Regular.ttf ]; then
+if [ ! -e ~/Library/Fonts/FiraCode-Regular.ttf ]; then
   echo "FiraCode already exists"
 else
   git clone git@github.com:tonsky/FiraCode.git
