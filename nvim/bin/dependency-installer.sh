@@ -2,17 +2,19 @@
 
 CURRENT_PATH=$(PWD)
 
+install_command() {
+  echo "------ install $1 -----"
+  if test -z $(which $1); then
+    brew install $1
+  fi
+}
+
 echo "##### install dependencies #####"
 
-echo "------ install yarn -----"
-if test -z $(which yarn); then
-  brew install yarn
-fi
-
-echo "------ install fzf -----"
-if test -z $(which fzf); then
-  brew install fzf
-fi
+install_command "yarn"
+install_command "fzf"
+install_command "ag"
+install_command "jq"
 
 echo "##### install Language Server #####"
 
