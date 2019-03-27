@@ -1,5 +1,16 @@
 #!bin/bash
 
+install_command() {
+  echo "----- install $1 -----"
+  if [ -z $(which $1) ]; then
+    brew install $1
+  fi
+}
+
+echo "##### install terminal tool #####"
+install_command "tmux"
+install_command "ghq"
+
 echo "##### install mac apps #####"
 
 if test -z $(brew --prefix); then
