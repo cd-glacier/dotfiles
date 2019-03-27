@@ -30,7 +30,7 @@ darker-slack: ## this command do not have idempotency. Run once. Restart slack a
 	bash ./mac/bin/darker-slack.sh
 
 gitignore-global: ## link and add gitignore_global to gitconfig
-	unlink ~/.gitignore_global&>/dev/null
+	if [ -f ~/.gitignore_global ]; then unlink ~/.gitignore_global&>/dev/null; fi
 	ln -sf $(PWD)/mac/.gitignore_global ~/.gitignore_global
 	git config --global core.excludesfile ~/.gitignore_global
 
@@ -38,7 +38,7 @@ rc: ## link .rc files
 	bash ./mac/bin/rc-setup.sh
 
 gitconfig: ## setup gitconfig and so on... Don't run this command without my pc.
-	unlink ~/.gitconfig&>/dev/null
+	if [ -f ~/.gitconfig ]; then unlink ~/.gitconfig&>/dev/null&>/dev/null; fi
 	ln -sf $(PWD)/mac/.gitconfig ~/.gitconfig
 
 bash: ## link bash_profile Don't run this command without my pc.
