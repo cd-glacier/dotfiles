@@ -90,9 +90,11 @@ hook_add = '''
       \ 'sh': ['bash-language-server', 'start'],
       \ 'dockerfile': ['docker-langserver', '--stdio'],
       \ 'javascript': ['node', '~/langserver/javascript-typescript-langserver/lib/language-server-stdio'],
-      \ 'typescript': ['node', '~/langserver/javascript-typescript-langserver/lib/language-server-stdio'],
+      \ 'typescript': ['tcp://127.0.0.1:1982'],
       \ 'yaml': ['node', '~/langserver/yaml-language-server/out/server/src/server.js', '--stdio'],
       \ }
+
+  autocmd Filetype typescript :!node ~/langserver/javascript-typescript-langserver/lib/language-server --port 1982&
 
   " Or map each action separately
   nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
