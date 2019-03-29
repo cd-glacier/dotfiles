@@ -10,6 +10,7 @@ install_command() {
 echo "##### install terminal tool #####"
 install_command "tmux"
 install_command "ghq"
+install_command "reattach-to-user-namespace"
 
 echo "##### install mac apps #####"
 
