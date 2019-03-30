@@ -13,6 +13,11 @@ brew install fish
 echo "----- link fish -----"
 LINK_FILES=(.config/fish)
 
+if [ ! -d ~/.config ]; then
+  echo "create ~/.config directory"
+  mkdir ~/.config
+fi
+
 for file in ${LINK_FILES[@]}; do \
   unlink ~/$file&>/dev/null
 
