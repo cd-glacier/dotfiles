@@ -17,12 +17,16 @@ warn() {
 check_directory() {
   if [ ! -d $1 ]; then
     alert "not exists $1"
+  else
+    echo "ok: $1"
   fi
 }
 
 check_file() {
   if [ ! -f $1 ]; then
     $2 "not exists $1"
+  else
+    echo "ok: $1"
   fi
 }
 
@@ -48,9 +52,7 @@ else
   fi
 
   echo "----- check ~/.config/dein -----"
-  if [ ! -d ~/.config/dein ]; then
-    alert "not exists ~/.config/dein"
-  fi
+  check_directory ~/.config/dein alert
 
   echo "----- check ~/.config/fish -----"
   if [ ! -d ~/.config/fish ]; then
@@ -72,3 +74,8 @@ OPTION_FILES=(.ideavimrc .vimrc .gitconfig .gitignore_global .pryrc)
 for file in ${OPTION_FILES[@]}; do \
   check_file ~/$file warn
 done
+
+echo "----- check langserver dir -----"
+check_directory ~/langserver warn
+
+
