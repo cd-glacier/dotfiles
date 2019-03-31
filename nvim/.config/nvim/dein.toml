@@ -70,15 +70,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'fatih/vim-go'
-hook_add = '''
-  let g:go_highlight_functions = 1
-  let g:go_highlight_methods = 1
-  let g:go_highlight_structs = 1
-  let g:go_fmt_command = "goimports"
-'''
-
-[[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
 build = 'bash install.sh'
@@ -92,6 +83,7 @@ hook_add = '''
       \ 'javascript': ['node', '~/langserver/javascript-typescript-langserver/lib/language-server-stdio'],
       \ 'typescript': ['tcp://127.0.0.1:1982'],
       \ 'yaml': ['node', '~/langserver/yaml-language-server/out/server/src/server.js', '--stdio'],
+      \ 'go': ['go-langserver'],
       \ }
 
   autocmd Filetype typescript :!node ~/langserver/javascript-typescript-langserver/lib/language-server --port 1982&
@@ -99,7 +91,8 @@ hook_add = '''
   " Or map each action separately
   nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
   nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-  nnoremap 'rn :call LanguageClient#textDocument_rename()<CR>
+  nnoremap 'r :call LanguageClient#textDocument_rename()<CR>
+  nnoremap 'f :call LanguageClient#textDocument_formatting()<CR>
   nnoremap <C-t> <C-o>
 '''
 

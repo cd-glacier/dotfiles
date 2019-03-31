@@ -58,3 +58,9 @@ else
     yarn && yarn run compile && \
     cd $CURRENT_PATH
 fi
+
+echo "----- install go-langserver -----"
+if [ -z $(which go-langserver) ]; then
+  go get -u github.com/sourcegraph/go-langserver
+fi
+
