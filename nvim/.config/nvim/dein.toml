@@ -88,6 +88,15 @@ hook_add = '''
 
   autocmd Filetype typescript :!node ~/langserver/javascript-typescript-langserver/lib/language-server --port 1982&
 
+  function! s:go_pre_write()
+    let view = winsaveview()
+    silent :%!goimports
+    silent :call LanguageClient_textDocument_formatting()
+    silent call winrestview(view)
+  endfunction
+
+  autocmd BufWritePre *.go :call <SID>go_pre_write()
+
   " Or map each action separately
   nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
   nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
