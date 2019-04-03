@@ -7,6 +7,15 @@ install_command() {
   fi
 }
 
+brew_cask_install() {
+  echo "----- install $1 -----"
+  if [[ $tools == *"$1"* ]]; then
+    echo "$1 already exists"
+  else
+    brew cask install $1
+  fi
+}
+
 echo "##### install terminal tool #####"
 install_command "tmux"
 install_command "ghq"
@@ -19,38 +28,17 @@ if test -z $(brew --prefix); then
   brew install caskroom/cask/brew-cask
 fi
 
-echo "----- install iterm -----"
-if [ -d /Applications/iTerm.app/ ]; then
-  echo "iterm already exists"
-else
-  brew cask install iterm2
-fi
+tools=$(brew list)
 
-echo "----- install other tools -----"
-if [ ! -d /Applications/Dropbox.app ]; then
-  brew cask install dropbox
-fi
-if [ ! -d "/Applications/Google Chrome.app" ]; then
-  brew cask install google-chrome
-fi
-if [ ! -d "/Applications/ShiftIt.app" ]; then
-  brew cask install shiftit
-fi
-if [ ! -d "/Applications/HyperSwitch.app" ]; then
-  brew cask install hyperswitch
-fi
-if [ ! -d "/Applications/Evernote.app" ]; then
-  brew cask install evernote
-fi
-if [ ! -d "/Applications/Slack.app" ]; then
-  brew cask install slack
-fi
-if [ ! -d "Applications/Lunar.app" ]; then
-  brew cask install lunar
-fi
-if [ ! -d "/Applications/Docker.app" ]; then
-  brew cask install docker
-fi
+brew_cask_install iterm2
+brew_cask_install dropbox
+brew_cask_install google-chrome
+brew_cask_install shiftit
+brew_cask_install hyperswitch
+brew_cask_install evernote
+brew_cask_install slack
+brew_cask_install lunar
+brew_cask_install docker
 
 echo "----- install qmk dependencies -----"
 if [ -z $(which avr-gcc) ]; then
