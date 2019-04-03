@@ -17,9 +17,9 @@ brew_cask_install() {
 }
 
 echo "##### install terminal tool #####"
-install_command "tmux"
-install_command "ghq"
-install_command "reattach-to-user-namespace"
+install_command tmux
+install_command ghq
+install_command reattach-to-user-namespace
 
 echo "##### install mac apps #####"
 

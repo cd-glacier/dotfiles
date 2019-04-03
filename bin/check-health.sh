@@ -78,4 +78,3 @@ done
 echo "----- check langserver dir -----"
 check_directory ~/langserver warn
 
-

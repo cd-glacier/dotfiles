@@ -11,10 +11,10 @@ install_command() {
 
 echo "##### install dependencies #####"
 
-install_command "yarn"
-install_command "fzf"
-install_command "ag"
-install_command "jq"
+install_command yarn
+install_command fzf
+install_command ag
+install_command jq
 
 echo "##### install Language Server #####"
 
