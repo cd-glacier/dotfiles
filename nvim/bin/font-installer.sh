@@ -12,7 +12,7 @@ else
 fi
 
 echo "----- install PowerLine fonts -----"
-if [ -z "$(ls ~/Library/Fonts/ | grep powerline)"]; then
+if [ -z "$(ls ~/Library/Fonts/ | grep powerline)" ]; then
   git clone https://github.com/powerline/fonts.git --depth=1
   cd fonts
   ./install.sh
