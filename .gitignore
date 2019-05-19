@@ -26,6 +26,7 @@ fish/.config/fish/functions/nippo.fish
 
 !mac/bin/*.sh
 !mac/.bash_profile
+!mac/.bashrc
 !mac/.gitconfig
 !mac/.gitignore_global
 !mac/.ideavimrc
