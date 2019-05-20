@@ -84,6 +84,7 @@ hook_add = '''
       \ 'typescript': ['tcp://127.0.0.1:1982'],
       \ 'yaml': ['node', '~/langserver/yaml-language-server/out/server/src/server.js', '--stdio'],
       \ 'go': ['go-langserver'],
+      \ 'java': ['~/langserver/java-language-server/dist/mac/bin/launcher', '--quiet']
       \ }
 
   autocmd Filetype typescript :!node ~/langserver/javascript-typescript-langserver/lib/language-server --port 1982&

@@ -64,3 +64,14 @@ if [ -z $(which go-langserver) ]; then
   go get -u github.com/sourcegraph/go-langserver
 fi
 
+echo "----- install java-language-server -----"
+if test -e ~/langserver/java-language-server/dist/mac/bin/launcher; then
+  echo "java-language-server already exists"
+else
+  cd ~/langserver && \
+    git clone https://github.com/georgewfraser/java-language-server && \
+    cd java-language-server && \
+    ./script/link_mac.sh && \
+    cd $CURRENT_PATH
+fi
+
