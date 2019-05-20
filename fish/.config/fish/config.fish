@@ -1,4 +1,6 @@
 
+set -x PATH $TO_FISH_PATH $PATH
+
 ##### vi mode #####
 # vi modeではなんか[I]みたいなの出るからオーバーライド
 function fish_mode_prompt
