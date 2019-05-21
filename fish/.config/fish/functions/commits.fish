@@ -13,6 +13,5 @@ function commits
     | fzfcat --preview 'git diff --color=always $second_commit_id $first_commit_id -- {}'
   end
 
-
 end
 
