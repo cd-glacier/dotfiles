@@ -6,3 +6,8 @@
 tags
 vendor/bundler/
 pg_*.log
+.vscode/
+.classpath
+.project
+.settings/
+filename.log
