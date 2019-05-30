@@ -38,7 +38,7 @@ set laststatus=2
 "set showcmd
 " タブ、空白、改行の可視化
 " set list
-set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
+" set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
 " vue.js
 autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 " □や○文字が崩れる問題を解決
@@ -54,11 +54,15 @@ hi SpellBad cterm=underline
 set synmaxcol=200
 " haskell indent
 autocmd Filetype haskell setlocal ts=4 sts=4 sw=4 expandtab
+" java
+autocmd Filetype java setlocal ts=8 sts=4 sw=4 expandtab
 " 括弧の対応色の色
 let loaded_matchparen = 1
 " cursor line
 set cursorline
 " set cursorcolumn
+" relative line number
+set relativenumber
 
 """"操作系""""
 " tabをスペース2個分に
