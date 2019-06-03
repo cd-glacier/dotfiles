@@ -1,8 +1,9 @@
 
-set -x PATH $TO_FISH_PATH $PATH
+set PATH $TO_FISH_PATH $PATH
+fix_path
 
 ##### vi mode #####
-# vi modeではなんか[I]みたいなの出るからオーバーライド
+# vi modeではなんか[I]みたいなの出るからOverride
 function fish_mode_prompt
 end
 
