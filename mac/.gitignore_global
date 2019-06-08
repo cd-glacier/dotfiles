@@ -11,3 +11,5 @@ pg_*.log
 .project
 .settings/
 filename.log
+.metadata/
+bin/

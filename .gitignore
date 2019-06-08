@@ -18,6 +18,9 @@ nvim/.config/dein/repos/
 !nvim/.config/nvim/dein.toml
 !nvim/.config/nvim/spell/en.utf-8.add
 
+!vscode/bin/*.sh
+!vscode/settings.json
+
 !fish/bin/*.sh
 !fish/.config/fish/config.fish
 !fish/.config/fish/functions/*.fish

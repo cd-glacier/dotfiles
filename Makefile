@@ -17,6 +17,9 @@ clean: ## delete auto created file and directory
 nvim: ## install and setup neovim
 	bash ./nvim/bin/installer.sh
 
+code: ## install and setup vscode
+	bash ./vscode/bin/installer.sh
+
 fish: ## install and setup fish
 	bash ./fish/bin/installer.sh
 
