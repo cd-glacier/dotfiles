@@ -11,7 +11,7 @@ if [ -z $(which code) ]; then
     brew install vscode
 fi
 
-LINK_FILES=(settings.json)
+LINK_FILES=(settings.json keybindings.json)
 
 for file in ${LINK_FILES[@]}; do \
     unlink ~/Library/Application\ Support/Code/User/$file&>/dev/null

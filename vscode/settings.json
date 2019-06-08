@@ -4,6 +4,7 @@
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.wordWrap": "on",
+    "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
     "go.useLanguageServer": true,
     "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home",
@@ -13,25 +14,32 @@
             "name": "orcha",
             "workingDirectory": "${workspaceFolder}",
             "env": {
-                "SPRING_PROFILES_ACTIVE": "development",
+                "SPRING_PROFILES_ACTIVE": "development"
             }
         },
         {
             "name": "tt_backend",
             "workingDirectory": "${workspaceFolder}",
             "env": {
-                "SPRING_PROFILES_ACTIVE": "development",
+                "SPRING_PROFILES_ACTIVE": "development"
             }
-        },
+        }
     ],
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "vim.insertModeKeyBindings": [
         {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        },
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
     ],
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
     "workbench.iconTheme": "material-icon-theme",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Nova",
+    "workbench.colorTheme": "Nova"
 }
