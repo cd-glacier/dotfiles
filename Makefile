@@ -20,6 +20,9 @@ nvim: ## install and setup neovim
 code: ## install and setup vscode
 	bash ./vscode/bin/installer.sh
 
+code-sync: ## sync vscode extentions
+	bash ./vscode/bin/sync-extensions.sh
+
 fish: ## install and setup fish
 	bash ./fish/bin/installer.sh
 
@@ -52,4 +55,3 @@ health: ## check whether my dotfiles are linked
 
 help: ## show help to make
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
-

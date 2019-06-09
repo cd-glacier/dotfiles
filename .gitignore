@@ -21,6 +21,7 @@ nvim/.config/dein/repos/
 !vscode/bin/*.sh
 !vscode/settings.json
 !vscode/keybindings.json
+!vscode/extensions.list
 
 !fish/bin/*.sh
 !fish/.config/fish/config.fish
