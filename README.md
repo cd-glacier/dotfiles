@@ -3,6 +3,7 @@
 setup for...
 
  * neovim
+ * vscode
  * fish
  * tmux
  * mac apps
@@ -14,6 +15,25 @@ setup for...
 
 ```sh
 make init
+```
+
+## Setup only vscode
+
+### Sync settings
+
+sync
+* settings.json
+* keybindings.json
+* extensions
+
+```sh
+make code
+```
+
+### Refresh extentions
+
+```
+make code-sync-extensions
 ```
 
 ## Setup only neovim

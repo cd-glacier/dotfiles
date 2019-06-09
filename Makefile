@@ -20,7 +20,7 @@ nvim: ## install and setup neovim
 code: ## install and setup vscode
 	bash ./vscode/bin/installer.sh
 
-code-sync: ## sync vscode extentions
+code-sync-extensions: ## sync vscode extentions
 	bash ./vscode/bin/sync-extensions.sh
 
 fish: ## install and setup fish
