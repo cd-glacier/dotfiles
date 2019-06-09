@@ -8,7 +8,7 @@ if [ -z $(which brew) ]; then
 fi
 
 if [ -z $(which code) ]; then
-    brew install vscode
+    brew cask install visual-studio-code
 fi
 
 LINK_FILES=(settings.json keybindings.json)
