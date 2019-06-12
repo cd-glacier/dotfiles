@@ -4,26 +4,18 @@
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.wordWrap": "on",
-    "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
     "go.useLanguageServer": true,
     "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home",
     "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/hyoga-yoshida/.vscode/extensions/gabrielbb.vscode-lombok-0.9.8/server/lombok.jar\" -Xbootclasspath/a:/Users/hyoga-yoshida/.vscode/extensions/gabrielbb.vscode-lombok-0.9.8/server/lombok.jar",
     "java.test.config": [
         {
-            "name": "orcha",
+            "name": "myConfiguration",
             "workingDirectory": "${workspaceFolder}",
             "env": {
                 "SPRING_PROFILES_ACTIVE": "development"
             }
         },
-        {
-            "name": "tt_backend",
-            "workingDirectory": "${workspaceFolder}",
-            "env": {
-                "SPRING_PROFILES_ACTIVE": "development"
-            }
-        }
     ],
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "vim.insertModeKeyBindings": [
@@ -41,5 +33,5 @@
     "vim.hlsearch": true,
     "workbench.iconTheme": "material-icon-theme",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Nova"
+    "workbench.colorTheme": "Nova",
 }
