@@ -34,4 +34,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Nova",
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.format": "rubocop",
+    "ruby.intellisense": "rubyLocate",
 }
