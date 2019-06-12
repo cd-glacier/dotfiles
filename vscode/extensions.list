@@ -1,6 +1,5 @@
 artdiniz.quitcontrol-vscode
 bungcip.better-toml
-castwide.solargraph
 CoenraadS.bracket-pair-colorizer-2
 eamodio.gitlens
 formulahendry.auto-close-tag
@@ -8,7 +7,6 @@ formulahendry.auto-rename-tag
 GabrielBB.vscode-lombok
 GitHub.vscode-pull-request-github
 humao.rest-client
-ICS.japanese-proofreading
 ionutvmi.path-autocomplete
 ldcf4.jumpprotobuf
 lunaryorn.fish-ide
@@ -26,6 +24,7 @@ shardulm94.trailing-spaces
 SirTobi.code-clip-ring
 skyapps.fish-vscode
 streetsidesoftware.code-spell-checker
+unpublished.sourcekit-lsp
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
 vscjava.vscode-java-dependency
