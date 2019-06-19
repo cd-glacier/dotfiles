@@ -53,3 +53,10 @@ function fish_prompt
 
   printf "%s%s " (set_color magenta) "❯❯❯"
 end
+
+## launch tmux
+
+if [ -z (echo $TMUX) ]
+  tmux
+end
+
