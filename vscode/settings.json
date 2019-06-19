@@ -39,5 +39,8 @@
     "ruby.intellisense": "rubyLocate",
     "[ruby]": {
         "editor.tabSize": 2
+    },
+    "files.associations": {
+        "*.schema": "ruby"
     }
 }
