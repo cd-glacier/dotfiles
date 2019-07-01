@@ -1,4 +1,5 @@
 {
+    "bashIde.explainshellEndpoint": "http://localhost:5000",
     "breadcrumbs.enabled": true,
     "editor.suggestSelection": "first",
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
@@ -67,6 +68,9 @@
     "ruby.format": "rubocop",
     "ruby.intellisense": "rubyLocate",
     "[ruby]": {
+        "editor.tabSize": 2
+    },
+    "[json]": {
         "editor.tabSize": 2
     },
     "files.associations": {
