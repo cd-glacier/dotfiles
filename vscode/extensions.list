@@ -1,9 +1,12 @@
+aaron-bond.better-comments
 artdiniz.quitcontrol-vscode
 bungcip.better-toml
 CoenraadS.bracket-pair-colorizer-2
 eamodio.gitlens
+esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
+foxundermoon.shell-format
 GabrielBB.vscode-lombok
 humao.rest-client
 ionutvmi.path-autocomplete
@@ -20,6 +23,7 @@ rebornix.nova
 rebornix.ruby
 redhat.java
 rogalmic.bash-debug
+shakram02.bash-beautify
 shardulm94.trailing-spaces
 SirTobi.code-clip-ring
 skyapps.fish-vscode
