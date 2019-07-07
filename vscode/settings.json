@@ -17,7 +17,9 @@
         "request": "launch",
         "cwd": "${workspaceFolder}",
         "program": "${workspaceFolder}/bin/rails",
-        "args": ["server"],
+        "args": [
+          "server"
+        ],
         "showDebuggerOutput": true
       },
       {
@@ -26,7 +28,11 @@
         "request": "launch",
         "cwd": "${workspaceFolder}",
         "program": "${workspaceFolder}/bin/rspec",
-        "args": ["-I", "${workspaceRoot}", "${file}"]
+        "args": [
+          "-I",
+          "${workspaceRoot}",
+          "${file}"
+        ]
       }
     ]
   },
@@ -44,8 +50,13 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.useSystemClipboard": true,
@@ -67,6 +78,10 @@
     "*.conf": "xml"
   },
   "java.configuration.checkProjectSettingsExclusions": false,
-  "cSpell.userWords": ["TSUKUREPO"]
+  "cSpell.userWords": [
+    "TSUKUREPO"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
-
