@@ -5,9 +5,9 @@ eamodio.gitlens
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 GabrielBB.vscode-lombok
-GitHub.vscode-pull-request-github
 humao.rest-client
 ionutvmi.path-autocomplete
+kaiwood.endwise
 ldcf4.jumpprotobuf
 lunaryorn.fish-ide
 mads-hartmann.bash-ide-vscode
@@ -25,6 +25,7 @@ SirTobi.code-clip-ring
 skyapps.fish-vscode
 streetsidesoftware.code-spell-checker
 unpublished.sourcekit-lsp
+vayan.haml
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
 vscjava.vscode-java-dependency
