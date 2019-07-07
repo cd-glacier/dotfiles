@@ -1,81 +1,72 @@
 {
-    "bashIde.explainshellEndpoint": "http://localhost:5000",
-    "breadcrumbs.enabled": true,
-    "editor.suggestSelection": "first",
-    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.wordWrap": "on",
-    "files.autoSave": "afterDelay",
-    "files.insertFinalNewline": true,
-    "go.useLanguageServer": true,
-    "launch": {
-        "version": "0.2.0",
-        "configurations": [
-            {
-                "name": "Rails server",
-                "type": "Ruby",
-                "request": "launch",
-                "cwd": "${workspaceFolder}",
-                "program": "${workspaceFolder}/bin/rails",
-                "args": [
-                    "server"
-                ],
-                "showDebuggerOutput": true
-            },
-            {
-                "name": "RSpec",
-                "type": "Ruby",
-                "request": "launch",
-                "cwd": "${workspaceFolder}",
-                "program": "${workspaceFolder}/bin/rspec",
-                "args": [
-                    "-I",
-                    "${workspaceRoot}",
-                    "${file}"
-                ],
-            },
-        ]
-    },
-    "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home",
-    "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/hyoga-yoshida/.vscode/extensions/gabrielbb.vscode-lombok-0.9.8/server/lombok.jar\" -Xbootclasspath/a:/Users/hyoga-yoshida/.vscode/extensions/gabrielbb.vscode-lombok-0.9.8/server/lombok.jar",
-    "java.test.config": [
-        {
-            "name": "development",
-            "workingDirectory": "${workspaceFolder}",
-            "env": {
-                "SPRING_PROFILES_ACTIVE": "development",
-            }
-        },
-    ],
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.useSystemClipboard": true,
-    "vim.hlsearch": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Nova",
-    "ruby.codeCompletion": "rcodetools",
-    "ruby.format": "rubocop",
-    "ruby.intellisense": "rubyLocate",
-    "[ruby]": {
-        "editor.tabSize": 2
-    },
-    "[json]": {
-        "editor.tabSize": 2
-    },
-    "files.associations": {
-        "*.schema": "ruby",
-        "*.conf": "xml"
-    },
-    "java.configuration.checkProjectSettingsExclusions": false
+  "bashIde.explainshellEndpoint": "http://localhost:5000",
+  "breadcrumbs.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "go.useLanguageServer": true,
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Rails server",
+        "type": "Ruby",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "program": "${workspaceFolder}/bin/rails",
+        "args": ["server"],
+        "showDebuggerOutput": true
+      },
+      {
+        "name": "RSpec",
+        "type": "Ruby",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "program": "${workspaceFolder}/bin/rspec",
+        "args": ["-I", "${workspaceRoot}", "${file}"]
+      }
+    ]
+  },
+  "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/hyoga-yoshida/.vscode/extensions/gabrielbb.vscode-lombok-0.9.8/server/lombok.jar\" -Xbootclasspath/a:/Users/hyoga-yoshida/.vscode/extensions/gabrielbb.vscode-lombok-0.9.8/server/lombok.jar",
+  "java.test.config": [
+    {
+      "name": "development",
+      "workingDirectory": "${workspaceFolder}",
+      "env": {
+        "SPRING_PROFILES_ACTIVE": "development"
+      }
+    }
+  ],
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Nova",
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.format": "rubocop",
+  "ruby.intellisense": "rubyLocate",
+  "[ruby]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "files.associations": {
+    "*.schema": "ruby",
+    "*.conf": "xml"
+  },
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "cSpell.userWords": ["TSUKUREPO"]
 }
+
