@@ -13,3 +13,4 @@ pg_*.log
 filename.log
 .metadata/
 bin/
+vendor/bundle/*
