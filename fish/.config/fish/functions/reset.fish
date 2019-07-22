@@ -1,4 +1,4 @@
-function greset
+function reset
   set stagedFileCount (count (git diff --name-only --staged))
 
   if [ $stagedFileCount -gt 0 ]
@@ -11,3 +11,4 @@ function greset
     echo "added file does not exist"
   end
 end
+
