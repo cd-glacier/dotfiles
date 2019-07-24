@@ -37,6 +37,7 @@ fish/.config/fish/functions/nippo.fish
 !mac/.ideavimrc
 !mac/.pryrc
 !mac/.vimrc
+!mac/.xvimrc
 
 !tmux/bin/*.sh
 !tmux/.tmux.conf
