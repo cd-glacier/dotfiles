@@ -84,7 +84,6 @@ hook_add = '''
       \ 'typescript': ['tcp://127.0.0.1:1982'],
       \ 'yaml': ['node', '~/langserver/yaml-language-server/out/server/src/server.js', '--stdio'],
       \ 'go': ['go-langserver'],
-      \ 'java': ['~/langserver/java-language-server/dist/mac/bin/launcher', '--quiet'],
       \ 'proto': ['~/langserver/protobuf-lsp/pls', 'server', '--mode=stdio'],
       \ }
 
@@ -113,6 +112,8 @@ hook_add = '''
   let g:ale_sign_error = '⌶'
   let g:ale_sign_warning = '▻'
   highlight link ALEWarningSign Special
+  autocmd BufEnter *.java ALEDisable
+  autocmd BufEnter *.rb ALEDisable
 '''
 
 [[plugins]]
