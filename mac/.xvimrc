@@ -1,3 +1,7 @@
 
+" 入力モード中に素早くJJと入力した場合はESCとみなす
 inoremap jj <Esc>
-
+" インクリメンタルサーチ. 1文字入力毎に検索を行う
+set incsearch
+" 検索パターンに大文字小文字を区別しない
+set ignorecase
