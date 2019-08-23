@@ -30,6 +30,7 @@ fish/.config/fish/functions/adlocal.fish
 fish/.config/fish/functions/nippo.fish
 !fish/.config/fish/completions/*.fish
 !fish/.config/fish/completions/.gitkeep
+fish/.config/fish/completions/envchain.fish
 
 !mac/bin/*.sh
 !mac/.bash_profile
