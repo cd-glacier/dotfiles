@@ -2,6 +2,9 @@
 set PATH $TO_FISH_PATH $PATH
 fix_path
 
+# completion for aws cli
+test -x (which aws_completer); and complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
+
 ##### vi mode #####
 # vi modeではなんか[I]みたいなの出るからOverride
 function fish_mode_prompt
