@@ -28,6 +28,8 @@ nvim/.config/dein/repos/
 !fish/.config/fish/functions/*.fish
 fish/.config/fish/functions/adlocal.fish
 fish/.config/fish/functions/nippo.fish
+!fish/.config/fish/completions/*.fish
+!fish/.config/fish/completions/.gitkeep
 
 !mac/bin/*.sh
 !mac/.bash_profile
