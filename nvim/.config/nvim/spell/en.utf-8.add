@@ -147,3 +147,12 @@ proc
 cdr
 cddr
 dest
+SSTable
+LSMTree
+WAL
+LSI
+GSI
+T2
+TT
+DAU
+tt
