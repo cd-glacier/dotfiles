@@ -65,7 +65,7 @@ if [ -z $(which go-langserver) ]; then
 fi
 
 echo "----- install java-language-server -----"
-if test -e ~/langserver/java-language-server/dist/mac/bin/launcher; then
+if [ -e ~/langserver/java-language-server/dist/mac/bin/launcher ]; then
   echo "java-language-server already exists"
 else
   cd ~/langserver && \
@@ -76,7 +76,7 @@ else
 fi
 
 echo "----- install protobuf-langserver -----"
-if test -e ~/langserver/protobuf-lsp/pls; then
+if [ -e ~/langserver/protobuf-lsp/pls ]; then
   echo "protobuf-lsp already exists"
 else
   cd ~/langserver && \
@@ -85,4 +85,11 @@ else
     go build main.go -o pls && \
     cd $CURRENT_PATH
 fi
+
+echo "----- install rust-langserver -----"
+if [ -z "$(which cargo)" ]; then
+  curl https://sh.rustup.rs -sSf | sh
+  rustup component add rls rust-analysis rust-src
+fi
+
 
