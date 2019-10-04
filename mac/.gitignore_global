@@ -12,5 +12,4 @@ pg_*.log
 .settings/
 filename.log
 .metadata/
-bin/
 vendor/bundle/*

@@ -75,17 +75,6 @@ else
     cd $CURRENT_PATH
 fi
 
-echo "----- install protobuf-langserver -----"
-if [ -e ~/langserver/protobuf-lsp/pls ]; then
-  echo "protobuf-lsp already exists"
-else
-  cd ~/langserver && \
-    git clone https://github.com/hudbrog/protobuf-lsp && \
-    cd protobuf-lsp && \
-    go build main.go -o pls && \
-    cd $CURRENT_PATH
-fi
-
 echo "----- install rust-langserver -----"
 if [ -z "$(which cargo)" ]; then
   curl https://sh.rustup.rs -sSf | sh
