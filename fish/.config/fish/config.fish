@@ -2,6 +2,9 @@
 set PATH $TO_FISH_PATH $PATH
 fix_path
 
+# completion for aws cli
+test -x (which aws_completer); and complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
+
 ##### vi mode #####
 # vi modeではなんか[I]みたいなの出るからOverride
 function fish_mode_prompt
@@ -30,13 +33,13 @@ function fish_prompt
   set git_prompt_len (string length "$git_prompt")
   set prompt_pwd_len (string length (prompt_pwd))
   set other_len (string length "❱ ❱ ❱ ")
-  set prompt_len (math $git_user_len + $git_prompt_len + $prompt_pwd_len + $other_len)
+  set prompt_len (math $git_user_len + $git_prompt_len + $prompt_pwd_len + $other_len + (string length " in 14:59:08 "))
 
   printf "%s%s " (set_color red) "❱"
 
   if [ $columns -gt $prompt_len ]
     # ❱ g-hyoga ❱ master|✔ ❱ ~/D/d/s/g/g/dotfiles
-    printf "%s%s %s " (set_color yellow) $git_user "❱"
+    printf "%s%s %s " (set_color yellow) $git_user in (date '+%H:%M:%S') " ❱"
     printf "%s%s %s " (set_color green) (__fish_git_prompt "%s") "❱"
     printf "%s%s\n" (set_color blue) (prompt_pwd)
   else if [ $columns -le $prompt_len -a $columns -ge (math $prompt_len - $git_user_len) ]
