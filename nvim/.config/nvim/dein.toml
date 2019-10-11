@@ -116,16 +116,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'w0rp/ale'
-hook_add = '''
-  let g:ale_sign_error = '⌶'
-  let g:ale_sign_warning = '▻'
-  highlight link ALEWarningSign Special
-  autocmd BufEnter *.java ALEDisable
-  autocmd BufEnter *.rb ALEDisable
-'''
-
-[[plugins]]
 repo = "ruanyl/vim-gh-line"
 hook_add = """
   let g:gh_line_map = 'ghline'
