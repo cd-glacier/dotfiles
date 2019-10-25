@@ -64,7 +64,7 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-  nmap ' :Buffers
+  nmap ' :History
   nmap " :Files
   nmap 'a :Ag
 '''
