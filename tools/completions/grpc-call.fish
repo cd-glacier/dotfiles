@@ -6,6 +6,11 @@ complete --no-files \
 
 complete --no-files \
   --command grpc-call \
+  --long-option "authority" \
+  --description "override authority header"
+
+complete --no-files \
+  --command grpc-call \
   --long-option "proto-root" \
   --description "--proto-root=./proto"
 

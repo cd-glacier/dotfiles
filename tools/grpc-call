@@ -6,6 +6,7 @@ for arg in "${args[@]}"; do
   case $arg in
     --proto-root* ) proto_root=${arg##*=};;
     --host* ) host=${arg##*=} ;;
+    --authority* ) authority=${arg##*=} ;;
     --package* ) package=${arg##*=} ;;
     --service* ) service=${arg##*=} ;;
     --method* ) method=${arg##*=} ;;
@@ -21,6 +22,7 @@ echo "$message" | java -jar -Dorg.slf4j.simpleLogger.defaultLogLevel=error $poly
   --use_reflection=false \
   call \
   --endpoint="$host" \
+  --tls_client_override_authority="$authority" \
   --metadata="$meta" \
   --full_method="$package.$service/$method"
 
