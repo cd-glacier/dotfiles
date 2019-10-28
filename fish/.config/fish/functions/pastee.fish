@@ -1,7 +1,7 @@
 
 set tmp_file /var/tmp/copytmpfile
 
-function paste
+function pastee
   cat $tmp_file | read filename
   if test -d $filename
     set option -r
@@ -12,7 +12,7 @@ function paste
 
   if count $argv == 0
     cp $option $filename .
-  else 
+  else
     cp $option $filename (string join $argv $dist)
   end
   rm $tmp_file
