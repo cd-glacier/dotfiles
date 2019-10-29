@@ -1,13 +1,13 @@
-
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-
+# 見た目
 [[plugins]] # color schema
 repo = 'trevordmiller/nova-vim'
 hook_add = '''
   colorscheme nova
   set background=dark
 '''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
@@ -19,6 +19,14 @@ hook_add = '''
   let g:airline#extensions#tabline#enabled = 1
   let g:airline_section_c = ''
 '''
+
+[[plugins]] # syntax highlight
+repo = 'othree/yajs.vim'
+
+[[plugins]] # 末尾spaceの可視化
+repo = 'ntpeters/vim-better-whitespace'
+
+# 機能
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -37,12 +45,18 @@ repo = "cohama/lexima.vim"
 [[plugins]] # auto indent
 repo = "Chiel92/vim-autoformat"
 
-[[plugins]] # syntax highlight
-repo = 'othree/yajs.vim'
-
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
+
+[[plugins]]
+repo = "ruanyl/vim-gh-line"
+hook_add = """
+  let g:gh_line_map = 'ghline'
+  let g:gh_github_domain = $GHE_DOMAIN
+"""
+
+# 補完
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
@@ -51,9 +65,6 @@ hook_add = '''
   let g:python_host_prog='/usr/local/bin/python2'
   let g:python3_host_prog='/opt/brew/bin/python3'
 '''
-
-[[plugins]] # 末尾spaceの可視化
-repo = 'ntpeters/vim-better-whitespace'
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -68,6 +79,8 @@ hook_add = '''
   nmap " :Files
   nmap 'a :Ag
 '''
+
+# Language Server
 
 [[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
@@ -104,9 +117,7 @@ hook_add = '''
     let view = winsaveview()
     silent :call LanguageClient_textDocument_formatting()
     silent call winrestview(view)
-  endfunction
-  autocmd BufWritePre *.rs :call <SID>rust_pre_write()
-
+  endfunction autocmd BufWritePre *.rs :call <SID>rust_pre_write()
   " Or map each action separately
   nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
   nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
@@ -116,11 +127,11 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = "ruanyl/vim-gh-line"
-hook_add = """
-  let g:gh_line_map = 'ghline'
-  let g:gh_github_domain = $GHE_DOMAIN
-"""
+repo = 'dense-analysis/ale'
+hook_add = '''
+  let g:ale_sign_error = '⌶'
+  let g:ale_sign_warning = '▻'
+'''
 
 [[plugins]]
 repo = "leafgarland/typescript-vim"
