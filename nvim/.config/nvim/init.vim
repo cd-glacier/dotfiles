@@ -176,6 +176,8 @@ syntax enable
 
 "End dein Scripts-------------------------
 
+highlight clear SignColumn
+
 " http://cohama.hateblo.jp/?page=1376705613
 function! s:get_syn_id(transparent)
   let synid = synID(line("."), col("."), 1)
