@@ -75,56 +75,12 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-  nmap ' :History
-  nmap " :Files
-  nmap 'a :Ag
+  nmap <silent> <space><space> :Files<CR>
+  nmap <silent> <space>h :History<CR>
+  nmap <silent> <space>f :Ag
 '''
 
-# Language Server
-
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
-hook_add = '''
-  set hidden
-
-  let g:LanguageClient_serverCommands = {
-      \ 'ruby': ['solargraph', 'stdio'],
-      \ 'sh': ['bash-language-server', 'start'],
-      \ 'dockerfile': ['docker-langserver', '--stdio'],
-      \ 'javascript': ['node', '~/langserver/javascript-typescript-langserver/lib/language-server-stdio'],
-      \ 'typescript': ['tcp://127.0.0.1:1982'],
-      \ 'yaml': ['node', '~/langserver/yaml-language-server/out/server/src/server.js', '--stdio'],
-      \ 'go': ['go-langserver'],
-      \ 'rust': ['rls']
-      \ }
-
-  " typescript
-  autocmd Filetype typescript :!node ~/langserver/javascript-typescript-langserver/lib/language-server --port 1982&
-
-  " go auto fmt and imports
-  function! s:go_pre_write()
-    let view = winsaveview()
-    silent :%!goimports
-    silent :call LanguageClient_textDocument_formatting()
-    silent call winrestview(view)
-  endfunction
-  autocmd BufWritePre *.go :call <SID>go_pre_write()
-
-  " rust auto fmt
-  function! s:rust_pre_write()
-    let view = winsaveview()
-    silent :call LanguageClient_textDocument_formatting()
-    silent call winrestview(view)
-  endfunction autocmd BufWritePre *.rs :call <SID>rust_pre_write()
-  " Or map each action separately
-  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-  nnoremap 'r :call LanguageClient#textDocument_rename()<CR>
-  nnoremap 'f :call LanguageClient#textDocument_formatting()<CR>
-  nnoremap <C-t> <C-o>
-'''
+# langserver server
 
 [[plugins]]
 repo = 'dense-analysis/ale'
@@ -134,13 +90,12 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = "leafgarland/typescript-vim"
-
-[[plugings]]
-repo = 'rust-lang/rust.vim'
-on_ft = 'rust'
-hook_source = '''
-    let g:rustfmt_autosave = 1
-    let g:rust_doc#define_map_K = 0
+repo = 'neoclide/coc.nvim'
+build = './install.sh'
+hook_add = '''
+  nmap <silent><space>p :CocList<CR>
+  nmap <silent>gd <Plug>(coc-definition)
+  nmap <silent><space>ref <Plug>(coc-references)
+  nmap <silent><space>ren <Plug>(coc-rename)
 '''
 
