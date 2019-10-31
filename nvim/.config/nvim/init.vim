@@ -62,7 +62,7 @@ let loaded_matchparen = 1
 set cursorline
 " set cursorcolumn
 " relative line number
-set relativenumber
+" set relativenumber
 
 """"操作系""""
 " tabをスペース2個分に
