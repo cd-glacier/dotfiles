@@ -17,7 +17,7 @@ done
 
 polyglot_path=$GOPATH/src/github.com/g-hyoga/dotfiles/tools/bin/polyglot.jar
 
-echo "$message" | java -jar -Dorg.slf4j.simpleLogger.defaultLogLevel=error $polyglot_path \
+echo "$message" | java -jar -Dorg.slf4j.simpleLogger.defaultLogLevel=error -Djava.util.logging.ConsoleHandler.level=error $polyglot_path \
   --proto_discovery_root="$proto_root" \
   --use_reflection=false \
   call \

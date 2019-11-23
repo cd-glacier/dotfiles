@@ -54,7 +54,7 @@ hi SpellBad cterm=underline
 au BufRead,BufNewFile *.md set filetype=markdown
 
 autocmd ColorScheme * highlight LineNr ctermfg=10
-" java
+" for java
 autocmd Filetype java setlocal ts=8 sts=4 sw=4 expandtab
 
 let loaded_matchparen = 1
@@ -63,6 +63,10 @@ nnoremap j gj
 nnoremap k gk
 
 inoremap jj <Esc>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 
 cmap w!! w !sudo tee > /dev/null %
 

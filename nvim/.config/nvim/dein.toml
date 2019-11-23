@@ -56,15 +56,19 @@ hook_add = """
   let g:gh_github_domain = $GHE_DOMAIN
 """
 
+[[plugins]]
+repo = "glacambre/firenvim"
+hook_post_update = "function('firenvim#install')"
+
 # 補完
 
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-  let g:deoplete#enable_at_startup = 1
-  let g:python_host_prog='/usr/local/bin/python2'
-  let g:python3_host_prog='/opt/brew/bin/python3'
-'''
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# hook_add = '''
+#   let g:deoplete#enable_at_startup = 1
+#   let g:python_host_prog='/usr/local/bin/python2'
+#   let g:python3_host_prog='/opt/brew/bin/python3'
+# '''
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -95,6 +99,8 @@ build = './install.sh'
 hook_add = '''
   nmap <silent><space>p :CocList<CR>
   nmap <silent>gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent><space>ref <Plug>(coc-references)
   nmap <silent><space>ren <Plug>(coc-rename)
 '''
