@@ -37,7 +37,7 @@
     ]
   },
   "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home",
-  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/hyoga-yoshida/.vscode/extensions/gabrielbb.vscode-lombok-0.9.8/server/lombok.jar\" -Xbootclasspath/a:/Users/hyoga-yoshida/.vscode/extensions/gabrielbb.vscode-lombok-0.9.8/server/lombok.jar",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/hyoga-yoshida/.vscode/extensions/gabrielbb.vscode-lombok-0.9.9/server/lombok.jar\"",
   "java.test.config": [
     {
       "name": "development",

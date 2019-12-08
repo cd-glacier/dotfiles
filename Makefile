@@ -1,4 +1,4 @@
-.PHONY: help nvim fish mac tmux
+.PHONY: help nvim fish mac tmux tools
 .DEFAULT_GOAL := help
 
 init: nvim fish mac tmux gitconfig gitignore_global rc health ## setup and install all
@@ -34,6 +34,9 @@ mac: ## install mac app
 
 darker-slack: ## this command do not have idempotency. Run once. Restart slack after running this command.
 	bash ./mac/bin/darker-slack.sh
+
+tools: ## link my tools
+	bash ./tools/bin/installer.sh
 
 gitignore-global: ## link and add gitignore_global to gitconfig
 	if [ -f ~/.gitignore_global ]; then unlink ~/.gitignore_global&>/dev/null; fi

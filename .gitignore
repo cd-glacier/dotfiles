@@ -45,3 +45,8 @@ fish/.config/fish/completions/cpad2.fish
 
 !tmux/bin/*.sh
 !tmux/.tmux.conf
+
+!tools/grpc-call
+!tools/bin/*
+!tools/completions/*.fish
+

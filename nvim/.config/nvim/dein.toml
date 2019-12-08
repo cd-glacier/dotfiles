@@ -1,13 +1,13 @@
-
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-
+# 見た目
 [[plugins]] # color schema
 repo = 'trevordmiller/nova-vim'
 hook_add = '''
   colorscheme nova
   set background=dark
 '''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
@@ -19,6 +19,14 @@ hook_add = '''
   let g:airline#extensions#tabline#enabled = 1
   let g:airline_section_c = ''
 '''
+
+[[plugins]] # syntax highlight
+repo = 'othree/yajs.vim'
+
+[[plugins]] # 末尾spaceの可視化
+repo = 'ntpeters/vim-better-whitespace'
+
+# 機能
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -37,23 +45,30 @@ repo = "cohama/lexima.vim"
 [[plugins]] # auto indent
 repo = "Chiel92/vim-autoformat"
 
-[[plugins]] # syntax highlight
-repo = 'othree/yajs.vim'
-
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-  let g:deoplete#enable_at_startup = 1
-  let g:python_host_prog='/usr/local/bin/python2'
-  let g:python3_host_prog='/opt/brew/bin/python3'
-'''
+repo = "ruanyl/vim-gh-line"
+hook_add = """
+  let g:gh_line_map = 'ghline'
+  let g:gh_github_domain = $GHE_DOMAIN
+"""
 
-[[plugins]] # 末尾spaceの可視化
-repo = 'ntpeters/vim-better-whitespace'
+[[plugins]]
+repo = "glacambre/firenvim"
+hook_post_update = "function('firenvim#install')"
+
+# 補完
+
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# hook_add = '''
+#   let g:deoplete#enable_at_startup = 1
+#   let g:python_host_prog='/usr/local/bin/python2'
+#   let g:python3_host_prog='/opt/brew/bin/python3'
+# '''
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -64,82 +79,29 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-  nmap ' :Buffers
-  nmap " :Files
-  nmap 'a :Ag
+  nmap <silent> <space><space> :Files<CR>
+  nmap <silent> <space>h :History<CR>
+  nmap <silent> <space>f :Ag
 '''
 
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
-hook_add = '''
-  set hidden
-
-  let g:LanguageClient_serverCommands = {
-      \ 'ruby': ['solargraph', 'stdio'],
-      \ 'sh': ['bash-language-server', 'start'],
-      \ 'dockerfile': ['docker-langserver', '--stdio'],
-      \ 'javascript': ['node', '~/langserver/javascript-typescript-langserver/lib/language-server-stdio'],
-      \ 'typescript': ['tcp://127.0.0.1:1982'],
-      \ 'yaml': ['node', '~/langserver/yaml-language-server/out/server/src/server.js', '--stdio'],
-      \ 'go': ['go-langserver'],
-      \ 'rust': ['rls']
-      \ }
-
-  " typescript
-  autocmd Filetype typescript :!node ~/langserver/javascript-typescript-langserver/lib/language-server --port 1982&
-
-  " go auto fmt and imports
-  function! s:go_pre_write()
-    let view = winsaveview()
-    silent :%!goimports
-    silent :call LanguageClient_textDocument_formatting()
-    silent call winrestview(view)
-  endfunction
-  autocmd BufWritePre *.go :call <SID>go_pre_write()
-
-  " rust auto fmt
-  function! s:rust_pre_write()
-    let view = winsaveview()
-    silent :call LanguageClient_textDocument_formatting()
-    silent call winrestview(view)
-  endfunction
-  autocmd BufWritePre *.rs :call <SID>rust_pre_write()
-
-  " Or map each action separately
-  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-  nnoremap 'r :call LanguageClient#textDocument_rename()<CR>
-  nnoremap 'f :call LanguageClient#textDocument_formatting()<CR>
-  nnoremap <C-t> <C-o>
-'''
+# langserver server
 
 [[plugins]]
-repo = 'w0rp/ale'
+repo = 'dense-analysis/ale'
 hook_add = '''
   let g:ale_sign_error = '⌶'
   let g:ale_sign_warning = '▻'
-  highlight link ALEWarningSign Special
-  autocmd BufEnter *.java ALEDisable
-  autocmd BufEnter *.rb ALEDisable
 '''
 
 [[plugins]]
-repo = "ruanyl/vim-gh-line"
-hook_add = """
-  let g:gh_line_map = 'ghline'
-  let g:gh_github_domain = $GHE_DOMAIN
-"""
-
-[[plugins]]
-repo = "leafgarland/typescript-vim"
-
-[[plugings]]
-repo = 'rust-lang/rust.vim'
-on_ft = 'rust'
-hook_source = '''
-    let g:rustfmt_autosave = 1
-    let g:rust_doc#define_map_K = 0
+repo = 'neoclide/coc.nvim'
+build = './install.sh'
+hook_add = '''
+  nmap <silent><space>p :CocList<CR>
+  nmap <silent>gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent><space>ref <Plug>(coc-references)
+  nmap <silent><space>ren <Plug>(coc-rename)
 '''
 
