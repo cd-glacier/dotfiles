@@ -1,5 +1,4 @@
 
-
 function java_home
   if [ "$argv" != "" ]
     set selected_java_version "$argv"

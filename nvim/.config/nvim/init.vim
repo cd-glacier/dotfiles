@@ -45,6 +45,10 @@ set nocompatible
 set ttimeout
 set ttimeoutlen=50
 
+
+let g:python_host_prog='/usr/local/bin/python2'
+let g:python3_host_prog='/opt/brew/bin/python3'
+
 hi Pmenu ctermbg=6
 hi PmenuSel ctermbg=4
 hi PmenuSbar ctermbg=2
