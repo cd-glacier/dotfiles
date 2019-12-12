@@ -56,18 +56,12 @@ hook_add = """
   let g:gh_github_domain = $GHE_DOMAIN
 """
 
-[[plugins]]
-repo = "glacambre/firenvim"
-hook_post_update = "function('firenvim#install')"
-
 # 補完
 
 # [[plugins]]
 # repo = 'Shougo/deoplete.nvim'
 # hook_add = '''
 #   let g:deoplete#enable_at_startup = 1
-#   let g:python_host_prog='/usr/local/bin/python2'
-#   let g:python3_host_prog='/opt/brew/bin/python3'
 # '''
 
 [[plugins]]
@@ -87,16 +81,10 @@ hook_add = '''
 # langserver server
 
 [[plugins]]
-repo = 'dense-analysis/ale'
-hook_add = '''
-  let g:ale_sign_error = '⌶'
-  let g:ale_sign_warning = '▻'
-'''
-
-[[plugins]]
 repo = 'neoclide/coc.nvim'
 build = './install.sh'
 hook_add = '''
+
   nmap <silent><space>p :CocList<CR>
   nmap <silent>gd <Plug>(coc-definition)
   nmap <silent> gy <Plug>(coc-type-definition)
