@@ -2,7 +2,7 @@
 function pr
   set user_name (git config --get user.name)
 
-  if $user_name == "g-hyoga"
+  if [ $user_name -eq "g-hyoga" ]
     set domain "github.com"
   else
     set domain $GHE_DOMAIN
