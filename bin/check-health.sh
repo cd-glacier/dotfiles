@@ -5,6 +5,7 @@ alert() {
   echo -n "Error: "
   echo -n $1
   echo -e "\033[m"
+  exit 1
 }
 
 warn() {
@@ -74,7 +75,4 @@ OPTION_FILES=(.ideavimrc .vimrc .gitconfig .gitignore_global .pryrc)
 for file in ${OPTION_FILES[@]}; do \
   check_file ~/$file warn
 done
-
-echo "----- check langserver dir -----"
-check_directory ~/langserver warn
 
