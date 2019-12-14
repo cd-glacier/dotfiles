@@ -3,14 +3,6 @@
 
 init: nvim fish mac tmux gitconfig gitignore_global rc health ## setup and install all
 
-nvim-clean: ## when python3 neovim is broken, run this command.
-	rm -rf /usr/local/lib/python3.7/site-packages/
-	brew uninstall --ignore-dependencies python3
-	rm -rf ~/.config/dein/.cache
-	rm -rf ~/.config/dein/cache_nvim
-	brew install python3
-	pip3 install neovim
-
 clean: ## delete auto created file and directory
 	rm -rf ~/langserver
 
@@ -31,9 +23,6 @@ tmux: ## install and setup tmux
 
 mac: ## install mac app
 	bash ./mac/bin/installer.sh
-
-darker-slack: ## this command do not have idempotency. Run once. Restart slack after running this command.
-	bash ./mac/bin/darker-slack.sh
 
 tools: ## link my tools
 	bash ./tools/bin/installer.sh

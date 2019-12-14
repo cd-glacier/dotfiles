@@ -16,9 +16,10 @@ brew_cask_install() {
   fi
 }
 
-echo "##### install terminal tool #####"
+echo "##### install cli tool #####"
 install_command tmux
 install_command ghq
+install_command hub
 install_command reattach-to-user-namespace
 
 echo "##### install mac apps #####"
