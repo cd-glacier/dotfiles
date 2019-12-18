@@ -16,11 +16,11 @@ function pr
     open https://$domain/$user_name/$repository/pull/new/(git_branch)
 
   else
-    set pullrequest (hub pr list | fzf | sed 's/   //g')
-    set number (echo "$pullrequest" | awk '{print $1}' | sed 's/#//g')
-
-    echo "open $pullrequest"
-
-    hub browse -- "pull/$number"
+    set tmp (hub pr list | fzf);
+      and set pullrequest (echo $tmp | sed 's/   //g');
+      and set number (echo "$pullrequest" | awk '{print $1}' | sed 's/#//g');
+      and echo "open $pullrequest";
+      and hub browse -- "pull/$number";
+      or exit 1
   end
 end
