@@ -82,9 +82,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-build = './install.sh'
 hook_add = '''
-
   nmap <silent><space>p :CocList<CR>
   nmap <silent>gd <Plug>(coc-definition)
   nmap <silent> gy <Plug>(coc-type-definition)
