@@ -2,6 +2,10 @@
 
 echo "##### install font #####"
 
+if [ ! -d ~/Library/Fonts ]; then
+  mkdir ~/Library/Fonts
+fi
+
 echo "----- install FiraCode -----"
 if [ -z "$(ls ~/Library/Fonts/ | grep FiraCode)" ]; then
   echo "FiraCode already exists"

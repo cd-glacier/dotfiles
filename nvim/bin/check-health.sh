@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -z "$(which neovim)" ]; then
+if [ -z "$(which nvim)" ]; then
   echo "neovim is not exist"
   exit 1
 fi
