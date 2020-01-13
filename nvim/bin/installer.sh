@@ -15,9 +15,9 @@ if [ -z $(which nvim) ]; then
 fi
 if [ -z $(which pip3) ]; then
   brew install python3
-  pip3 install neovim
+  pip3 install pynvim
 else
-  pip3 install neovim --upgrade
+  pip3 install pynvim --upgrade
 fi
 
 bash ./nvim/bin/dependency-installer.sh
