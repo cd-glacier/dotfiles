@@ -6,6 +6,7 @@
 
 nvim/.config/dein/.cache/
 nvim/.config/dein/repos/
+nvim/.config/coc/extensions/
 
 # allow
 !Makefile
@@ -13,9 +14,12 @@ nvim/.config/dein/repos/
 !bin/*.sh
 
 !nvim/bin/*.sh
+!nvim/.config/coc/extensions/package.json
 !nvim/.config/dein/.gitkeep
 !nvim/.config/nvim/init.vim
+!nvim/.config/nvim/coc-settings.json
 !nvim/.config/nvim/dein.toml
+!nvim/.config/nvim/lombok.jar
 !nvim/.config/nvim/spell/en.utf-8.add
 
 !vscode/bin/*.sh

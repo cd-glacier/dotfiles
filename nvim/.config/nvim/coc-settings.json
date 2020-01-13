@@ -1,0 +1,15 @@
+{
+  "diagnostic.infoSign": "▻",
+  "diagnostic.hintSign": "▻",
+  "diagnostic.warningSign": "▻",
+  "diagnostic.errorSign": "⌶",
+  "java.jdt.ls.vmargs": "-javaagent:/Users/hyoga-yoshida/.config/nvim/lombok.jar -Xbootclasspath/a:/Users/hyoga-yoshida/.config/nvim/lombok.jar",
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "filetypes": ["sh"],
+      "args": ["start"],
+      "ignoredRootPaths": ["~"]
+    }
+  }
+}
