@@ -29,7 +29,7 @@ if [ ! -d ~/.config ]; then
   mkdir ~/.config
 fi
 
-LINK_FILES=(.config/dein .config/nvim)
+LINK_FILES=(.config/dein .config/nvim .config/coc)
 
 for file in ${LINK_FILES[@]}; do \
   unlink ~/$file&>/dev/null
