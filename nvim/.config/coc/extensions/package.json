@@ -2,7 +2,7 @@
   "dependencies": {
     "coc-java": ">=1.4.6",
     "coc-json": ">=1.2.4",
-    "coc-solargraph": ">=1.1.4",
+    "coc-solargraph": ">=1.1.5",
     "coc-tsserver": ">=1.4.9"
   }
 }
