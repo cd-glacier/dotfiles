@@ -21,6 +21,6 @@ function pr
       and set number (echo "$pullrequest" | awk '{print $1}' | sed 's/#//g');
       and echo "open $pullrequest";
       and hub browse -- "pull/$number";
-      or exit 1
+      or echo ""
   end
 end
