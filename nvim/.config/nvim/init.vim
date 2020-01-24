@@ -65,6 +65,7 @@ let loaded_matchparen = 1
 
 nnoremap j gj
 nnoremap k gk
+nnoremap tt :tabnew<CR>
 
 inoremap jj <Esc>
 inoremap <C-j> <Down>
@@ -74,7 +75,6 @@ inoremap <C-l> <Right>
 
 cmap w!! w !sudo tee > /dev/null %
 
-command T tabnew
 command JQ %!jq '.'
 
 function! <SID>AutoProjectRootCD()
