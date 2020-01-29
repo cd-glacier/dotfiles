@@ -59,6 +59,12 @@ hook_add = """
   let g:gh_github_domain = $GHE_DOMAIN
 """
 
+[[plugins]]
+repo = "wellle/context.vim"
+hook_add = """
+  let g:context_enabled = 1
+"""
+
 # 補完
 
 # [[plugins]]
