@@ -66,6 +66,7 @@ let loaded_matchparen = 1
 nnoremap j gj
 nnoremap k gk
 nnoremap tt :tabnew<CR>
+nnoremap ee :e .<CR>
 
 inoremap jj <Esc>
 inoremap <C-j> <Down>
