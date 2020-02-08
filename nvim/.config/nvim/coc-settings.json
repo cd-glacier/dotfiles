@@ -10,6 +10,12 @@
       "filetypes": ["sh"],
       "args": ["start"],
       "ignoredRootPaths": ["~"]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
     }
-  }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "go"],
 }

@@ -106,6 +106,8 @@ repo = 'neoclide/coc.nvim'
 merged = '0'
 rev = 'release'
 hook_add = '''
+  autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+
   nmap <silent><space>p :CocList<CR>
   nmap <silent>gd <Plug>(coc-definition)
   nmap <silent> gy <Plug>(coc-type-definition)

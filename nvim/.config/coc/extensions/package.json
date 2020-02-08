@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "coc-go": ">=0.6.2",
     "coc-java": ">=1.4.6",
     "coc-json": ">=1.2.4",
+    "coc-prettier": ">=1.1.11",
     "coc-solargraph": ">=1.1.5",
     "coc-tsserver": ">=1.4.9"
   }
