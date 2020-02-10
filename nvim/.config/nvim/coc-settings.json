@@ -17,5 +17,5 @@
       "filetypes": ["go"]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "go"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "go", "json"],
 }

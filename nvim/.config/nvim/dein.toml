@@ -26,6 +26,9 @@ repo = 'othree/yajs.vim'
 [[plugins]] # 末尾spaceの可視化
 repo = 'ntpeters/vim-better-whitespace'
 
+[[plugins]]
+repo= 'jparise/vim-graphql'
+
 # 機能
 
 [[plugins]]
