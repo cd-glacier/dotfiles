@@ -1,8 +1,21 @@
 
 function hi
-  history -z | fzfcat --read0 --preview 'echo {} | bat --color always --language bash' \
+  set option $argv
+
+  history -z | fzf --read0 \
+    --reverse \
+    --preview 'echo {} | bat --color always --language bash' \
+    --preview-window top:15 \
+    --bind ctrl-d:preview-down \
+    --bind ctrl-u:preview-up \
   | perl -pe 'chomp if eof' \
   | read -lz result
-    and commandline -- $result
+
+  if [ "$option" = "remove" ]
+    echo remove from history: $result
+    history delete --exact --case-sensitive "$result"
+  else
+    commandline -- "$result"
+  end
 end
 
