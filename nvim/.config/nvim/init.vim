@@ -15,8 +15,8 @@ set showmatch
 set matchtime=3
 set syntax=markdown
 set laststatus=2
-set spelllang+=cjk
-set spell
+" set spelllang+=cjk
+" set spell
 set synmaxcol=200
 set cursorline
 set expandtab
