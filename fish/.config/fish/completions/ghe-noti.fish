@@ -1,0 +1,1 @@
+/Users/hyoga-yoshida/w/src/github.com/g-hyoga/dotfiles/tools/completions/ghe-noti.fish
