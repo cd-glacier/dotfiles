@@ -1,0 +1,16 @@
+#!/bin/bash
+
+args=("$@")
+
+if [ "$args" == "rm" ]; then
+  line_number=$(cat -n ~/.memo | fzf --reverse | awk '{ print $1 }') \
+    && sed -i -e "$line_number"d ~/.memo \
+    && echo "removed"
+elif [ "${#args[@]}" == 0 ]; then
+  raw_memo=$(tac ~/.memo | fzf --reverse)
+  echo $raw_memo | sed 's/\[[0-9]*-[0-9]*-[0-9]*\] //g' | tr -d '\n' | pbcopy
+  echo $raw_memo
+else
+  echo "[$(date '+%Y-%m-%d')] $@" >> ~/.memo
+fi
+

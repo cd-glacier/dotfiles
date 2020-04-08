@@ -51,6 +51,8 @@ fish/.config/fish/completions/cpad2.fish
 !tmux/.tmux.conf
 
 !tools/grpc-call
+!tools/ghe-noti
+!tools/memo
 !tools/bin/*
 !tools/completions/*.fish
 

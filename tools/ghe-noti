@@ -1,0 +1,58 @@
+#!/bin/bash
+
+if [ -z "$ACCESS_TOKEN" ]; then
+  echo "missing ACCESS_TOKEN"
+  exit 1
+fi
+
+if [ -z "$USER_NAME" ]; then
+  echo "missing USER_NAME"
+  exit 1
+fi
+
+notifications=$(curl -s -u "$USER_NAME:$ACCESS_TOKEN" \
+  --get https://ghe.ckpd.co/api/v3/notifications \
+  | jq '. | map({
+    "title": .subject.title,
+    "type": .subject.type,
+    "url": .subject.url,
+    "latest_url": .subject.latest_comment_url
+  })')
+notifications_length=$(echo $notifications | jq '. | length')
+
+if [ -z "$notifications" ]; then
+  echo "notifications is empty"
+  exit 0
+fi
+
+if [ -f /tmp/ghe-notifications ]; then
+  rm /tmp/ghe-notifications
+fi
+
+for i in $(seq 0 $(($notifications_length - 1)))
+do
+  title=$(echo $notifications | jq -r ".[$i].title")
+  notification_type=$(echo $notifications | jq -r ".[$i].type")
+
+  echo "$title" >> /tmp/ghe-notifications
+done
+
+selected_index=$(($(cat -n /tmp/ghe-notifications | fzf | awk '{ print $1 }') - 1))
+
+selected_url=$(echo "$notifications" | jq -r ".[$selected_index].url")
+selected_latest_url=$(echo "$notifications" | jq -r ".[$selected_index].latest_url")
+
+if [ -z "$selected_latest_url" ]; then
+  reacted_url=$(curl -s -u "$USER_NAME:$ACCESS_TOKEN" \
+    --get "$selected_url" \
+    | jq -r .html_url)
+else
+  reacted_url=$(curl -s -u "$USER_NAME:$ACCESS_TOKEN" \
+    --get "$selected_latest_url" \
+    | jq -r .html_url)
+fi
+
+if [ ! -z "$reacted_url" ]; then
+  open "$reacted_url"
+fi
+
