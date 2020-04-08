@@ -20,7 +20,7 @@ notifications=$(curl -s -u "$USER_NAME:$ACCESS_TOKEN" \
   })')
 notifications_length=$(echo $notifications | jq '. | length')
 
-if [ -z "$notifications" ]; then
+if [[ "$notifications_length" == 0 ]]; then
   echo "notifications is empty"
   exit 0
 fi
@@ -34,7 +34,7 @@ do
   title=$(echo $notifications | jq -r ".[$i].title")
   notification_type=$(echo $notifications | jq -r ".[$i].type")
 
-  echo "$title" >> /tmp/ghe-notifications
+  echo "[$notification_type] $title" >> /tmp/ghe-notifications
 done
 
 selected_index=$(($(cat -n /tmp/ghe-notifications | fzf | awk '{ print $1 }') - 1))
