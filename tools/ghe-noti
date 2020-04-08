@@ -42,7 +42,7 @@ selected_index=$(($(cat -n /tmp/ghe-notifications | fzf | awk '{ print $1 }') - 
 selected_url=$(echo "$notifications" | jq -r ".[$selected_index].url")
 selected_latest_url=$(echo "$notifications" | jq -r ".[$selected_index].latest_url")
 
-if [ -z "$selected_latest_url" ]; then
+if [ "$selected_latest_url" == "null" ]; then
   reacted_url=$(curl -s -u "$USER_NAME:$ACCESS_TOKEN" \
     --get "$selected_url" \
     | jq -r .html_url)
