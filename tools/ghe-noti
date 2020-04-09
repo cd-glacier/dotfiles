@@ -23,6 +23,9 @@ notifications_length=$(echo $notifications | jq '. | length')
 if [[ "$notifications_length" == 0 ]]; then
   echo "notifications is empty"
   exit 0
+elif [ -z "$notifications" ]; then
+  echo "failed to connect GHE"
+  exit 1
 fi
 
 if [ -f /tmp/ghe-notifications ]; then
@@ -37,7 +40,13 @@ do
   echo "[$notification_type] $title" >> /tmp/ghe-notifications
 done
 
-selected_index=$(($(cat -n /tmp/ghe-notifications | fzf | awk '{ print $1 }') - 1))
+selected_line=$(cat -n /tmp/ghe-notifications | fzf)
+
+if [ -z "$selected_line" ]; then
+  exit 1
+fi
+
+selected_index=$(($(echo $selected_line | awk '{ print $1 }') - 1))
 
 selected_url=$(echo "$notifications" | jq -r ".[$selected_index].url")
 selected_latest_url=$(echo "$notifications" | jq -r ".[$selected_index].latest_url")
