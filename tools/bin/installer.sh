@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tools=(grpc-call memo ghe-noti)
+tools=(grpc-call memo ghe-noti co)
 
 for file in "${tools[@]}"; do
   echo "link $file to /usr/local/bin"

@@ -30,7 +30,6 @@ nvim/.config/coc/extensions/
 !fish/bin/*.sh
 !fish/.config/fish/config.fish
 !fish/.config/fish/functions/*.fish
-fish/.config/fish/functions/adlocal.fish
 fish/.config/fish/functions/nippo.fish
 !fish/.config/fish/completions/*.fish
 !fish/.config/fish/completions/.gitkeep
@@ -53,6 +52,7 @@ fish/.config/fish/completions/cpad2.fish
 !tools/grpc-call
 !tools/ghe-noti
 !tools/memo
+!tools/co
 !tools/bin/*
 !tools/completions/*.fish
 
