@@ -1,7 +1,11 @@
 #!/bin/bash
 
 if [ ! -z "$1" ]; then
-  git checkout -b "$1"
+  if [[ "$1" == "." ]]; then
+    git checkout .
+  else
+    git checkout -b "$1"
+  fi
   exit 0
 fi
 
