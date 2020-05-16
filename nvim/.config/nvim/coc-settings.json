@@ -15,6 +15,10 @@
       "command": "gopls",
       "rootPatterns": ["go.mod"],
       "filetypes": ["go"]
+    },
+    "kotlin": {
+      "command": "/Users/hyoga-yoshida/w/src/github.com/fwcd/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
+      "filetypes": ["kotlin"]
     }
   },
   "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "go", "json"],

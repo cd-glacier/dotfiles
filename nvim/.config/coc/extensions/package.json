@@ -1,10 +1,10 @@
 {
   "dependencies": {
     "coc-go": ">=0.7.0",
-    "coc-java": ">=1.4.9",
-    "coc-json": ">=1.2.5",
+    "coc-java": ">=1.4.10",
+    "coc-json": ">=1.2.6",
     "coc-prettier": ">=1.1.12",
     "coc-solargraph": ">=1.1.6",
-    "coc-tsserver": ">=1.4.15"
+    "coc-tsserver": ">=1.5.1"
   }
 }

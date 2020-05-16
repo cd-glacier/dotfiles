@@ -27,7 +27,10 @@ repo = 'othree/yajs.vim'
 repo = 'ntpeters/vim-better-whitespace'
 
 [[plugins]]
-repo= 'jparise/vim-graphql'
+repo = 'jparise/vim-graphql'
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'
 
 # 機能
 
