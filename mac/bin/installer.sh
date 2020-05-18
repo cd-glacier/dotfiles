@@ -20,6 +20,8 @@ echo "##### install cli tool #####"
 install_command tmux
 install_command ghq
 install_command hub
+install_command mycli
+install_command pgcli
 install_command reattach-to-user-namespace
 
 echo "##### install mac apps #####"
@@ -38,7 +40,6 @@ brew_cask_install shiftit
 brew_cask_install hyperswitch
 brew_cask_install evernote
 brew_cask_install slack
-brew_cask_install lunar
 brew_cask_install docker
 
 echo "----- install qmk dependencies -----"
