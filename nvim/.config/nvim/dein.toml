@@ -1,18 +1,17 @@
 # 見た目
 [[plugins]] # color schema
-repo = 'trevordmiller/nova-vim'
+repo = 'cocopon/iceberg.vim'
 hook_add = '''
-  colorscheme nova
-  set background=dark
+  colorscheme iceberg
 '''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+repo = 'gkeep/iceberg-dark'
 hook_add = '''
-  let g:airline_theme='nova'
+  let g:airline_theme='icebergDark'
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#branch#enabled = 0
   let g:airline#extensions#readonly#enabled = 0
