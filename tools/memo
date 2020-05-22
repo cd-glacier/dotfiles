@@ -2,15 +2,17 @@
 
 args=("$@")
 
+memo_file_path=~/Dropbox/.memo
+
 if [ "$args" == "rm" ]; then
-  line_number=$(cat -n ~/.memo | fzf --reverse | awk '{ print $1 }') \
-    && sed -i -e "$line_number"d ~/.memo \
+  line_number=$(cat -n "$memo_file_path" | fzf --reverse | awk '{ print $1 }') \
+    && sed -i -e "$line_number"d "$memo_file_path" \
     && echo "removed"
 elif [ "${#args[@]}" == 0 ]; then
-  raw_memo=$(tac ~/.memo | fzf --reverse)
+  raw_memo=$(tac "$memo_file_path" | fzf --reverse)
   echo $raw_memo | sed 's/\[[0-9]*-[0-9]*-[0-9]*\] //g' | tr -d '\n' | pbcopy
   echo $raw_memo
 else
-  echo "[$(date '+%Y-%m-%d')] $@" >> ~/.memo
+  echo "[$(date '+%Y-%m-%d')] $@" >> $memo_file_path
 fi
 
