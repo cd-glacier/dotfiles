@@ -1,14 +1,16 @@
 
-nnoremap \b :action ToggleLineBreakpoint<CR>
+nnoremap <space><space> :action SearchEverywhere<CR>
+nnoremap <space>f :action FindInPath<CR>
 
-nnoremap \d :action Debug<CR>
-nnoremap \dc :action DebugClass<CR>
+nnoremap <space>b :action ToggleLineBreakpoint<CR>
+nnoremap <space>d :action Debug<CR>
+nnoremap <space>dc :action DebugClass<CR>
+
+nnoremap <space>r :action Run<CR>
+nnoremap <space>rc :action RunClass<CR>
+
+nnoremap <space>re Refactorings.QuickListPopupAction<CR>
+
+nnoremap ee :action ActivateProjectToolWindow<CR>
 
 inoremap jj <Esc>
-
-nnoremap \r :action Run<CR>
-nnoremap \rc :action RunClass<CR>
-nnoremap \re Refactorings.QuickListPopupAction<CR>
-
-
-
