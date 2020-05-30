@@ -2,7 +2,7 @@
 
 args=("$@")
 
-memo_file_path=~/Dropbox/.memo
+memo_file_path=~/Dropbox/.memo.txt
 
 if [ "$args" == "rm" ]; then
   line_number=$(cat -n "$memo_file_path" | fzf --reverse | awk '{ print $1 }') \
