@@ -10,6 +10,9 @@ repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'gkeep/iceberg-dark'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
   let g:airline_theme='icebergDark'
   let g:airline_powerline_fonts = 1
