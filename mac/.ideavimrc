@@ -1,3 +1,4 @@
+set clipboard=unnamed
 
 nnoremap <space><space> :action SearchEverywhere<CR>
 nnoremap <space>f :action FindInPath<CR>
