@@ -17,9 +17,7 @@
         "request": "launch",
         "cwd": "${workspaceFolder}",
         "program": "${workspaceFolder}/bin/rails",
-        "args": [
-          "server"
-        ],
+        "args": ["server"],
         "showDebuggerOutput": true
       },
       {
@@ -28,11 +26,7 @@
         "request": "launch",
         "cwd": "${workspaceFolder}",
         "program": "${workspaceFolder}/bin/rspec",
-        "args": [
-          "-I",
-          "${workspaceRoot}",
-          "${file}"
-        ]
+        "args": ["-I", "${workspaceRoot}", "${file}"]
       }
     ]
   },
@@ -50,20 +44,14 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
   "workbench.iconTheme": "material-icon-theme",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Nova",
   "ruby.codeCompletion": "rcodetools",
   "ruby.format": "rubocop",
   "ruby.intellisense": "rubyLocate",
@@ -73,19 +61,22 @@
   "[json]": {
     "editor.tabSize": 2
   },
+  "[graphql]": {
+    "editor.tabSize": 2
+  },
   "files.associations": {
     "*.schema": "ruby",
     "*.conf": "xml"
   },
   "java.configuration.checkProjectSettingsExclusions": false,
-  "cSpell.userWords": [
-    "TSUKUREPO"
-  ],
+  "cSpell.userWords": ["TSUKUREPO"],
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "terminal.integrated.shell.osx": "/bin/sh"
+  "terminal.integrated.shell.osx": "/bin/sh",
+  "java.semanticHighlighting.enabled": true,
+  "workbench.colorTheme": "Iceberg"
 }

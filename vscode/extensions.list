@@ -2,12 +2,14 @@ aaron-bond.better-comments
 artdiniz.quitcontrol-vscode
 bungcip.better-toml
 CoenraadS.bracket-pair-colorizer-2
+Dmytro.racket
 eamodio.gitlens
 esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 foxundermoon.shell-format
 GabrielBB.vscode-lombok
+harg.iceberg
 humao.rest-client
 ionutvmi.path-autocomplete
 kaiwood.endwise
@@ -16,10 +18,11 @@ lunaryorn.fish-ide
 mads-hartmann.bash-ide-vscode
 mechatroner.rainbow-csv
 ms-vscode.Go
+ms-vsliveshare.vsliveshare
 naumovs.color-highlight
 oderwat.indent-rainbow
 PKief.material-icon-theme
-rebornix.nova
+Prisma.vscode-graphql
 rebornix.ruby
 redhat.java
 rogalmic.bash-debug
@@ -38,4 +41,5 @@ vscjava.vscode-java-test
 vscjava.vscode-maven
 vscodevim.vim
 wayou.vscode-todo-highlight
+wingrunr21.vscode-ruby
 zxh404.vscode-proto3
