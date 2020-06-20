@@ -1,5 +1,7 @@
 set clipboard=unnamed
 
+nmap gi :action GotoImplementation<CR>
+
 nnoremap <space><space> :action SearchEverywhere<CR>
 nnoremap <space>f :action FindInPath<CR>
 
@@ -11,6 +13,11 @@ nnoremap <space>r :action Run<CR>
 nnoremap <space>rc :action RunClass<CR>
 
 nnoremap <space>re Refactorings.QuickListPopupAction<CR>
+nnoremap <space>ren :action RenameElement<CR>
+nnoremap <space>ref :action ShowUsages<CR>
+
+nnoremap <C-w>\| :action SplitVertically<CR>
+nnoremap <C-w>\- :action SplitHolizontally<CR>
 
 nnoremap ee :action ActivateProjectToolWindow<CR>
 
