@@ -21,4 +21,6 @@ nnoremap <C-w>\- :action SplitHolizontally<CR>
 
 nnoremap ee :action ActivateProjectToolWindow<CR>
 
+nnoremap :w :action SaveAll<CR>
+
 inoremap jj <Esc>
