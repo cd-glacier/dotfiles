@@ -23,4 +23,9 @@ nnoremap ee :action ActivateProjectToolWindow<CR>
 
 nnoremap :w :action SaveAll<CR>
 
+nnoremap / :action Find<CR>
+
+nnoremap n :action NextOccurence<CR>
+nnoremap N :action PreviousOccurence<CR>
+
 inoremap jj <Esc>

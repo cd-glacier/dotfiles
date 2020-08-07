@@ -1,0 +1,30 @@
+#!/bin/bash
+
+args=("$@")
+
+if [ "$args" == "create" ]; then
+    user_name=$(git config --get user.name)
+
+    if [ "$user_name" = "g-hyoga" ]; then
+      domain="github.com"
+    else
+      domain="$GHE_DOMAIN"
+    fi
+
+    repository=$(basename $(git rev-parse --show-toplevel))
+
+    open "https://$domain/$user_name/$repository/pull/new/$git_branch"
+elif [[ "$args" =~ ^[0-9]+$ ]]; then
+  git branch -D pr \
+  && git fetch upstream "pull/$args/head:pr" \
+  && git checkout pr \
+  || echo "failed to fetch pull request"
+else
+  tmp=$(hub pr list | fzf) \
+    && pullrequest=$(echo $tmp | sed 's/   //g') \
+    && number=$(echo "$pullrequest" | awk '{print $1}' | sed 's/#//g') \
+    && echo "open $pullrequest" \
+    && hub browse -- "pull/$number" \
+    || echo ""
+fi
+
