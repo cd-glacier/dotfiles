@@ -58,6 +58,13 @@
   "[ruby]": {
     "editor.tabSize": 2
   },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
   "[json]": {
     "editor.tabSize": 2
   },
@@ -78,5 +85,8 @@
   },
   "terminal.integrated.shell.osx": "/bin/sh",
   "java.semanticHighlighting.enabled": true,
-  "workbench.colorTheme": "Iceberg"
+  "workbench.colorTheme": "Iceberg",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
