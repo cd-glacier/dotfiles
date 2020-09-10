@@ -57,6 +57,7 @@ fish/.config/fish/completions/cpad2.fish
 !tools/pr
 !tools/studio
 !tools/xcode
+!tools/rubymine
 !tools/bin/*
 !tools/completions/*.fish
 
