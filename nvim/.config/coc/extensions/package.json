@@ -4,7 +4,7 @@
     "coc-java": ">=1.4.12",
     "coc-json": ">=1.2.6",
     "coc-prettier": ">=1.1.14",
-    "coc-solargraph": ">=1.1.6",
+    "coc-solargraph": ">=1.1.7",
     "coc-tsserver": ">=1.5.5"
   }
 }
