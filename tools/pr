@@ -3,17 +3,10 @@
 args=("$@")
 
 if [ "$args" == "create" ]; then
-    user_name=$(git config --get user.name)
-
-    if [ "$user_name" = "g-hyoga" ]; then
-      domain="github.com"
-    else
-      domain="$GHE_DOMAIN"
-    fi
-
-    repository=$(basename $(git rev-parse --show-toplevel))
-
-    open "https://$domain/$user_name/$repository/pull/new/$git_branch"
+  base_branch=${args[1]:-master} \
+    && result=$(hub pull-request --base "$base_branch") \
+    && open "$result" \
+    || echo "$result"
 elif [[ "$args" =~ ^[0-9]+$ ]]; then
   git branch -D pr \
   && git fetch upstream "pull/$args/head:pr" \
