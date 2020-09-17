@@ -51,7 +51,7 @@
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
   "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "ruby.codeCompletion": "rcodetools",
   "ruby.format": "rubocop",
   "ruby.intellisense": "rubyLocate",

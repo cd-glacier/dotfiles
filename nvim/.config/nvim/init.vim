@@ -55,6 +55,7 @@ hi PmenuSbar ctermbg=2
 hi PmenuThumb ctermfg=3
 hi clear SpellBad
 hi SpellBad cterm=underline
+" set filetype
 au BufRead,BufNewFile *.md set filetype=markdown
 
 autocmd ColorScheme * highlight LineNr ctermfg=10
@@ -161,3 +162,6 @@ function! s:get_syn_info()
 endfunction
 command! SyntaxInfo call s:get_syn_info()
 
+
+" rainbow brackets
+au FileType java,typescript,typescript.tsx,javascript,javascript.jsx,ruby call rainbow#load()

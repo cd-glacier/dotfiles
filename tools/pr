@@ -3,10 +3,8 @@
 args=("$@")
 
 if [ "$args" == "create" ]; then
-  base_branch=${args[1]:-master} \
-    && result=$(hub pull-request --base "$base_branch") \
-    && open "$result" \
-    || echo "$result"
+  base_branch=${args[1]:-master}
+  hub pull-request --base "$base_branch"
 elif [[ "$args" =~ ^[0-9]+$ ]]; then
   git branch -D pr \
   && git fetch upstream "pull/$args/head:pr" \

@@ -31,8 +31,19 @@ repo = 'ntpeters/vim-better-whitespace'
 [[plugins]]
 repo = 'jparise/vim-graphql'
 
-[[plugins]]
-repo = 'udalov/kotlin-vim'
+[[plugins]] # jsx tsx syntax highlight
+repo = 'peitalin/vim-jsx-typescript'
+
+[[plugins]] # rainbow brackets
+repo = 'frazrepo/vim-rainbow'
+hook_add = '''
+  let g:rainbow_load_separately = [
+      \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+      \ [ '*.{html,htm,tsx,jsx}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+      \ ]
+  let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+  let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+'''
 
 # 機能
 
