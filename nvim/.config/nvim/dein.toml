@@ -78,6 +78,9 @@ hook_add = """
   let g:gh_github_domain = $GHE_DOMAIN
 """
 
+[[plugins]] # <CNTL-y>,
+repo = 'mattn/emmet-vim'
+
 # 補完
 
 # [[plugins]]
