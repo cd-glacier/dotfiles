@@ -25,7 +25,8 @@ install_command pgcli
 install_command reattach-to-user-namespace
 install_command bat
 install_command noti
-intall_command fd
+install_command fd
+install_command fx
 
 echo "##### install mac apps #####"
 
