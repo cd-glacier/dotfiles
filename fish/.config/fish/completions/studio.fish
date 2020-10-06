@@ -1,1 +1,1 @@
-/Users/hyoga-yoshida/w/src/github.com/g-hyoga/dotfiles/tools/completions/studio.fish
+/Users/glacier/dev/src/github.com/g-hyoga/dotfiles/tools/completions/studio.fish

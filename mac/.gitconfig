@@ -7,4 +7,4 @@
 [web]
   browser = open
 [ghq]
-  root = ~/Dropbox/dev/src/
+  root = ~/dev/src/

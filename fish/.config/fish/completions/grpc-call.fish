@@ -1,1 +1,1 @@
-/Users/hyoga-yoshida/w/src/github.com/g-hyoga/dotfiles/tools/completions/grpc-call.fish
+/Users/glacier/dev/src/github.com/g-hyoga/dotfiles/tools/completions/grpc-call.fish
