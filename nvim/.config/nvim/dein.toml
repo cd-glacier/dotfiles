@@ -45,6 +45,12 @@ hook_add = '''
   let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 '''
 
+[[plugins]] # display color with color code
+repo = 'chrisbra/Colorizer'
+hook_add = '''
+  let g:colorizer_auto_color = 1
+'''
+
 # 機能
 
 [[plugins]]

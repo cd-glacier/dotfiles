@@ -1,4 +1,3 @@
-
 syntax on
 
 set shell=/bin/bash
@@ -44,7 +43,6 @@ set matchpairs& matchpairs+=<:>
 set nocompatible
 set ttimeout
 set ttimeoutlen=50
-
 
 let g:python_host_prog='/usr/local/bin/python2'
 let g:python3_host_prog='/opt/brew/bin/python3'
@@ -162,6 +160,6 @@ function! s:get_syn_info()
 endfunction
 command! SyntaxInfo call s:get_syn_info()
 
+" vim-rainbow
+au FileType java,ruby,json,typescript.tsx call rainbow#load()
 
-" rainbow brackets
-au FileType java,typescript,typescript.tsx,javascript,javascript.jsx,ruby call rainbow#load()
