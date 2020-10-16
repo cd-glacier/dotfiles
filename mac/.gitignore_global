@@ -14,3 +14,4 @@ filename.log
 .metadata/
 vendor/bundle/*
 *.class
+.evans.toml
