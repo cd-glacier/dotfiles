@@ -4,18 +4,21 @@ args=("$@")
 
 if [ "$args" == "create" ]; then
   base_branch=${args[1]:-master}
-  hub pull-request --base "$base_branch"
+  gh pr create --base "$base_branch"
 elif [[ "$args" =~ ^[0-9]+$ ]]; then
   git branch -D pr \
   && git fetch upstream "pull/$args/head:pr" \
   && git checkout pr \
   || echo "failed to fetch pull request"
 else
-  tmp=$(hub pr list | fzf) \
-    && pullrequest=$(echo $tmp | sed 's/   //g') \
-    && number=$(echo "$pullrequest" | awk '{print $1}' | sed 's/#//g') \
-    && echo "open $pullrequest" \
-    && hub browse -- "pull/$number" \
+  pr=$(gh pr list \
+      | fzf --reverse \
+        --preview-window down:30 \
+        --bind ctrl-d:preview-down \
+        --bind ctrl-u:preview-up \
+        --preview "echo {} | awk '{print \$1}' | sed 's/#//g' | xargs -I{} gh pr view {}") \
+    && number=$(echo "$pr" | awk '{print $1}' | sed 's/#//g') \
+    && gh pr view --web "$number" \
     || echo ""
 fi
 
