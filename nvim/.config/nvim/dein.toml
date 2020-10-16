@@ -51,6 +51,12 @@ hook_add = '''
   let g:colorizer_auto_color = 1
 '''
 
+[[plugins]] # HEADとの差分が見える
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]] # git系
+repo = 'tpope/vim-fugitive'
+
 # 機能
 
 [[plugins]]
