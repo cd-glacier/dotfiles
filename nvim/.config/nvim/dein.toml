@@ -93,6 +93,9 @@ hook_add = """
 [[plugins]] # <CNTL-y>,
 repo = 'mattn/emmet-vim'
 
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'
+
 # 補完
 
 # [[plugins]]

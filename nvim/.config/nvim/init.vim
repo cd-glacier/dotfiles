@@ -163,3 +163,7 @@ command! SyntaxInfo call s:get_syn_info()
 " vim-rainbow
 au FileType java,ruby,json,typescript.tsx call rainbow#load()
 
+nnoremap <silent> <C-w>h :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-w>j :TmuxNavigateDown<cr>
+nnoremap <silent> <C-w>k :TmuxNavigateUp<cr>
+nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
