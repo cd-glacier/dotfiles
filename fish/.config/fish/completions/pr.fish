@@ -1,1 +1,1 @@
-/Users/hyoga-yoshida/w/src/github.com/g-hyoga/dotfiles/tools/completions/pr.fish
+/Users/glacier/dev/src/github.com/g-hyoga/dotfiles/tools/completions/pr.fish

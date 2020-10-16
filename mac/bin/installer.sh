@@ -23,6 +23,10 @@ install_command hub
 install_command mycli
 install_command pgcli
 install_command reattach-to-user-namespace
+install_command bat
+install_command noti
+install_command fd
+install_command fx
 
 echo "##### install mac apps #####"
 
@@ -38,9 +42,8 @@ brew_cask_install dropbox
 brew_cask_install google-chrome
 brew_cask_install shiftit
 brew_cask_install hyperswitch
-brew_cask_install evernote
-brew_cask_install slack
 brew_cask_install docker
+brew_cask_install fontforge
 
 echo "----- install qmk dependencies -----"
 if [ -z $(which avr-gcc) ]; then

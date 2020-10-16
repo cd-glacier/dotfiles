@@ -10,6 +10,11 @@ echo "----- install FiraCode -----"
 if [ -z "$(ls ~/Library/Fonts/ | grep FiraCode)" ]; then
   git clone git@github.com:tonsky/FiraCode.git
   cp FiraCode/distr/ttf/FiraCode-Medium.ttf ~/Library/Fonts/
+  if [ -z "$(ls ~/Library/Fonts/ | grep NerdFonts)" ]; then
+    # うまく動かないかも
+    fontforge --script font-patcher FiraCode/distr/ttf/FiraCode-Medium.ttf -c FiraCode-Medium-NerdFonts.otf
+    cp FiraCode-Medium-NerdFonts.otf ~/Library/Fonts/
+  fi
   rm -rf FiraCode
 else
   echo "FiraCode already exists"
@@ -26,10 +31,3 @@ else
   echo "PoewrLine fonts already exists"
 fi
 
-echo "----- install nerd-fonts -----"
-if [ -z "$(ls ~/Library/Fonts/ | grep NerdFonts)" ]; then
-  brew tap homebrew/cask-fonts
-  brew cask install font-hack-nerd-font
-else
-  echo "NerdFonts already exists"
-fi
