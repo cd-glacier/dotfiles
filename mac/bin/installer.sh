@@ -20,6 +20,7 @@ echo "##### install cli tool #####"
 install_command tmux
 install_command ghq
 install_command hub
+install_command gh
 install_command mycli
 install_command pgcli
 install_command reattach-to-user-namespace
