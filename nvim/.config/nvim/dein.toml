@@ -1,20 +1,17 @@
 # 見た目
 [[plugins]] # color schema
-repo = 'cocopon/iceberg.vim'
+repo = 'ghifarit53/tokyonight-vim'
 hook_add = '''
-  colorscheme iceberg
+  colorscheme tokyonight
 '''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
-repo = 'gkeep/iceberg-dark'
-
-[[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
-  let g:airline_theme='icebergDark'
+  let g:airline_theme='tokyonight'
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#branch#enabled = 0
   let g:airline#extensions#readonly#enabled = 0
