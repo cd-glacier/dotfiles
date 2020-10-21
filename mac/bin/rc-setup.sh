@@ -1,7 +1,7 @@
 #!bin/bash
 
 echo "##### link .rc files ######"
-LINK_FILES=(.ideavimrc .vimrc .pryrc .xvimrc .myclirc)
+LINK_FILES=(.ideavimrc .vimrc .pryrc .xvimrc .myclirc .pgclirc)
 
 for file in ${LINK_FILES[@]}; do \
   unlink ~/$file&>/dev/null
