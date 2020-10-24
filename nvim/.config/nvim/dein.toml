@@ -48,6 +48,12 @@ hook_add = '''
   let g:colorizer_auto_color = 1
 '''
 
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+  let g:indentLine_bgcolor_gui = '#808080'
+'''
+
 [[plugins]] # HEADとの差分が見える
 repo = 'airblade/vim-gitgutter'
 
@@ -61,14 +67,6 @@ repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
-hook_add = '''
-  let g:indent_guides_enable_on_vim_startup = 1
-  let g:indent_guides_start_level = 2
-  let g:indent_guides_guide_size = 1
-'''
 
 [[plugins]] # 括弧補完
 repo = "cohama/lexima.vim"
