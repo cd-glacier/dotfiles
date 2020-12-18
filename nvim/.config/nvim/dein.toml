@@ -1,8 +1,8 @@
 # 見た目
 [[plugins]] # color schema
-repo = 'ghifarit53/tokyonight-vim'
+repo = 'arcticicestudio/nord-vim'
 hook_add = '''
-  colorscheme tokyonight
+  colorscheme nord
 '''
 
 [[plugins]]
@@ -11,7 +11,7 @@ repo = 'vim-airline/vim-airline'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
-  let g:airline_theme='tokyonight'
+  let g:airline_theme='nord'
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#branch#enabled = 0
   let g:airline#extensions#readonly#enabled = 0
