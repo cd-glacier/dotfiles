@@ -161,7 +161,7 @@ endfunction
 command! SyntaxInfo call s:get_syn_info()
 
 " vim-rainbow
-au FileType java,ruby,json call rainbow#load()
+au FileType java,ruby,json,go call rainbow#load()
 
 nnoremap <silent> <C-w>h :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-w>j :TmuxNavigateDown<cr>
