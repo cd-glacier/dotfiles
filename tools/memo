@@ -5,9 +5,12 @@ args=("$@")
 memo_file_path=~/Dropbox/.memo.txt
 
 if [ "$args" == "rm" ]; then
-  line_number=$(cat -n "$memo_file_path" | fzf --reverse | awk '{ print $1 }') \
-    && sed -i -e "$line_number"d "$memo_file_path" \
-    && echo "removed"
+  line_number=$(cat -n "$memo_file_path" | fzf --reverse | awk '{ print $1 }')
+
+  if [ "$line_number" != "" ]; then
+    sed -i -e "$line_number"d "$memo_file_path" \
+      && echo "removed"
+  fi
 elif [ "${#args[@]}" == 0 ]; then
   raw_memo=$(tac "$memo_file_path" | fzf --reverse)
   echo $raw_memo | sed 's/\[[0-9]*-[0-9]*-[0-9]*\] //g' | tr -d '\n' | pbcopy
