@@ -31,6 +31,12 @@ repo = 'jparise/vim-graphql'
 [[plugins]] # jsx tsx syntax highlight
 repo = 'peitalin/vim-jsx-typescript'
 
+[[plugins]] # jsx tsx syntax highlight
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]] # styped-components syntax highlight
+repo = 'styled-components/vim-styled-components'
+
 [[plugins]] # rainbow brackets
 repo = 'frazrepo/vim-rainbow'
 hook_add = '''
