@@ -37,6 +37,9 @@ repo = 'leafgarland/typescript-vim'
 [[plugins]] # styped-components syntax highlight
 repo = 'styled-components/vim-styled-components'
 
+[[plugins]]
+repo = 'uiiaoo/java-syntax.vim'
+
 [[plugins]] # rainbow brackets
 repo = 'frazrepo/vim-rainbow'
 hook_add = '''
