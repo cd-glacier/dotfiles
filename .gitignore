@@ -36,6 +36,10 @@ fish/.config/fish/functions/nippo.fish
 fish/.config/fish/completions/envchain.fish
 fish/.config/fish/completions/cpad2.fish
 
+!bash/bin/*.sh
+!/bash/.bash_profile
+!/bash/.bashrc
+
 !mac/bin/*.sh
 !mac/.bash_profile
 !mac/.bashrc

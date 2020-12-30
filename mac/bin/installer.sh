@@ -17,19 +17,8 @@ brew_cask_install() {
 }
 
 echo "##### install cli tool #####"
-install_command tmux
-install_command ghq
-install_command hub
-install_command gh
 install_command mycli
 install_command pgcli
-install_command reattach-to-user-namespace
-install_command bat
-install_command noti
-install_command fd
-install_command fx
-install_command bash
-install_command starship
 
 echo "##### install mac apps #####"
 
