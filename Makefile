@@ -1,7 +1,5 @@
-.PHONY: help nvim fish mac tmux tools
+.PHONY: help nvim fish mac tmux tools bash
 .DEFAULT_GOAL := help
-
-init: nvim fish mac tmux gitconfig gitignore_global rc health ## setup and install all
 
 clean: ## delete auto created file and directory
 	rm -rf ~/langserver
@@ -17,6 +15,9 @@ code-sync-extensions: ## sync vscode extentions
 
 fish: ## install and setup fish
 	bash ./fish/bin/installer.sh
+
+bash: ## install and setup bash
+	bash ./bash/bin/installer.sh
 
 tmux: ## install and setup tmux
 	bash ./tmux/bin/installer.sh
@@ -38,9 +39,6 @@ rc: ## link .rc files
 gitconfig: ## setup gitconfig and so on... Don't run this command without my pc.
 	if [ -f ~/.gitconfig ]; then unlink ~/.gitconfig&>/dev/null&>/dev/null; fi
 	ln -sf $(PWD)/mac/.gitconfig ~/.gitconfig
-
-bash: ## link bash_profile Don't run this command without my pc.
-	bash ./mac/bin/bash.sh
 
 health: ## check whether my dotfiles are linked
 	bash ./bin/check-health.sh
