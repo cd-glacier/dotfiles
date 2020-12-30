@@ -5,5 +5,5 @@ fi
 
 export TO_FOSH_PATH=$PATH
 
-exec fish
+# exec fish
 
