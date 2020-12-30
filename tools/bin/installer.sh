@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tools=(grpc-call memo ghe-noti co pr xcode studio rubymine)
+tools=(grpc-call memo ghe-noti co pr push xcode studio rubymine)
 
 for file in "${tools[@]}"; do
   echo "link $file to /usr/local/bin"

@@ -6,6 +6,8 @@ export FZF_DEFAULT_COMMAND='fd --exclude "*.class"'
 
 # alias
 alias g=git
+alias commit="git commit"
+alias git_branch="git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"

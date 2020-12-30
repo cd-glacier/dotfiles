@@ -1,0 +1,14 @@
+#!/bin/bash
+
+git_branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+
+echo "git push origin $git_branch"
+if [ "$git_branch" = "master" ]; then
+ read -p "Your branch is master. push origin master? (Y/n):" yn
+ if [ "$yn" = "Y" ]; then
+  git push origin "$git_branch"
+ fi
+else
+  git push origin "$git_branch"
+fi
+
