@@ -39,6 +39,7 @@ fish/.config/fish/completions/cpad2.fish
 !bash/bin/*.sh
 !/bash/.bash_profile
 !/bash/.bashrc
+!/bash/.config/starship.toml
 
 !mac/bin/*.sh
 !mac/.bash_profile
