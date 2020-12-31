@@ -22,6 +22,13 @@ repo() {
     --preview 'bat --color always {}/README.md')
 }
 
+pullstream() {
+  echo "git fetch upstream"
+  git fetch upstream
+  echo "git rebase upstream/master"
+  git rebase upstream/master
+}
+
 # prompt
 eval "$(starship init bash)"
 
