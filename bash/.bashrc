@@ -29,6 +29,11 @@ pullstream() {
   git rebase upstream/master
 }
 
+hi() {
+  history | cut -c 8- | tac | fzf --reverse | pbcopy
+  echo "copied"
+}
+
 # prompt
 eval "$(starship init bash)"
 
