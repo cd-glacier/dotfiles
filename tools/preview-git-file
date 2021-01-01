@@ -15,6 +15,8 @@ case "$file_status" in
     echo "$file_name -> $renamed_file_name" ;;
   "D" )
     echo "Delete file" ;;
+  "RD" )
+    echo "Delete file" ;;
   "AM" )
     git diff --color=always $file_name ;;
   "RM" )

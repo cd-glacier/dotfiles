@@ -2,7 +2,7 @@
 
 targetFiles="$(git diff --name-only) $(git ls-files -o --exclude-standard)"
 
-if [ "$(echo "$targetFiles" | wc -w | awk '{print $1}')" > 0 ]; then
+if [ ! -z "$targetFiles" ]; then
   changedFiles=$(git status --short | fzf --reverse \
     --preview 'preview-git-file {}' \
     --preview-window down:30 \
