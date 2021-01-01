@@ -1,0 +1,19 @@
+#!/bin/bash
+
+targetFiles="$(git diff --name-only) $(git ls-files -o --exclude-standard)"
+
+if [ "$(echo "$targetFiles" | wc -w | awk '{print $1}')" > 0 ]; then
+  changedFiles=$(git status --short | fzf --reverse \
+    --preview 'preview-git-file {}' \
+    --preview-window down:30 \
+    --bind ctrl-d:preview-down \
+    --bind ctrl-u:preview-up \
+    -m | awk '{print $2}')
+
+  for file in $changedFiles; do
+    echo "git add $file"
+    git add "$file"
+  done
+else
+  echo "Your branch is clean"
+fi

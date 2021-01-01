@@ -1,0 +1,1 @@
+/Users/glacier/dev/src/github.com/g-hyoga/dotfiles/tools/completions/add.fish
