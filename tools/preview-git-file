@@ -1,0 +1,30 @@
+#!/bin/bash
+
+file_status="$(echo $1 | awk '{print $1}')"
+file_name="$(echo $1 | awk '{print $2}')"
+renamed_file_name="$(echo $1 | awk '{print $4}')"
+
+case "$file_status" in
+  "A" )
+    git diff --cached --color=always $file_name ;;
+  "M" )
+    git diff --cached --color=always $file_name
+    git diff --color=always $file_name ;;
+  "R" )
+    echo "Rename file"
+    echo "$file_name -> $renamed_file_name" ;;
+  "D" )
+    echo "Delete file" ;;
+  "AM" )
+    git diff --color=always $file_name ;;
+  "RM" )
+    echo "Rename file"
+    echo "$file_name -> $renamed_file_name" ;;
+  "??" )
+    git add $file_name
+    git diff --cached --color=always $file_name
+    git reset $file_name >/dev/null ;;
+  "*" )
+    echo "unknown status: $file_status"
+    echo "$file_name" ;;
+esac
