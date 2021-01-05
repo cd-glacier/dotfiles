@@ -62,6 +62,7 @@ fish/.config/fish/completions/cpad2.fish
 !tools/memo
 !tools/add
 !tools/pr
+!tools/issue
 !tools/push
 !tools/preview-git-file
 !tools/studio

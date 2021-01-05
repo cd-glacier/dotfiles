@@ -1,0 +1,8 @@
+#!/bin/bash
+
+issueeee=$(hub issue | fzf | sed 's/   //g')
+number=$(echo "$issueeee" | awk '{print $1}' | sed 's/#//g')
+
+echo "open $issueeee"
+
+hub browse -- "issues/$number"
