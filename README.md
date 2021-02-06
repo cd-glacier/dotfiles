@@ -2,20 +2,12 @@
 
 setup for...
 
+ * bash
  * neovim
- * vscode
- * fish
  * tmux
- * mac apps
  * gitignore-global
  * gitconfig
  * ~rc files
-
-## Setup
-
-```sh
-make init
-```
 
 ## Help
 
