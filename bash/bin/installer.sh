@@ -20,8 +20,9 @@ install_command bash
 install_command starship
 install_command reattach-to-user-namespace
 
+
 echo "##### link bash setting files ######"
-LINK_FILES=(.bash_profile .bashrc .config/starship.toml .inputrc)
+LINK_FILES=(.bash_profile .bashrc .inputrc .config/starship.toml .config/custom_bashrc)
 
 for file in ${LINK_FILES[@]}; do \
   unlink ~/$file&>/dev/null
