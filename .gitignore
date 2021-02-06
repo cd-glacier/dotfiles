@@ -43,8 +43,6 @@ fish/.config/fish/completions/cpad2.fish
 !/bash/.config/starship.toml
 
 !mac/bin/*.sh
-!mac/.bash_profile
-!mac/.bashrc
 !mac/.gitconfig
 !mac/.gitignore_global
 !mac/.ideavimrc
