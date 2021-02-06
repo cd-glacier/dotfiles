@@ -71,3 +71,4 @@ fish/.config/fish/completions/cpad2.fish
 !tools/bin/*
 !tools/completions/*.fish
 
+!swiftbar/.gitkeep
