@@ -1,6 +1,6 @@
 [user]
   email = hyoga0216@gmail.com
-  name = g-hyoga
+  name = cd-glacier
 [core]
   excludesfile = ~/.gitignore_global
   editor = nvim -c \"set fenc=utf-8\"
