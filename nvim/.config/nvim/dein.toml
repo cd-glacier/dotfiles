@@ -40,6 +40,9 @@ repo = 'styled-components/vim-styled-components'
 [[plugins]]
 repo = 'uiiaoo/java-syntax.vim'
 
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+
 [[plugins]] # rainbow brackets
 repo = 'frazrepo/vim-rainbow'
 hook_add = '''

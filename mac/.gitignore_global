@@ -15,3 +15,5 @@ filename.log
 vendor/bundle/*
 *.class
 .evans.toml
+lib/*
+*.iml

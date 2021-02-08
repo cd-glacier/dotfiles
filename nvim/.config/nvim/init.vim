@@ -10,7 +10,6 @@ set number
 set ruler
 set nohlsearch
 set title
-set showmatch
 set matchtime=3
 set syntax=markdown
 set laststatus=2
@@ -55,10 +54,12 @@ hi clear SpellBad
 hi SpellBad cterm=underline
 " set filetype
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.kt set filetype=kotlin
 
 autocmd ColorScheme * highlight LineNr ctermfg=10
 " for java
 autocmd Filetype java setlocal ts=8 sts=4 sw=4 expandtab
+autocmd Filetype kotlin setlocal ts=8 sts=4 sw=4 expandtab
 
 let loaded_matchparen = 1
 

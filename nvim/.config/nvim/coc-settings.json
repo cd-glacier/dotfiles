@@ -17,13 +17,13 @@
       "filetypes": ["go"]
     },
     "kotlin": {
-      "command": "/Users/hyoga-yoshida/w/src/github.com/fwcd/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
+      "command": "~/dev/src/github.com/fwcd/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
       "filetypes": ["kotlin"]
     },
     "sql": {
       "command": "sqls",
-      "filetypes": ["sql"],
-    },
+      "filetypes": ["sql"]
+    }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "go", "json"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "go", "json"]
 }
