@@ -1,0 +1,22 @@
+#!/bin/bash
+
+args=("$@")
+
+if [ "$args" != "" ]; then
+  selected_java_version="$args"
+else
+  java_list='/tmp/java_home'
+
+  /usr/libexec/java_home -V 2> /tmp/tmp
+  tail -n+2 /tmp/tmp \
+    | sed 's/^ *//g' \
+    | sed 's/	/ /g' \
+    | sed 's/,//g' \
+    > "$java_list"
+
+  selected_java_version=$(cat "$java_list" | fzf | awk '{print $1}')
+fi
+
+export JAVA_HOME=$(/usr/libexec/java_home -v "$selected_java_version")
+export PATH="$JAVA_HOME/bin:$PATH"
+echo "change to $JAVA_HOME"
