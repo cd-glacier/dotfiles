@@ -103,14 +103,6 @@ repo = 'mattn/emmet-vim'
 [[plugins]]
 repo = 'christoomey/vim-tmux-navigator'
 
-# 補完
-
-# [[plugins]]
-# repo = 'Shougo/deoplete.nvim'
-# hook_add = '''
-#   let g:deoplete#enable_at_startup = 1
-# '''
-
 [[plugins]]
 repo = 'junegunn/fzf'
 build = './install --bin'
@@ -132,9 +124,10 @@ hook_add = '''
     \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
     \                 <bang>0)
 
-  nmap <silent> <space><space> :Files!<CR>
+  nmap <silent> <space><space> :GFiles<CR>
   nmap <silent> <space>h :History!<CR>
-  nmap <silent> <space>f :Ag!
+  nmap <silent> <space>f :Rg<CR>
+  nmap <silent> <space>c :Commits<CR>
 '''
 
 # langserver server
