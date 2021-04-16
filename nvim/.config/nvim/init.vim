@@ -60,6 +60,7 @@ autocmd ColorScheme * highlight LineNr ctermfg=10
 " for java
 autocmd Filetype java setlocal ts=8 sts=4 sw=4 expandtab
 autocmd Filetype kotlin setlocal ts=8 sts=4 sw=4 expandtab
+autocmd Filetype sql setlocal ts=8 sts=4 sw=4 expandtab
 
 let loaded_matchparen = 1
 
