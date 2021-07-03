@@ -74,3 +74,5 @@ fish/.config/fish/completions/cpad2.fish
 !tools/completions/*.fish
 
 !swiftbar/.gitkeep
+!swiftbar/ghe-notification.10s.sh
+
