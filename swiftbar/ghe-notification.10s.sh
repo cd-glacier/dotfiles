@@ -24,12 +24,25 @@ notifications=$(curl -s -u "$USER_NAME:$ACCESS_TOKEN" \
 
 notifications_length=$(echo $notifications | jq '. | length')
 
+# FIXME: reafactoring
+bar_text() {
+  if [ $1 -gt 20 ]; then
+    echo "🔥 $notifications_length notifications | href=https://ghe.ckpd.co/notifications"
+  elif [ $1 -gt 10 ]; then
+    echo "⚡️ $notifications_length notifications | href=https://ghe.ckpd.co/notifications"
+  elif [ $1 -gt 5 ]; then
+    echo "🌧  $notifications_length notifications | href=https://ghe.ckpd.co/notifications"
+  else
+    echo "☁️  $notifications_length notifications | href=https://ghe.ckpd.co/notifications"
+  fi
+}
+
 if [[ ! ${notifications_length} =~  ^[0-9]+$ ]]; then
   echo "Failed to connect to GHE | href=https://ghe.ckpd.co/notifications"
 fi
 
 if [[ "$notifications_length" > 0 ]]; then
-  echo "🤧 $notifications_length notifications | href=https://ghe.ckpd.co/notifications"
+  bar_text "$notifications_length"
 
   echo "---"
   for i in $(seq 0 $(($notifications_length - 1)))
@@ -40,6 +53,6 @@ if [[ "$notifications_length" > 0 ]]; then
     echo "[$notification_type] $title"
   done
 else
-  echo "✔ none | href=https://ghe.ckpd.co/notifications"
+  echo "☀️  none | href=https://ghe.ckpd.co/notifications"
 fi
 
