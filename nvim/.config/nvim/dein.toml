@@ -25,24 +25,6 @@ repo = 'othree/yajs.vim'
 [[plugins]] # 末尾spaceの可視化
 repo = 'ntpeters/vim-better-whitespace'
 
-[[plugins]]
-repo = 'jparise/vim-graphql'
-
-[[plugins]] # jsx tsx syntax highlight
-repo = 'peitalin/vim-jsx-typescript'
-
-[[plugins]] # jsx tsx syntax highlight
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]] # styped-components syntax highlight
-repo = 'styled-components/vim-styled-components'
-
-[[plugins]]
-repo = 'uiiaoo/java-syntax.vim'
-
-[[plugins]]
-repo = 'udalov/kotlin-vim'
-
 [[plugins]] # rainbow brackets
 repo = 'frazrepo/vim-rainbow'
 hook_add = '''
@@ -97,9 +79,6 @@ hook_add = """
   let g:gh_github_domain = $GHE_DOMAIN
 """
 
-[[plugins]] # <CNTL-y>,
-repo = 'mattn/emmet-vim'
-
 [[plugins]]
 repo = 'christoomey/vim-tmux-navigator'
 
@@ -128,22 +107,5 @@ hook_add = '''
   nmap <silent> <space>h :History!<CR>
   nmap <silent> <space>f :Rg<CR>
   nmap <silent> <space>c :Commits<CR>
-'''
-
-# langserver server
-
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-merged = '0'
-rev = 'release'
-hook_add = '''
-  autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-
-  nmap <silent><space>p :CocList<CR>
-  nmap <silent>gd <Plug>(coc-definition)
-  nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
-  nmap <silent><space>ref <Plug>(coc-references)
-  nmap <silent><space>ren <Plug>(coc-rename)
 '''
 
