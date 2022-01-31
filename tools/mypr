@@ -1,0 +1,4 @@
+
+#!/bin/bash
+
+gh pr list --state open --assignee hyoga-yoshida
