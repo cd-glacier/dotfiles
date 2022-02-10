@@ -4,17 +4,17 @@ if [ ! -z "$1" ]; then
   if [[ "$1" == "." ]]; then
     git checkout .
   elif [[ "$1" == mine ]]; then
-    GH_FORCE_TTY='100%' gh pr list --state all --assignee @me | \
-      tail -n +4 | \
+    GH_FORCE_TTY='100%' gh pr list --state all --assignee @me --limit 100 |
+      tail -n +4 |
       fzf --ansi \
         --preview-window down:30 \
         --bind ctrl-d:preview-down \
         --bind ctrl-u:preview-up \
         --preview 'GH_FORCE_TTY=$FZF_PREVIEW_COLUMNS gh pr view {1} | bat --color always -l md' |
-      awk '{print $1}' | \
-      tr -d '#' | \
-      xargs -I {} gh pr view {} --json headRefName | \
-      jq -r '.headRefName' | \
+      awk '{print $1}' |
+      tr -d '#' |
+      xargs -I {} gh pr view {} --json headRefName |
+      jq -r '.headRefName' |
       xargs -I {} git checkout {}
   else
     git checkout -b "$1"

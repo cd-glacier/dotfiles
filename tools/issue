@@ -1,8 +1,26 @@
 #!/bin/bash
 
-issueeee=$(hub issue | fzf | sed 's/   //g')
-number=$(echo "$issueeee" | awk '{print $1}' | sed 's/#//g')
+if [[ "$1" == "mine" ]]; then
+  GH_FORCE_TTY='100%' gh issue list --state all --author @me --limit 100 |
+    tail -n +4 |
+    fzf --ansi \
+      --preview-window down:30 \
+      --bind ctrl-d:preview-down \
+      --bind ctrl-u:preview-up \
+      --preview 'GH_FORCE_TTY=$FZF_PREVIEW_COLUMNS gh pr view {1} | bat --color always -l md' |
+    awk '{print $1}' |
+    tr -d '#' |
+    xargs -I {} gh issue view --web {}
+else
+  GH_FORCE_TTY='100%' gh issue list --state all --limit 100 |
+    tail -n +4 |
+    fzf --ansi \
+      --preview-window down:30 \
+      --bind ctrl-d:preview-down \
+      --bind ctrl-u:preview-up \
+      --preview 'GH_FORCE_TTY=$FZF_PREVIEW_COLUMNS gh pr view {1} | bat --color always -l md' |
+    awk '{print $1}' |
+    tr -d '#' |
+    xargs -I {} gh issue view --web {}
+fi
 
-echo "open $issueeee"
-
-hub browse -- "issues/$number"

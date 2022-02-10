@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GH_FORCE_TTY='100%' gh pr list --state all --assignee @me | \
+GH_FORCE_TTY='100%' gh pr list --state all --assignee @me --limit 100 | \
   tail -n +4 | \
   fzf --ansi \
     --preview-window down:30 \
