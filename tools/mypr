@@ -1,4 +1,14 @@
-
 #!/bin/bash
 
-gh pr list --state open --assignee hyoga-yoshida
+GH_FORCE_TTY='100%' gh pr list --state all --assignee @me | \
+  tail -n +4 | \
+  fzf --ansi \
+    --preview-window down:30 \
+    --bind ctrl-d:preview-down \
+    --bind ctrl-u:preview-up \
+    -m \
+    --preview 'GH_FORCE_TTY=$FZF_PREVIEW_COLUMNS gh pr view {1} | bat --color always -l md' |
+  awk '{print $1}' |
+  tr -d '#' |
+  xargs -I {} gh pr view --web {}
+
