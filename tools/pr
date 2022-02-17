@@ -5,19 +5,33 @@ args=("$@")
 if [ "$args" == "create" ]; then
   base_branch=${args[1]:-master}
   gh pr create --base "$base_branch"
+elif [ "$args" == "mine" ]; then
+  GH_FORCE_TTY='100%' gh pr list --state all --assignee @me --limit 100 | \
+    tail -n +4 | \
+    fzf --ansi \
+      --preview-window down:30 \
+      --bind ctrl-d:preview-down \
+      --bind ctrl-u:preview-up \
+      -m \
+      --preview 'GH_FORCE_TTY=$FZF_PREVIEW_COLUMNS gh pr view {1} | bat --color always -l md' |
+    awk '{print $1}' |
+    tr -d '#' |
+    xargs -I {} gh pr view --web {}
 elif [[ "$args" =~ ^[0-9]+$ ]]; then
   git fetch upstream "pull/$args/head:pr#$args" \
   && git checkout "pr#$args" \
   || echo "failed to fetch pull request"
 else
-  pr=$(gh pr list \
-      | fzf --reverse \
-        --preview-window down:30 \
-        --bind ctrl-d:preview-down \
-        --bind ctrl-u:preview-up \
-        --preview "echo {} | awk '{print \$1}' | sed 's/#//g' | xargs -I{} gh pr view {}") \
-    && number=$(echo "$pr" | awk '{print $1}' | sed 's/#//g') \
-    && gh pr view --web "$number" \
-    || echo ""
+  GH_FORCE_TTY='100%' gh pr list --state all --limit 100 | \
+    tail -n +4 | \
+    fzf --ansi \
+      --preview-window down:30 \
+      --bind ctrl-d:preview-down \
+      --bind ctrl-u:preview-up \
+      -m \
+      --preview 'GH_FORCE_TTY=$FZF_PREVIEW_COLUMNS gh pr view {1} | bat --color always -l md' |
+    awk '{print $1}' |
+    tr -d '#' |
+    xargs -I {} gh pr view --web {}
 fi
 
