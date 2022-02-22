@@ -32,18 +32,7 @@ tools=$(brew list)
 brew_cask_install iterm2
 brew_cask_install dropbox
 brew_cask_install google-chrome
-brew_cask_install shiftit
 brew_cask_install hyperswitch
-brew_cask_install docker
 brew_cask_install fontforge
-
-echo "----- install qmk dependencies -----"
-if [ -z $(which avr-gcc) ]; then
-  brew tap osx-cross/avr
-  brew install avr-gcc
-  brew install avrdude
-else
-  echo "qmk dependencies already exists"
-fi
 
 echo "##### finish to install mac apps #####"
