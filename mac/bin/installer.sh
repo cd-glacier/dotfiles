@@ -12,7 +12,7 @@ brew_cask_install() {
   if [[ $tools == *"$1"* ]]; then
     echo "$1 already exists"
   else
-    brew cask install $1
+    brew install $1 --cask
   fi
 }
 
