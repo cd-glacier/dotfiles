@@ -13,6 +13,6 @@ echo "##### install dependencies #####"
 
 install_command yarn
 install_command fzf
-install_command ag
+install_command ripgrep
 install_command jq
 
