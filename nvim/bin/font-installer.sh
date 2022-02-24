@@ -7,25 +7,23 @@ if [ ! -d ~/Library/Fonts ]; then
 fi
 
 echo "----- install FiraCode -----"
-if [ -z "$(ls ~/Library/Fonts/ | grep FiraCode)" ]; then
+if [ ! -z "$(ls ~/Library/Fonts/ | grep FiraCode)" ]; then
   git clone git@github.com:tonsky/FiraCode.git
   cp FiraCode/distr/ttf/FiraCode-Medium.ttf ~/Library/Fonts/
-  if [ -z "$(ls ~/Library/Fonts/ | grep NerdFonts)" ]; then
-    # うまく動かないかも
-    fontforge --script font-patcher FiraCode/distr/ttf/FiraCode-Medium.ttf -c FiraCode-Medium-NerdFonts.otf
-    cp FiraCode-Medium-NerdFonts.otf ~/Library/Fonts/
+  if [ ! -z "$(ls ~/Library/Fonts/ | grep NerdFonts)" ]; then
+    git clone --branch=master --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+    ./nerd-fonts/install.sh FiraCode
   fi
+  rm -rf nerd-fonts
   rm -rf FiraCode
 else
   echo "FiraCode already exists"
 fi
 
 echo "----- install PowerLine fonts -----"
-if [ -z "$(ls ~/Library/Fonts/ | grep PowerLine)" ]; then
+if [ ! -z "$(ls ~/Library/Fonts/ | grep PowerLine)" ]; then
   git clone https://github.com/powerline/fonts.git --depth=1
-  cd fonts
-  ./install.sh
-  cd ..
+  ./fonts/install.sh
   rm -rf fonts
 else
   echo "PoewrLine fonts already exists"
