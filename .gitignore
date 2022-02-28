@@ -22,20 +22,6 @@ nvim/.config/coc/extensions/
 !nvim/.config/nvim/lombok.jar
 !nvim/.config/nvim/spell/en.utf-8.add
 
-!vscode/bin/*.sh
-!vscode/settings.json
-!vscode/keybindings.json
-!vscode/extensions.list
-
-!fish/bin/*.sh
-!fish/.config/fish/config.fish
-!fish/.config/fish/functions/*.fish
-fish/.config/fish/functions/nippo.fish
-!fish/.config/fish/completions/*.fish
-!fish/.config/fish/completions/.gitkeep
-fish/.config/fish/completions/envchain.fish
-fish/.config/fish/completions/cpad2.fish
-
 !bash/bin/*.sh
 !/bash/.bash_profile
 !/bash/.bashrc

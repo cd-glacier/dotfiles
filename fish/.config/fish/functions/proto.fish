@@ -1,1 +1,0 @@
-/Users/hyoga-yoshida/w/src/ghe.ckpd.co/hyoga-yoshida/dotfiles/fish_functions/proto.fish

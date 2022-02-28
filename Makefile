@@ -1,4 +1,4 @@
-.PHONY: help nvim fish mac tmux tools bash swiftbar
+.PHONY: help nvim mac tmux tools bash swiftbar
 .DEFAULT_GOAL := help
 
 clean: ## delete auto created file and directory
@@ -6,15 +6,6 @@ clean: ## delete auto created file and directory
 
 nvim: ## install and setup neovim
 	bash ./nvim/bin/installer.sh
-
-code: ## install and setup vscode
-	bash ./vscode/bin/installer.sh
-
-code-sync-extensions: ## sync vscode extentions
-	bash ./vscode/bin/sync-extensions.sh
-
-fish: ## install and setup fish
-	bash ./fish/bin/installer.sh
 
 bash: ## install and setup bash
 	bash ./bash/bin/installer.sh
