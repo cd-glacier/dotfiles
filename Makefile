@@ -1,4 +1,4 @@
-.PHONY: help nvim fish mac tmux tools bash
+.PHONY: help nvim fish mac tmux tools bash swiftbar
 .DEFAULT_GOAL := help
 
 clean: ## delete auto created file and directory
@@ -24,6 +24,9 @@ tmux: ## install and setup tmux
 
 mac: ## install mac app
 	bash ./mac/bin/installer.sh
+
+swiftbar: ## install swiftbar and link swiftbar file to Dropbox
+	bash ./swiftbar/bin/installer.sh
 
 tools: ## link my tools
 	bash ./tools/bin/installer.sh

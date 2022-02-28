@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ACCESS_TOKEN=hoge
-USER_NAME=hyoga-yoshida
+ACCESS_TOKEN=$(envchain swiftbar bash -c 'echo $GHE_ACCESS_TOKEN')
+USER_NAME=$(envchain swiftbar bash -c 'echo $GHE_USER_NAME')
 
 if [ -z "$ACCESS_TOKEN" ]; then
   echo "missing ACCESS_TOKEN"
