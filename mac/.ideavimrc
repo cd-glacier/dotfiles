@@ -1,31 +1,32 @@
 set clipboard=unnamed
+set incsearch
 
-nmap gi :action GotoImplementation<CR>
-
-nnoremap <space><space> :action SearchEverywhere<CR>
-nnoremap <space>f :action FindInPath<CR>
-
-nnoremap <space>b :action ToggleLineBreakpoint<CR>
-nnoremap <space>d :action Debug<CR>
-nnoremap <space>dc :action DebugClass<CR>
-
-nnoremap <space>r :action Run<CR>
-nnoremap <space>rc :action RunClass<CR>
-
-nnoremap <space>re Refactorings.QuickListPopupAction<CR>
-nnoremap <space>ren :action RenameElement<CR>
-nnoremap <space>ref :action ShowUsages<CR>
-
-nnoremap <C-w>\| :action SplitVertically<CR>
-nnoremap <C-w>\- :action SplitHolizontally<CR>
-
-nnoremap ee :action ActivateProjectToolWindow<CR>
-
-nnoremap :w :action SaveAll<CR>
-
-nnoremap / :action Find<CR>
-
-nnoremap n :action NextOccurence<CR>
-nnoremap N :action PreviousOccurence<CR>
+let mapleader=" "
 
 inoremap jj <Esc>
+
+nmap gi <Action>(GotoImplementation)
+
+map <leader><space> <Action>(SearchEverywhere)
+map <leader>f <Action>(FindInPath)
+
+map <C-w>\| <Action>(SplitVertically)
+map <C-w>\- <Action>(SplitHolizontally)
+
+map :w <Action>(SaveAll)
+
+map / <Action>(Find)
+
+# Run
+map <leader>ru <Action>(Run)
+
+# Debug
+map <leader>d <Action>(Debug)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>e <Action>(EvaluateExpression)
+map <leader>c <Action>(Resume)
+map <leader>s <Action>(StepOver)
+
+# Refactoring
+map <leader>re <Action>(RefactoringMenu)
+
