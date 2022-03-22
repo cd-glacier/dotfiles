@@ -53,6 +53,6 @@ if [[ "$notifications_length" > 0 ]]; then
     echo "[$notification_type] $title"
   done
 else
-  echo "☀️  | href=https://ghe.ckpd.co/notifications"
+  echo "☀️  | href=https://ghe.ckpd.co/notifications?query=is%3Asaved"
 fi
 
