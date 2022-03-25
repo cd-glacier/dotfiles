@@ -27,18 +27,18 @@ notifications_length=$(echo $notifications | jq '. | length')
 # FIXME: reafactoring
 bar_text() {
   if [ $1 -gt 20 ]; then
-    echo "🔥 $notifications_length | href=https://ghe.ckpd.co/notifications"
+    echo "🔥 $notifications_length | href=https://ghe.ckpd.co/notifications?query=is%3Asaved"
   elif [ $1 -gt 10 ]; then
-    echo "⚡️ $notifications_length | href=https://ghe.ckpd.co/notifications"
+    echo "⚡️ $notifications_length | href=https://ghe.ckpd.co/notifications?query=is%3Asaved"
   elif [ $1 -gt 5 ]; then
-    echo "🌧  $notifications_length | href=https://ghe.ckpd.co/notifications"
+    echo "🌧  $notifications_length | href=https://ghe.ckpd.co/notification?query=is%3Asaveds"
   else
-    echo "☁️  $notifications_length | href=https://ghe.ckpd.co/notifications"
+    echo "☁️  $notifications_length | href=https://ghe.ckpd.co/notifications?query=is%3Asaved"
   fi
 }
 
 if [[ ! ${notifications_length} =~  ^[0-9]+$ ]]; then
-  echo "Failed to connect to GHE | href=https://ghe.ckpd.co/notifications"
+  echo "Failed to connect to GHE | href=https://ghe.ckpd.co/notifications?query=is%3Asaved"
 fi
 
 if [[ "$notifications_length" > 0 ]]; then
