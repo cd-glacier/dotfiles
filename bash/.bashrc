@@ -13,3 +13,8 @@ alias git_branch="git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/*
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# read custom bashrc
+for rc in $(ls ~/.config/custom_bashrc/); do
+  . ~/.config/custom_bashrc/$rc
+done
+
