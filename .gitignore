@@ -42,6 +42,9 @@ nvim/.config/coc/extensions/
 !tmux/bin/*.sh
 !tmux/.tmux.conf
 
+!zellij/bin/*.sh
+!zellij/.config/zellij/config.yaml
+
 !tools/co
 !tools/grpc-call
 !tools/ghe-noti

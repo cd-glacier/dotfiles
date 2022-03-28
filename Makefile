@@ -1,4 +1,4 @@
-.PHONY: help nvim mac tmux tools bash swiftbar
+.PHONY: help nvim mac tmux tools bash swiftbar zellij
 .DEFAULT_GOAL := help
 
 clean: ## delete auto created file and directory
@@ -12,6 +12,9 @@ bash: ## install and setup bash
 
 tmux: ## install and setup tmux
 	bash ./tmux/bin/installer.sh
+
+zellij: ## install and setup zellij
+	bash ./zellij/bin/installer.sh
 
 mac: ## install mac app
 	bash ./mac/bin/installer.sh

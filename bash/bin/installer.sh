@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 install_command() {
   echo "----- install $1 -----"
@@ -9,7 +9,6 @@ install_command() {
 
 echo '#### install with brew'
 
-install_command tmux
 install_command ghq
 install_command gh
 install_command bat
@@ -19,7 +18,6 @@ install_command fx
 install_command bash
 install_command starship
 install_command reattach-to-user-namespace
-
 
 echo "##### link bash setting files ######"
 LINK_FILES=(.bash_profile .bashrc .inputrc .config/starship.toml .config/custom_bashrc)

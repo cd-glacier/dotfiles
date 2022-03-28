@@ -4,7 +4,7 @@ setup for...
 
  * bash
  * neovim
- * tmux
+ * zellij
  * gitignore-global
  * gitconfig
  * ~rc files
