@@ -10,9 +10,6 @@ nvim: ## install and setup neovim
 bash: ## install and setup bash
 	bash ./bash/bin/installer.sh
 
-tmux: ## install and setup tmux
-	bash ./tmux/bin/installer.sh
-
 zellij: ## install and setup zellij
 	bash ./zellij/bin/installer.sh
 
