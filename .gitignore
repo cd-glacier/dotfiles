@@ -39,6 +39,9 @@ nvim/.config/coc/extensions/
 !mac/.myclirc
 !mac/.pgclirc
 
+!tmux/bin/*.sh
+!tmux/.tmux.conf
+
 !zellij/bin/*.sh
 !zellij/.config/zellij/config.yaml
 
