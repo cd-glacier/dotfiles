@@ -1,3 +1,6 @@
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init bash pre)"
 
 # const
 export LANG=en_US.UTF-8
@@ -17,4 +20,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 for rc in $(ls ~/.config/custom_bashrc/); do
   . ~/.config/custom_bashrc/$rc
 done
+
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init bash post)"
 
