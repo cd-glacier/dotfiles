@@ -31,7 +31,7 @@ bar_text() {
   elif [ $1 -gt 10 ]; then
     echo "⚡️ $notifications_length | href=https://ghe.ckpd.co/notifications?query=is%3Asaved"
   elif [ $1 -gt 5 ]; then
-    echo "🌧  $notifications_length | href=https://ghe.ckpd.co/notification?query=is%3Asaveds"
+    echo "🌧  $notifications_length | href=https://ghe.ckpd.co/notifications?query=is%3Asaveds"
   else
     echo "☁️  $notifications_length | href=https://ghe.ckpd.co/notifications?query=is%3Asaved"
   fi
