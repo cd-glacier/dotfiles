@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ "$1" == "mine" ]]; then
-  GH_FORCE_TTY='100%' gh issue list --state all --author @me --limit 100 |
+  GH_FORCE_TTY='100%' gh issue list --state all --assignee @me --limit 200 |
     tail -n +4 |
     fzf --ansi \
       --preview-window down:30 \

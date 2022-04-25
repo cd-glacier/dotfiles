@@ -6,7 +6,7 @@ if [ "$args" == "create" ]; then
   base_branch=${args[1]:-master}
   gh pr create --base "$base_branch"
 elif [ "$args" == "mine" ]; then
-  GH_FORCE_TTY='100%' gh pr list --state all --assignee @me --limit 100 | \
+  GH_FORCE_TTY='100%' gh pr list --assignee @me --limit 100 | \
     tail -n +4 | \
     fzf --ansi \
       --preview-window down:30 \
