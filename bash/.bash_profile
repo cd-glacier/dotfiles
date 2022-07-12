@@ -1,11 +1,8 @@
 # Fig pre block. Keep at the top of this file.
-export PATH="${PATH}:${HOME}/.local/bin"
-eval "$(fig init bash pre)"
-
+[[ -f "$HOME/.fig/shell/bash_profile.pre.bash" ]] && . "$HOME/.fig/shell/bash_profile.pre.bash"
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
 # Fig post block. Keep at the bottom of this file.
-eval "$(fig init bash post)"
-
+[[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && . "$HOME/.fig/shell/bash_profile.post.bash"
