@@ -16,9 +16,9 @@ brew_cask_install() {
   fi
 }
 
-echo "##### install cli tool #####"
-install_command mycli
-install_command pgcli
+# echo "##### install cli tool #####"
+# install_command mycli
+# install_command pgcli
 
 echo "##### install mac apps #####"
 
@@ -29,7 +29,6 @@ fi
 
 tools=$(brew list)
 
-brew_cask_install iterm2
 brew_cask_install dropbox
 brew_cask_install google-chrome
 brew_cask_install hyperswitch

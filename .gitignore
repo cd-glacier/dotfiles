@@ -39,9 +39,6 @@ nvim/.config/coc/extensions/
 !mac/.myclirc
 !mac/.pgclirc
 
-!tmux/bin/*.sh
-!tmux/.tmux.conf
-
 !wezterm/bin/*.sh
 !wezterm/.config/wezterm/wezterm.lua
 
