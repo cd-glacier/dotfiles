@@ -43,7 +43,7 @@ nvim/.config/coc/extensions/
 !tmux/.tmux.conf
 
 !wezterm/bin/*.sh
-!wezterm/.config/wezterm/config.yaml
+!wezterm/.config/wezterm/wezterm.lua
 
 !tools/co
 !tools/grpc-call
