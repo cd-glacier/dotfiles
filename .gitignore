@@ -42,26 +42,20 @@ nvim/.config/coc/extensions/
 !tmux/bin/*.sh
 !tmux/.tmux.conf
 
-!zellij/bin/*.sh
-!zellij/.config/zellij/config.yaml
+!wezterm/bin/*.sh
+!wezterm/.config/wezterm/config.yaml
 
 !tools/co
 !tools/grpc-call
 !tools/ghe-noti
-!tools/memo
 !tools/add
 !tools/pr
 !tools/mypr
 !tools/issue
 !tools/push
 !tools/preview-git-file
-!tools/studio
-!tools/xcode
-!tools/rubymine
-!tools/idea
 !tools/java-home
 !tools/bin/*
-!tools/completions/*.fish
 
 !swiftbar/bin/*.sh
 !swiftbar/.gitkeep
