@@ -53,5 +53,10 @@ return {
       mods = 'LEADER',
       action = wezterm.action.ActivatePaneDirection 'Right',
     },
+    {
+      key = '[',
+      mods = 'LEADER',
+      action = wezterm.action.ActivateCopyMode,
+    }
   },
 }
