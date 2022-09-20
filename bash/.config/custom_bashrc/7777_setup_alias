@@ -3,6 +3,6 @@
 alias chrome="open -a 'Google Chrome'"
 alias idea="open -a 'IntelliJ IDEA CE'"
 alias rubymine="open -a 'RubyMine'"
-alias studio="open -a 'Android Studio'"
+alias studio="open -a 'Android Studio Preview'"
 alias xcode="open -a 'Xcode'"
 
