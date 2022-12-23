@@ -2,6 +2,7 @@
 export LANG=en_US.UTF-8
 export EDITOR=nvim
 export FZF_DEFAULT_COMMAND='fd --exclude "*.class"'
+export PGCLIENTENCODING=utf-8 # for pgcli
 
 # alias
 alias g=git
