@@ -58,3 +58,4 @@ nvim/.config/coc/extensions/
 !swiftbar/.gitkeep
 !swiftbar/ghe-notification.10s.sh
 
+!raycast/*.rayconfig
