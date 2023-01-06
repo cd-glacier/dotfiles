@@ -12,7 +12,7 @@ brew_cask_install() {
   if [[ $tools == *"$1"* ]]; then
     echo "$1 already exists"
   else
-    brew install $1 --cask
+    brew install --cask $1
   fi
 }
 
@@ -29,9 +29,8 @@ fi
 
 tools=$(brew list)
 
-brew_cask_install dropbox
-brew_cask_install google-chrome
+brew_cask_install vivaldi
+brew_cask_install raycast
 brew_cask_install hyperswitch
-brew_cask_install fontforge
 
 echo "##### finish to install mac apps #####"
