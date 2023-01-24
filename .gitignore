@@ -59,3 +59,8 @@ nvim/.config/coc/extensions/
 !swiftbar/ghe-notification.10s.sh
 
 !raycast/*.rayconfig
+
+!yabai_skhd/bin/*.sh
+!yabai_skhd/.yabairc
+!yabai_skdh/.skhdrc
+

@@ -1,4 +1,4 @@
-.PHONY: help nvim mac tmux tools bash swiftbar wezterm
+.PHONY: help nvim mac tmux tools bash swiftbar wezterm yabai-skhd
 .DEFAULT_GOAL := help
 
 clean: ## delete auto created file and directory
@@ -25,6 +25,9 @@ swiftbar: ## install swiftbar and link swiftbar file to Dropbox
 tools: ## link my tools
 	bash ./tools/bin/installer.sh
 
+yabai-skhd: ## link yabairc and skhdrc
+	bash ./yabai_skhd/bin/installer.sh
+
 gitignore-global: ## link and add gitignore_global to gitconfig
 	if [ -f ~/.gitignore_global ]; then unlink ~/.gitignore_global&>/dev/null; fi
 	ln -sf $(PWD)/mac/.gitignore_global ~/.gitignore_global
@@ -42,3 +45,4 @@ health: ## check whether my dotfiles are linked
 
 help: ## show help to make
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
