@@ -1,5 +1,9 @@
 #!/bin/bash
 
+alias g=git
+alias commit="git commit"
+alias git_branch="git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'"
+
 alias idea="open -a 'IntelliJ IDEA CE'"
 alias rubymine="open -a 'RubyMine'"
 alias studio="open -a 'Android Studio'"
