@@ -1,8 +1,7 @@
 #!/bin/bash
 
-alias chrome="open -a 'Google Chrome'"
 alias idea="open -a 'IntelliJ IDEA CE'"
 alias rubymine="open -a 'RubyMine'"
-alias studio="open -a 'Android Studio Preview'"
+alias studio="open -a 'Android Studio'"
 alias xcode="open -a 'Xcode'"
 
