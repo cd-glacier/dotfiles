@@ -62,5 +62,5 @@ nvim/.config/coc/extensions/
 
 !yabai_skhd/bin/*.sh
 !yabai_skhd/.yabairc
-!yabai_skdh/.skhdrc
+!yabai_skhd/.skhdrc
 
