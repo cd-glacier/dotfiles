@@ -1,16 +1,16 @@
 # window 移動
-cmd - h : yabai -m window --focus west || \
+ctrl - h : yabai -m window --focus west || \
   yabai -m display --focus west || \
   yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Vivaldi") | .id')
 
-cmd - j : yabai -m window --focus south || \
+ctrl - j : yabai -m window --focus south || \
   yabai -m display --focus south || \
   yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "WezTerm") | .id')
 
-cmd - k : yabai -m window --focus north || \
+ctrl - k : yabai -m window --focus north || \
   yabai -m display --focus north
 
-cmd - l : yabai -m window --focus east || \
+ctrl - l : yabai -m window --focus east || \
   yabai -m display --focus east || \
   yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Android Studio") | .id')
 
