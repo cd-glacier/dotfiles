@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tools=(grpc-call ghe-noti co pr issue add push preview-git-file java-home)
+tools=(grpc-call ghe-noti pr add push preview-git-file java-home)
 
 for file in "${tools[@]}"; do
   echo "link $file to /usr/local/bin"
