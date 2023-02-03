@@ -38,6 +38,5 @@ yabai -m config mouse_drop_action            swap
 
 yabai -m rule --add app="Systen Preferences" manage=off
 yabai -m rule --add app="Finder" manage=off
-yabai -m rule --add app="TickTick" manage=off
 yabai -m rule --add title="Picture in Picture" manage=off
 
