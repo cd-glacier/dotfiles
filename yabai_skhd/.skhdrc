@@ -8,7 +8,8 @@ ctrl - j : yabai -m window --focus south || \
   yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "WezTerm") | .id')
 
 ctrl - k : yabai -m window --focus north || \
-  yabai -m display --focus north
+  yabai -m display --focus north || \
+  yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Obsidian") | .id')
 
 ctrl - l : yabai -m window --focus east || \
   yabai -m display --focus east || \
