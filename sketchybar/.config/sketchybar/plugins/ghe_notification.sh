@@ -43,6 +43,6 @@ fi
 if [[ "$notifications_length" > "0" ]]; then
   bar_text "$notifications_length"
 else
-  sketchybar --set $NAME icon="󰖨"
+  sketchybar --set $NAME icon="󰖨" label="0"
 fi
 
