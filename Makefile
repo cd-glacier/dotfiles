@@ -1,4 +1,4 @@
-.PHONY: help nvim mac tmux tools bash swiftbar wezterm yabai-skhd sketchybar
+.PHONY: help nvim mac tmux tools bash wezterm yabai-skhd sketchybar
 .DEFAULT_GOAL := help
 
 clean: ## delete auto created file and directory
@@ -18,9 +18,6 @@ wezterm: ## install and setup wezterm
 
 mac: ## install mac app
 	bash ./mac/bin/installer.sh
-
-swiftbar: ## install swiftbar and link swiftbar file to Dropbox
-	bash ./swiftbar/bin/installer.sh
 
 sketchybar: ## install sketchybar and link config files
 	bash ./sketchybar/bin/installer.sh

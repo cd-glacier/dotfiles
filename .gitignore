@@ -50,10 +50,6 @@ nvim/.config/coc/extensions/
 !tools/java-home
 !tools/bin/*
 
-!swiftbar/bin/*.sh
-!swiftbar/.gitkeep
-!swiftbar/ghe-notification.10s.sh
-
 !sketchybar/bin/*.sh
 !sketchybar/.config/sketchybar/sketchybarrc
 !sketchybar/.config/sketchybar/plugins/*.sh
