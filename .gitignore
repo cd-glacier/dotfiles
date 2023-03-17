@@ -54,6 +54,10 @@ nvim/.config/coc/extensions/
 !swiftbar/.gitkeep
 !swiftbar/ghe-notification.10s.sh
 
+!sketchybar/bin/*.sh
+!sketchybar/.config/sketchybar/sketchybarrc
+!sketchybar/.config/sketchybar/plugins/*.sh
+
 !raycast/*.rayconfig
 
 !yabai_skhd/bin/*.sh

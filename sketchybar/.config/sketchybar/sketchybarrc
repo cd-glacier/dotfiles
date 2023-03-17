@@ -1,0 +1,107 @@
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+
+sketchybar --bar \
+  height=32 \
+  blur_radius=0 \
+  position=top \
+  sticky=on \
+  padding_left=23 \
+  padding_right=23 \
+  display=main \
+  color=0x6624273a
+
+sketchybar --default \
+  updates=when_shown \
+  background.color=0xff24273a \
+  background.padding_left=2 \
+  background.padding_right=2 \
+  background.corner_radius=5 \
+  background.height=24 \
+  icon.color=0xffffffff \
+  icon.font="Hack Nerd Font:Bold:17.0"  \
+  icon.padding_left=8 \
+  icon.padding_right=7 \
+  label.font="Hack Nerd Font:Bold:12.0" \
+  label.color=0xffcad3f5 \
+  label.padding_left=0 \
+  label.padding_right=7
+
+
+##### Left Items #####
+
+# Front App
+sketchybar \
+  --add item front_app left \
+  --set front_app \
+    background.color=0xffa6da95 \
+    background.padding_left=0 \
+    background.padding_right=0 \
+    icon.y_offset=1 \
+    icon.color=0xff24273a \
+    label.drawing=no \
+    script="$PLUGIN_DIR/front_app.sh" \
+  --add item front_app.separator left \
+  --set front_app.separator \
+    icon= \
+    background.padding_left=-1 \
+    icon.y_offset=0 \
+    icon.font="Hack Nerd Font:Bold:17.0"  \
+    icon.color=0xffa6da95 \
+    icon.padding_left=0 \
+    icon.padding_right=0 \
+    label.drawing=no \
+  --add item front_app.name left \
+  --set front_app.name \
+    icon.drawing=off \
+    label="Hello" \
+    label.drawing=yes \
+
+sketchybar \
+  --add bracket front_app_bracket \
+    front_app \
+    front_app.separator \
+    front_app.name \
+  --subscribe	front_app front_app_switched
+
+sketchybar \
+  --add item ghe left \
+  --set ghe \
+    icon.color=0xffAEA3CD \
+    update_freq=10 \
+    script="$PLUGIN_DIR/ghe_notification.sh"
+
+sketchybar \
+  --add event input_change 'AppleSelectedInputSourcesChangedNotification' \
+  --add item input_source left \
+  --set input_source \
+    script="$PLUGIN_DIR/input_source.sh" \
+    icon= \
+    icon.color=0xffF4F2F0 \
+  --subscribe input_source input_change
+
+##### Adding Right Items #####
+
+sketchybar \
+  --add item clock right \
+  --set clock \
+    icon= \
+    icon.color=0xffed8796 \
+    update_freq=10 \
+    script="$PLUGIN_DIR/clock.sh"
+
+sketchybar \
+  --add item battery right \
+  --set battery \
+    icon.color=0xfff0e68c \
+    update_freq=10 \
+    script="$PLUGIN_DIR/battery.sh" \
+  --subscribe battery system_woke
+
+sketchybar \
+  --add item wifi right \
+  --set wifi script="$PLUGIN_DIR/wifi.sh" \
+    icon=直 \
+    icon.color=0xff8aadf4 \
+  --subscribe wifi wifi_change
+
+sketchybar --update
