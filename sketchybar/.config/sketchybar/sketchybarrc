@@ -1,7 +1,7 @@
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 
 sketchybar --bar \
-  height=32 \
+  height=38 \
   blur_radius=0 \
   position=top \
   sticky=on \
