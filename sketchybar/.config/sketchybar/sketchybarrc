@@ -36,7 +36,6 @@ sketchybar \
     background.color=0xffa6da95 \
     background.padding_left=0 \
     background.padding_right=0 \
-    icon.y_offset=1 \
     icon.color=0xff24273a \
     label.drawing=no \
     script="$PLUGIN_DIR/front_app.sh" \
@@ -44,7 +43,6 @@ sketchybar \
   --set front_app.separator \
     icon= \
     background.padding_left=-1 \
-    icon.y_offset=0 \
     icon.font="Hack Nerd Font:Bold:17.0"  \
     icon.color=0xffa6da95 \
     icon.padding_left=0 \
