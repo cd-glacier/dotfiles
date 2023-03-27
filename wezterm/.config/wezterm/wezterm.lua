@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 return {
   font = wezterm.font 'JetBrains Mono',
-  color_scheme = 'Gruvbox Dark',
+  color_scheme = 'Gruvbox dark, medium (base16)',
   scrollback_lines = 9999999,
 
   leader = { key = 'w', mods = 'CTRL', timeout_milliseconds = 1000 },
