@@ -2,6 +2,7 @@ local wezterm = require 'wezterm'
 
 return {
   font = wezterm.font 'JetBrains Mono',
+  font_size = 14.0,
   color_scheme = 'Gruvbox dark, medium (base16)',
   scrollback_lines = 9999999,
 
