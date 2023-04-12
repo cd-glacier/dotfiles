@@ -25,8 +25,16 @@ notifications=$(curl -s -u "$USER_NAME:$ACCESS_TOKEN" \
 notifications_length=$(echo $notifications | jq '. | length')
 
 if [[ ! ${notifications_length} =~  ^[0-9]+$ ]]; then
-  sketchybar --set $NAME label="Failed to connect to GHE"
+  LABEL="Failed to connect to GHE"
+else
+  title=$(echo "$notifications" | jq -r .[0].title | cut -c 1-30)
+
+  if [[ "$title" == "null" ]]; then
+    LABEL="none"
+  else
+    LABEL="$notification_length $title"
+  fi
 fi
 
-sketchybar --set $NAME icon="" label="$notifications_length"
+sketchybar --set $NAME icon="" icon.padding_right=0 label.padding_right=15 label="$LABEL..."
 

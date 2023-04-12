@@ -78,7 +78,6 @@ sketchybar \
     script="$PLUGIN_DIR/ghe_notification.sh" \
     click_script="open https://ghe.ckpd.co/notifications"
 
-
 ##### Adding Right Items #####
 
 sketchybar \
