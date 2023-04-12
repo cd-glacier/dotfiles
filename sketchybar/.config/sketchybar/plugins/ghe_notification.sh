@@ -27,7 +27,7 @@ notifications_length=$(echo $notifications | jq '. | length')
 if [[ ! ${notifications_length} =~  ^[0-9]+$ ]]; then
   LABEL="Failed to connect to GHE"
 else
-  title=$(echo "$notifications" | jq -r .[0].title | cut -c 1-30)
+  title=$(echo "$notifications" | jq -r .[0].title)
 
   if [[ "$title" == "null" ]]; then
     LABEL="none"
@@ -36,5 +36,5 @@ else
   fi
 fi
 
-sketchybar --set $NAME icon="" icon.padding_right=0 label.padding_right=15 label="$LABEL..."
+sketchybar --set $NAME icon="" label="$LABEL"
 
