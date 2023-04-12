@@ -22,9 +22,9 @@ notifications=$(curl -s -u "$USER_NAME:$ACCESS_TOKEN" \
     "latest_url": .subject.latest_comment_url
   })')
 
-notifications_length=$(echo $notifications | jq '. | length')
+notification_length=$(echo $notifications | jq '. | length')
 
-if [[ ! ${notifications_length} =~  ^[0-9]+$ ]]; then
+if [[ ! ${notification_length} =~  ^[0-9]+$ ]]; then
   LABEL="Failed to connect to GHE"
 else
   title=$(echo "$notifications" | jq -r .[0].title)
@@ -32,7 +32,7 @@ else
   if [[ "$title" == "null" ]]; then
     LABEL="none"
   else
-    LABEL="$notification_length $title"
+    LABEL="$notification_length | $title "
   fi
 fi
 
