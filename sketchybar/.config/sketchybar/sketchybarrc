@@ -97,18 +97,17 @@ sketchybar \
 
 sketchybar \
   --add item wifi right \
-  --set wifi script="$PLUGIN_DIR/wifi.sh" \
+  --set wifi \
+    script="$PLUGIN_DIR/wifi.sh" \
     icon=直 \
-    icon.color=0xff8aadf4 \
+    icon.color=0xffE47305 \
   --subscribe wifi wifi_change
 
 sketchybar \
   --add event bluetooth_change "com.apple.bluetooth.status" \
   --add item bluetooth right \
   --set bluetooth \
-    icon= \
-    icon.color=0xffE47305 \
-    label.padding_right=0 \
+    icon.color=0xff8aadf4 \
     update_freq=10 \
     script="$PLUGIN_DIR/bluetooth.sh" \
   --subscribe bluetooth bluetooth_change
