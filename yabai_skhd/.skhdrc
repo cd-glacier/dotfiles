@@ -9,7 +9,7 @@ ctrl - j : yabai -m window --focus south || \
 
 ctrl - k : yabai -m window --focus north || \
   yabai -m display --focus north || \
-  yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Obsidian") | .id')
+  yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Logseq") | .id')
 
 ctrl - l : yabai -m window --focus east || \
   yabai -m display --focus east || \
