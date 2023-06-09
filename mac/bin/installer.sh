@@ -31,6 +31,6 @@ tools=$(brew list)
 
 brew_cask_install vivaldi
 brew_cask_install raycast
-brew_cask_install hyperswitch
+brew_cask_install logseq
 
 echo "##### finish to install mac apps #####"
