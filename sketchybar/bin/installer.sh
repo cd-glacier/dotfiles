@@ -27,6 +27,7 @@ LINK_FILES=(
   .config/sketchybar/plugins/wifi.sh
   .config/sketchybar/plugins/bluetooth.sh
   .config/sketchybar/plugins/test.sh
+  .config/sketchybar/plugins/logseq_todo.sh
 )
 
 for file in ${LINK_FILES[@]}; do \
