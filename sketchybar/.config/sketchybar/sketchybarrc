@@ -84,7 +84,8 @@ sketchybar \
     icon= \
     icon.color=0xff78e3aa \
     update_freq=10 \
-    script="$PLUGIN_DIR/logseq_todo.sh"
+    script="$PLUGIN_DIR/logseq_todo.sh" \
+    click_script="open -a Logseq"
 
 ##### Adding Center Items #####
 
