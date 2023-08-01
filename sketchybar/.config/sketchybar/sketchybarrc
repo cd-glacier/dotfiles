@@ -70,24 +70,14 @@ sketchybar \
     icon.color=0xffF4F2F0 \
   --subscribe input_source input_change
 
-<<<<<<< HEAD
 # sketchybar \
 #   --add item ghe left \
 #   --set ghe \
 #     icon.color=0xffAEA3CD \
+#     icon= \
 #     update_freq=10 \
 #     script="$PLUGIN_DIR/ghe_notification.sh" \
 #     click_script="open https://ghe.ckpd.co/notifications"
-=======
-sketchybar \
-  --add item ghe left \
-  --set ghe \
-    icon.color=0xffAEA3CD \
-    icon= \
-    update_freq=10 \
-    script="$PLUGIN_DIR/ghe_notification.sh" \
-    click_script="open https://ghe.ckpd.co/notifications"
->>>>>>> f4f506b (...)
 
 sketchybar \
   --add item logseq left \
