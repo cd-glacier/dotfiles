@@ -33,7 +33,7 @@ sketchybar --default \
 sketchybar \
   --add item front_app left \
   --set front_app \
-    background.color=0xffa6da95 \
+    background.color=0xffadcfd9 \
     background.padding_left=0 \
     background.padding_right=0 \
     icon.color=0xff24273a \
@@ -44,7 +44,7 @@ sketchybar \
     icon= \
     background.padding_left=-1 \
     icon.font="Hack Nerd Font:Bold:17.0"  \
-    icon.color=0xffa6da95 \
+    icon.color=0xffadcfd9 \
     icon.padding_left=0 \
     icon.padding_right=0 \
     label.drawing=no \
@@ -103,7 +103,7 @@ sketchybar \
 sketchybar \
   --add item clock right \
   --set clock \
-    icon= \
+    icon=󰃰 \
     icon.color=0xffed8796 \
     update_freq=10 \
     script="$PLUGIN_DIR/clock.sh"

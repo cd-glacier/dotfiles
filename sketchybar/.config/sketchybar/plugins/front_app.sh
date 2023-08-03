@@ -14,7 +14,7 @@ case $INFO in
     ;;
   "Vivaldi")
     ICON_PADDING_RIGHT=7
-    ICON=󰖟
+    ICON=
     ;;
   "Android Studio")
     ICON_PADDING_RIGHT=7
@@ -24,20 +24,16 @@ case $INFO in
     ICON_PADDING_RIGHT=6
     ICON=
     ;;
-  "Obsidian")
-    ICON_PADDING_RIGHT=6
-    ICON=
-    ;;
   "System Settings")
     ICON_PADDING_RIGHT=6
     ICON=
     ;;
-  "Gmage")
+  "Logseq")
     ICON_PADDING_RIGHT=6
-    ICON=󱣴
+    ICON=
     ;;
   *)
-    ICON=
+    ICON=
     ;;
 esac
 
