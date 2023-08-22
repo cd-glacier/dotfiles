@@ -1,6 +1,6 @@
 #!/bin/bash
 
-journals_directory="/Users/glacier/Google Drive/マイドライブ/logseq/journals"
+journals_directory="/Users/hyoga.yoshida/logseq/journals"
 today=$(date "+%Y_%m_%d")
 today_jounal="$journals_directory/$today.md"
 
