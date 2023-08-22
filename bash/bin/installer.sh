@@ -9,12 +9,13 @@ install_command() {
 
 echo '#### install with brew'
 
+brew install bash
 install_command ghq
 install_command gh
 install_command bat
 install_command noti
-install_command fd
-install_command fx
+# install_command fd
+# install_command fx
 install_command bash
 install_command starship
 install_command reattach-to-user-namespace
