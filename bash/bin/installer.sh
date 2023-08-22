@@ -16,7 +16,7 @@ install_command bat
 install_command noti
 # install_command fd
 # install_command fx
-install_command bash
+install_command tig
 install_command starship
 install_command reattach-to-user-namespace
 
