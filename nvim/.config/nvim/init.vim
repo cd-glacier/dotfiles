@@ -92,30 +92,20 @@ endfunction
 autocmd BufEnter * call <SID>AutoProjectRootCD()
 
 "dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+set nocompatible
 
-" ~/.config/deinで
-" sh installer.sh .
-" したと仮定
-let deinroot = "~/.config/dein/."
-let $DEIN_PATH= deinroot . "/repos/github.com/Shougo/dein.vim"
+let s:dein_base = '~/.cache/dein'
+let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
 let s:toml = "~/.config/nvim/dein.toml"
 
-" Required:
-set runtimepath+=$DEIN_PATH
+execute 'set runtimepath+=' . s:dein_src
 
-" Required:
-if dein#load_state(deinroot)
-  call dein#begin(deinroot)
-  call dein#add($DEIN_PATH)
-  call dein#load_toml(s:toml, {'lazy': 0})
-  call dein#end()
-  call dein#save_state()
-endif
+call dein#begin(s:dein_base)
 
-" Required:
+call dein#add(s:dein_src)
+call dein#load_toml(s:toml, {'lazy': 0})
+call dein#end()
+
 filetype plugin indent on
 syntax enable
 
