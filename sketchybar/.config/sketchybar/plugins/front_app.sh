@@ -9,6 +9,10 @@ case $INFO in
     ICON_PADDING_RIGHT=8
     ICON=
     ;;
+  "Warp")
+    ICON_PADDING_RIGHT=8
+    ICON=
+    ;;
   "Finder")
     ICON=
     ;;

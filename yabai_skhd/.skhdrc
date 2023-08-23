@@ -5,7 +5,7 @@ ctrl - h : yabai -m window --focus west || \
 
 ctrl - j : yabai -m window --focus south || \
   yabai -m display --focus south || \
-  yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "WezTerm") | .id')
+  yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Warp") | .id')
 
 ctrl - k : yabai -m window --focus north || \
   yabai -m display --focus north || \
