@@ -7,6 +7,10 @@ export PGCLIENTENCODING=utf-8 # for pgcli
 # bash
 export PATH="/opt/homebrew/bin:$PATH"
 
+# Android
+export PATH=$PATH:/Users/hyoga.yoshida/Library/Android/sdk/platform-tools
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
