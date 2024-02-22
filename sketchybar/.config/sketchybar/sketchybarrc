@@ -116,13 +116,14 @@ sketchybar \
     script="$PLUGIN_DIR/battery.sh" \
   --subscribe battery system_woke
 
-sketchybar \
-  --add item wifi right \
-  --set wifi \
-    script="$PLUGIN_DIR/wifi.sh" \
-    icon=󰖩 \
-    icon.color=0xffE47305 \
-  --subscribe wifi wifi_change
+# Not working on Sonoma
+# sketchybar \
+#   --add item wifi right \
+#   --set wifi \
+#     script="$PLUGIN_DIR/wifi.sh" \
+#     icon=󰖩 \
+#     icon.color=0xffE47305 \
+#   --subscribe wifi wifi_change
 
 sketchybar \
   --add event bluetooth_change "com.apple.bluetooth.status" \

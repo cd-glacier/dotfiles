@@ -1,5 +1,5 @@
-# set editing-mode vi
-# set keymap vi-command
-# set show-mode-in-prompt on
-# set vi-ins-mode-string \1\e[34;1m\2[insert] \1\e[0m\2
-# set vi-cmd-mode-string \1\e[33;1m\2[normal] \1\e[0m\2
+set editing-mode vi
+set keymap vi-command
+set show-mode-in-prompt on
+set vi-ins-mode-string \1\e[34;1m\2[insert] \1\e[0m\2
+set vi-cmd-mode-string \1\e[33;1m\2[normal] \1\e[0m\2
