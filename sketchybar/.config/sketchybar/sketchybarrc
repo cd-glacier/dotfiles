@@ -126,6 +126,14 @@ sketchybar \
 #   --subscribe wifi wifi_change
 
 sketchybar \
+  --add item vpn right \
+  --set vpn \
+    icon=  \
+    icon.color=0xffE47305 \
+    update_freq=10 \
+    script="$HOME/.config/sketchybar/plugins/vpn.sh"
+
+sketchybar \
   --add event bluetooth_change "com.apple.bluetooth.status" \
   --add item bluetooth right \
   --set bluetooth \
