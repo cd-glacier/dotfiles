@@ -79,14 +79,14 @@ sketchybar \
 #     script="$PLUGIN_DIR/ghe_notification.sh" \
 #     click_script="open https://ghe.ckpd.co/notifications"
 
-sketchybar \
-  --add item logseq left \
-  --set logseq \
-    icon= \
-    icon.color=0xff78e3aa \
-    update_freq=10 \
-    script="$PLUGIN_DIR/logseq_todo.sh" \
-    click_script="open -a Logseq"
+# sketchybar \
+#   --add item logseq left \
+#   --set logseq \
+#     icon= \
+#     icon.color=0xff78e3aa \
+#     update_freq=10 \
+#     script="$PLUGIN_DIR/logseq_todo.sh" \
+#     click_script="open -a Logseq"
 
 ##### Adding Center Items #####
 
