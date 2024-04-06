@@ -1,8 +1,8 @@
 #!/bin/bash
 
-vpn=$(scutil --nc list | grep Connected)
+vpn_connection=$(scutil --nc list | grep Connected)
 
-if [[ -z $vpn ]]; then
+if [[ -z "$vpn_connection" ]]; then
   label="VPN NOT Connected"
 else
   label="VPN Connected"

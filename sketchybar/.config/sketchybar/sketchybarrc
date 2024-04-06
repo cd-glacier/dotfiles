@@ -131,7 +131,7 @@ sketchybar \
     icon=  \
     icon.color=0xffE47305 \
     update_freq=10 \
-    script="$HOME/.config/sketchybar/plugins/vpn.sh"
+    script="$PLUGIN_DIR/vpn.sh"
 
 sketchybar \
   --add event bluetooth_change "com.apple.bluetooth.status" \

@@ -26,7 +26,7 @@ LINK_FILES=(
   .config/sketchybar/plugins/volume.sh
   .config/sketchybar/plugins/wifi.sh
   .config/sketchybar/plugins/bluetooth.sh
-  .config/sketchybar/plugins/test.sh
+  .config/sketchybar/plugins/vpn.sh
   .config/sketchybar/plugins/logseq_todo.sh
 )
 
