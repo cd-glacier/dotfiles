@@ -28,6 +28,7 @@ LINK_FILES=(
   .config/sketchybar/plugins/bluetooth.sh
   .config/sketchybar/plugins/vpn.sh
   .config/sketchybar/plugins/logseq_todo.sh
+  .config/sketchybar/plugins/adb_device.sh
 )
 
 for file in ${LINK_FILES[@]}; do \

@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-echo $INFO
-
 ICON_PADDING_RIGHT=10
 
 case $INFO in
@@ -17,6 +15,10 @@ case $INFO in
     ICON=
     ;;
   "Vivaldi")
+    ICON_PADDING_RIGHT=7
+    ICON=
+    ;;
+  "Arc")
     ICON_PADDING_RIGHT=7
     ICON=
     ;;
