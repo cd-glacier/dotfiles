@@ -1,7 +1,8 @@
 #!/bin/bash
 
-ACCESS_TOKEN=$(envchain swiftbar bash -c 'echo $GHE_ACCESS_TOKEN')
-USER_NAME=$(envchain swiftbar bash -c 'echo $GHE_USER_NAME')
+ACCESS_TOKEN=$(envchain GHE bash -c 'echo $GHE_ACCESS_TOKEN')
+USER_NAME=$(envchain GHE bash -c 'echo $GHE_USER_NAME')
+NOTIFICATION_ENDPOINT=$(envchain GHE bash -c 'echo $GHE_NOTIFICATION_ENDPOINT')
 
 if [ -z "$ACCESS_TOKEN" ]; then
   sketchybar --set $NAME label="missing ACCESS_TOKEN"
@@ -14,7 +15,7 @@ if [ -z "$USER_NAME" ]; then
 fi
 
 notifications=$(curl -s -u "$USER_NAME:$ACCESS_TOKEN" \
-  --get https://ghe.ckpd.co/api/v3/notifications \
+  --get "$NOTIFICATION_ENDPOINT" \
   | jq '. | map({
     "title": .subject.title,
     "type": .subject.type,
@@ -37,4 +38,3 @@ else
 fi
 
 sketchybar --set $NAME icon="" label="$LABEL"
-

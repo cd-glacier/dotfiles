@@ -22,6 +22,7 @@ LINK_FILES=(
   .config/sketchybar/plugins/clock.sh
   .config/sketchybar/plugins/front_app.sh
   .config/sketchybar/plugins/ghe_notification.sh
+  .config/sketchybar/plugins/ghe_notification_click.sh
   .config/sketchybar/plugins/input_source.sh
   .config/sketchybar/plugins/volume.sh
   .config/sketchybar/plugins/wifi.sh
