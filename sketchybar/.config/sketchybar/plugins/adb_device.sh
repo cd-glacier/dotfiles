@@ -3,10 +3,12 @@
 device=$(adb devices -l | grep -o -E 'model:\s*\S*' | tail -n 1 | sed 's/model://')
 
 if [[ ! -z "$device" ]]; then
-  label="Connected $device"
+  ICON=󰦉
+  LABEL="Connected $device"
 else
-  label="Not Connected"
+  ICON=󰄢
+  LABEL="Not Connected"
 fi
 
-sketchybar --set $NAME label="$label"
+sketchybar --set $NAME icon="$ICON" label="$LABEL"
 

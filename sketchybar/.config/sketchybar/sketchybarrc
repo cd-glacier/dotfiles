@@ -73,7 +73,7 @@ sketchybar \
 sketchybar \
   --add item adb_device left \
   --set adb_device \
-    icon=󰄜  \
+    icon=󰦉  \
     icon.color=0xff33FF93 \
     update_freq=10 \
     script="$PLUGIN_DIR/adb_device.sh"
@@ -96,6 +96,7 @@ sketchybar \
 #     script="$PLUGIN_DIR/logseq_todo.sh" \
 #     click_script="open -a Logseq"
 
+
 ##### Adding Center Items #####
 
 # sketchybar \
@@ -105,6 +106,7 @@ sketchybar \
 #     icon.color=0xffF4F2F0 \
 #     update_freq=10 \
 #     script="$PLUGIN_DIR/test.sh"
+
 
 ##### Adding Right Items #####
 
