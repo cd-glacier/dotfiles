@@ -3,10 +3,13 @@
 vpn_connection=$(scutil --nc list | grep Connected)
 
 if [[ -z "$vpn_connection" ]]; then
-  label="VPN NOT Connected"
+  ICON=""
+  LABEL="VPN NOT Connected"
+  ICON_PADDING_RIGHT=7
 else
-  label="VPN Connected"
+  ICON="󰳌"
+  LABEL=""
+  ICON_PADDING_RIGHT=0
 fi
 
-sketchybar --set "$NAME" label="$label"
-
+sketchybar --set $NAME icon="$ICON" label="$LABEL" icon.padding_right=$ICON_PADDING_RIGHT

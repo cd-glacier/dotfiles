@@ -37,4 +37,4 @@ else
   fi
 fi
 
-sketchybar --set $NAME icon="" label="$LABEL"
+sketchybar --set $NAME label="$LABEL"
