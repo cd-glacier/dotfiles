@@ -31,10 +31,12 @@ else
   title=$(echo "$notifications" | jq -r .[0].title)
 
   if [[ "$title" == "null" ]]; then
-    LABEL="none"
+    LABEL=""
+    ICON_PADDING_RIGHT=0
   else
     LABEL="$notification_length | $title "
+    ICON_PADDING_RIGHT=7
   fi
 fi
 
-sketchybar --set $NAME label="$LABEL"
+sketchybar --set $NAME label="$LABEL" icon.padding_right=$ICON_PADDING_RIGHT
