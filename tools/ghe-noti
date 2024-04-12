@@ -11,7 +11,7 @@ if [ -z "$USER_NAME" ]; then
 fi
 
 notifications=$(curl -s -u "$USER_NAME:$ACCESS_TOKEN" \
-  --get https://ghe.ckpd.co/api/v3/notifications \
+  --get https://ghe/api/v3/notifications \
   | jq '. | map({
     "title": .subject.title,
     "type": .subject.type,

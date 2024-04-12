@@ -22,15 +22,6 @@ return {
       regex = "\\bfile://\\S*\\b",
       format = "$0",
     },
-    -- for cookpad
-    {
-      regex = "Android/android-cookpad#(\\d+)",
-      format = "https://ghe.ckpd.co/Android/android-cookpad/issues/$1",
-    },
-    {
-      regex = "(\\w+)/(\\w+)#(\\d+)",
-      format = "https://ghe.ckpd.co/$1/$2/issues/$3",
-    },
   },
   keys = {
     {
