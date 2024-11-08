@@ -11,6 +11,7 @@ echo '#### install with brew'
 
 install_command koekeishiya/formulae/yabai
 install_command koekeishiya/formulae/skhd
+install_command FelixKratz/formulae/borders
 
 echo "##### link setting files ######"
 LINK_FILES=(.yabairc .skhdrc)
