@@ -1,8 +1,9 @@
 #!/bin/bash
 
-vpn_connection=$(scutil --nc list | grep Connected)
+vpn_url=$(envchain sketchybar bash -c 'echo $VPN_URL')
+vpn_connection=$(envchain sketchybar curl -s -o /dev/null -w '%{http_code}' --head "$vpn_url")
 
-if [[ -z "$vpn_connection" ]]; then
+if [[ "$vpn_connection" != 200 ]]; then
   ICON=""
   LABEL="VPN NOT Connected"
   ICON_PADDING_RIGHT=7

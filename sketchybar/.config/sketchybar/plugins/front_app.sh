@@ -38,6 +38,10 @@ case $INFO in
     ICON_PADDING_RIGHT=6
     ICON=
     ;;
+  "Obsidian")
+    ICON_PADDING_RIGHT=6
+    ICON=
+    ;;
   *)
     ICON=
     ;;
