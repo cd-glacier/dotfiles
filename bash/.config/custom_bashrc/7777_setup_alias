@@ -1,6 +1,7 @@
 #!/bin/bash
 
 alias g=git
+alias main="git switch main"
 alias commit="git commit"
 alias git_branch="git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'"
 
