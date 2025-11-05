@@ -1,8 +1,9 @@
 # 見た目
 [[plugins]] # color schema
-repo = 'blazkowolf/gruber-darker.nvim'
+repo = 'jacoborus/tender.vim'
 hook_add = '''
-  colorscheme gruber-darker
+  syntax enable
+  colorscheme tender
 '''
 
 [[plugins]]
