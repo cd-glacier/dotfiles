@@ -27,7 +27,9 @@ nvim/.config/coc/extensions/
 !/bash/.bashrc
 !/bash/.inputrc
 !/bash/.config/starship.toml
-!/bash/.config/custom_bashrc/*
+!/bash/.config/custom_bashrc/7777_setup_alias
+!/bash/.config/custom_bashrc/8888_setup_func
+!/bash/.config/custom_bashrc/9999_launch_starship
 
 !mac/bin/*.sh
 !mac/.gitconfig
