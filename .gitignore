@@ -65,4 +65,5 @@ nvim/.config/coc/extensions/
 !claudecode/bin/*.sh
 !claudecode/.claude/CLAUDE.md
 !claudecode/.claude/settings.json
+!claudecode/.claude/statusline.sh
 

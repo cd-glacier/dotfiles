@@ -1,5 +1,4 @@
 {
-  "alwaysThinkingEnabled": true,
   "permissions": {
     "allow": [
       "Bash(noti:*)",
@@ -7,5 +6,11 @@
       "Bash(gh pr diff:*)"
     ],
     "deny": []
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
+  },
+  "alwaysThinkingEnabled": true
 }

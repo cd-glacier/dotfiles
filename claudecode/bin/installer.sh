@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "##### link CLAUDE Code setting files ######"
-LINK_FILES=(.claude/CLAUDE.md .claude/settings.json)
+LINK_FILES=(.claude/CLAUDE.md .claude/settings.json .claude/statusline.sh)
 
 for file in ${LINK_FILES[@]}; do \
   unlink ~/$file&>/dev/null
