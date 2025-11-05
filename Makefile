@@ -28,6 +28,9 @@ tools: ## link my tools
 yabai-skhd: ## link yabairc and skhdrc
 	bash ./yabai_skhd/bin/installer.sh
 
+claude: ## link claude code setting files
+	bash ./claudecode/bin/installer.sh
+
 gitignore-global: ## link and add gitignore_global to gitconfig
 	if [ -f ~/.gitignore_global ]; then unlink ~/.gitignore_global&>/dev/null; fi
 	ln -sf $(PWD)/mac/.gitignore_global ~/.gitignore_global

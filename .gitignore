@@ -62,3 +62,7 @@ nvim/.config/coc/extensions/
 !yabai_skhd/.yabairc
 !yabai_skhd/.skhdrc
 
+!claudecode/bin/*.sh
+!claudecode/.claude/CLAUDE.md
+!claudecode/.claude/settings.json
+
