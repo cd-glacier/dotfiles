@@ -1,8 +1,8 @@
 # 見た目
 [[plugins]] # color schema
-repo = 'arcticicestudio/nord-vim'
+repo = 'blazkowolf/gruber-darker.nvim'
 hook_add = '''
-  colorscheme nord
+  colorscheme gruber-darker
 '''
 
 [[plugins]]
