@@ -2,6 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(noti:*)",
+      "Bash(./gradlew:*)",
+      "Bash(gh pr list:*)",
       "Bash(gh pr view:*)",
       "Bash(gh pr diff:*)"
     ],
@@ -12,5 +14,18 @@
     "command": "~/.claude/statusline.sh",
     "padding": 0
   },
-  "alwaysThinkingEnabled": true
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE_PATH=$(jq -r '.tool_input.file_path') && [ -n \"$(tail -c1 \"$FILE_PATH\")\" ] && echo >> \"$FILE_PATH\""
+          }
+        ]
+      }
+    ]
+  },
+  "alwaysThinkingEnabled": false
 }
