@@ -78,15 +78,13 @@ sketchybar \
     script="$PLUGIN_DIR/ghe_notification.sh" \
     click_script="$PLUGIN_DIR/ghe_notification_click.sh"
 
-# sketchybar \
-#   --add item logseq left \
-#   --set logseq \
-#     icon= \
-#     icon.color=0xff78e3aa \
-#     update_freq=10 \
-#     script="$PLUGIN_DIR/logseq_todo.sh" \
-#     click_script="open -a Logseq"
-
+sketchybar \
+  --add item claude_code left \
+  --set claude_code \
+    icon=󰚩 \
+    icon.color=0xffD77557 \
+    update_freq=3 \
+    script="$PLUGIN_DIR/claude_code.sh"
 
 ##### Adding Center Items #####
 
