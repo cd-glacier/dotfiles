@@ -1,3 +1,15 @@
+# プロンプトのフォーマットを明示的に指定（指定したモジュールのみ表示）
+format = """
+$time\
+$directory\
+$git_branch\
+$git_status\
+$kotlin\
+$java\
+$gradle\
+$custom\
+$line_break\
+$character"""
 
 [git_status]
 ahead = "↑${count}"
@@ -7,3 +19,32 @@ untracked = "…${count}"
 modified = "+${count}"
 staged = "●${count}"
 
+# Kotlin
+[kotlin]
+symbol=" "
+format = "[$symbol($version )]($style)"
+
+# Java
+[java]
+symbol=" "
+format = "[$symbol($version )]($style)"
+detect_files = ["pom.xml", "build.gradle.kts", "build.gradle", ".java-version"]
+
+# Gradle（gradle-wrapper.propertiesからバージョン取得）
+[gradle]
+symbol=" "
+format = "[$symbol($version )]($style)"
+
+# GCPログイン状態（ログイン済みなら✓、未ログインなら✗）
+[custom.gcp_login]
+command = "gcloud auth list --filter=status:ACTIVE --format='value(account)' 2>/dev/null | head -1 | grep -q '@' && echo '✓' || echo '✗'"
+when = "command -v gcloud"
+format = "[GCP:$output]($style) "
+style = "bold blue"
+
+# 現在時刻
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format = "%H:%M:%S"
+style = "gray"
