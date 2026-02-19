@@ -12,6 +12,7 @@ $line_break\
 $character"""
 
 [git_status]
+ignore_submodules = true
 ahead = "↑${count}"
 diverged = "↑${ahead_count}↓${behind_count}"
 behind = "↓${count}"
