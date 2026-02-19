@@ -17,6 +17,7 @@ nvim/.config/coc/extensions/
 !nvim/.config/coc/extensions/package.json
 !nvim/.config/dein/.gitkeep
 !nvim/.config/nvim/init.vim
+!nvim/.config/nvim/init.lua
 !nvim/.config/nvim/coc-settings.json
 !nvim/.config/nvim/dein.toml
 !nvim/.config/nvim/lombok.jar
