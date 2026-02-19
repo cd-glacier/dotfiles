@@ -1,6 +1,19 @@
 # window 移動
-ctrl - j : yabai -m window --focus $(yabai -m query --windows --space | jq -re 'map(select(."is-minimized"==false)) | sort_by(.id) as $list | ($list | map(."has-focus") | index(true) // 0) as $cur | $list[($cur - 1) % length].id')
-ctrl - k : yabai -m window --focus $(yabai -m query --windows --space | jq -re 'map(select(."is-minimized"==false)) | sort_by(.id) as $list | ($list | map(."has-focus") | index(true) // 0) as $cur | $list[($cur + 1 + length) % length].id')
+ctrl - h : yabai -m window --focus west || \
+  yabai -m display --focus west || \
+  yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Arc" or .app == "Vivaldi" and .title != "Picture in Picture") | .id')
+
+ctrl - j : yabai -m window --focus south || \
+  yabai -m display --focus south || \
+  yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "WezTerm") | .id')
+
+ctrl - k : yabai -m window --focus north || \
+  yabai -m display --focus north || \
+  yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Obsidian" or .app == "Logseq") | .id')
+
+ctrl - l : yabai -m window --focus east || \
+  yabai -m display --focus east || \
+  yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Android Studio" or .app == "RubyMine") | .id')
 
 # 位置変更
 alt + ctrl - h  : yabai -m window --swap west || yabai -m display --swap west

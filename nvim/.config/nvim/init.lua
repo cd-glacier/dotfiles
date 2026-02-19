@@ -10,6 +10,9 @@ vim.opt.rtp:prepend(lazypath)
 -- 基本設定
 vim.g.mapleader = " " -- スペースをリーダーキーに設定
 
+-- 行番号を表示
+vim.opt.number = true
+
 -- 挿入モード(i)で jj を高速に入力した時に <Esc> とする
 vim.keymap.set('i', 'jj', '<Esc>', { silent = true })
 
