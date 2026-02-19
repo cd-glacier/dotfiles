@@ -28,6 +28,9 @@ vim.keymap.set('n', 'ee', ':NERDTreeToggle<CR>', { noremap = true, silent = true
 -- ノーマルモードで tt を押すと新しいタブを開く
 vim.keymap.set('n', 'tt', ':tabnew<CR>', { noremap = true, silent = true })
 
+-- :JQ コマンドでバッファ全体のJSONをjqで整形
+vim.api.nvim_create_user_command('JQ', '%!jq .', {})
+
 -- ==========================================================================
 -- 2. プラグイン構成
 -- 1. lazy.nvim 自体のインストール
