@@ -2,6 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(noti:*)",
+      "Write(~/.claude/SECRET_DIARY.md)",
       "Bash(./gradlew:*)",
       "Bash(gh pr list:*)",
       "Bash(gh pr view:*)",
