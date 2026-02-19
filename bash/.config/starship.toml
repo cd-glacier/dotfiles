@@ -11,6 +11,11 @@ $custom\
 $line_break\
 $character"""
 
+# ディレクトリ表示（親ディレクトリ/現在ディレクトリの2階層表示）
+[directory]
+truncation_length = 2
+truncate_to_repo = false
+
 [git_status]
 ignore_submodules = true
 ahead = "↑${count}"
