@@ -13,6 +13,10 @@ vim.g.mapleader = " " -- スペースをリーダーキーに設定
 -- 行番号を表示
 vim.opt.number = true
 
+-- 検索時に大文字小文字を区別しない（smartcaseと併用で大文字入力時のみ区別）
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- 挿入モード(i)で jj を高速に入力した時に <Esc> とする
 vim.keymap.set('i', 'jj', '<Esc>', { silent = true })
 
