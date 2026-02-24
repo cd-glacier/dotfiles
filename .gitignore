@@ -45,6 +45,9 @@ nvim/.config/coc/extensions/
 !wezterm/bin/*.sh
 !wezterm/.config/wezterm/wezterm.lua
 
+!ghostty/bin/*.sh
+!ghostty/.config/ghostty/config
+
 !tools/grpc-call
 !tools/ghe-noti
 !tools/add

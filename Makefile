@@ -1,4 +1,4 @@
-.PHONY: help nvim mac tmux tools bash wezterm yabai-skhd sketchybar
+.PHONY: help nvim mac tmux tools bash wezterm ghostty yabai-skhd sketchybar
 .DEFAULT_GOAL := help
 
 clean: ## delete auto created file and directory
@@ -15,6 +15,9 @@ tmux: ## install and setup tmux
 
 wezterm: ## install and setup wezterm
 	bash ./wezterm/bin/installer.sh
+
+ghostty: ## link ghostty config files
+	bash ./ghostty/bin/installer.sh
 
 mac: ## install mac app
 	bash ./mac/bin/installer.sh
