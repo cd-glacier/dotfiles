@@ -23,3 +23,6 @@ keybind = ctrl+w>h=goto_split:left
 keybind = ctrl+w>j=goto_split:bottom
 keybind = ctrl+w>k=goto_split:top
 keybind = ctrl+w>l=goto_split:right
+
+# Fix fzf tab selection (override fixterms encoding)
+keybind = ctrl+i=text:\x09

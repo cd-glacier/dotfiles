@@ -34,5 +34,6 @@ yabai -m rule --add app="System Settings" manage=off
 yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="Obsidian" manage=off
 yabai -m rule --add app="WezTerm" manage=off
+yabai -m rule --add app="Ghostty" manage=off
 yabai -m rule --add title="Picture in Picture" manage=off
 
