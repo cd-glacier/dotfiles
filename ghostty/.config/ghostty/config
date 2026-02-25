@@ -28,3 +28,6 @@ keybind = ctrl+w>l=goto_split:right
 
 # Fix fzf tab selection (override fixterms encoding)
 keybind = ctrl+i=text:\x09
+
+# Disable fullscreen/zoom shortcut
+keybind = super+enter=unbind
