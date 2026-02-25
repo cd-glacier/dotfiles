@@ -15,6 +15,10 @@ scrollback-limit = 9999999
 
 desktop-notifications = true
 
+# Pane split border colors
+unfocused-split-fill = #555555
+# アクティブなペインはより明るいグレー、非アクティブは暗めのグレー
+
 # Key bindings (leader key pattern: ctrl+w)
 # Split panes
 keybind = ctrl+w>shift+backslash=new_split:right
