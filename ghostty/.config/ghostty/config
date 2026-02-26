@@ -30,6 +30,10 @@ keybind = ctrl+w>j=goto_split:bottom
 keybind = ctrl+w>k=goto_split:top
 keybind = ctrl+w>l=goto_split:right
 
+# Scroll (vim-style with Shift+j/k = J/K)
+keybind = shift+j=scroll_line_down
+keybind = shift+k=scroll_line_up
+
 # Fix fzf tab selection (override fixterms encoding)
 keybind = ctrl+i=text:\x09
 
