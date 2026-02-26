@@ -1,0 +1,71 @@
+
+[tasks.clear-cache-on-android]
+description = "[Android] Clear cache"
+run = "rm -i -rf ~/.gradle/caches/transforms-2 && ./gradlew --stop &&  rm -i -rf ~/.gradle/caches/build-cache-* && noti ./gradlew clean"
+
+[tasks.switch-desktop]
+description = "[yabai] Switch to desktop mode"
+run = [
+  "yabai -m config top_padding 38",
+  "yabai -m space --layout bsp",
+]
+
+[tasks.switch-laptop]
+description = "[yabai] Switch to laptop mode"
+run = [
+  "yabai -m config top_padding 4",
+  "yabai -m space --layout stack",
+  "yabai -m space --layout float",
+]
+
+[tasks.restart-sketchybar]
+description = "[Sketchbar] Restart sketchybar"
+run = "brew services restart sketchybar"
+
+[tasks.pull-obsidian]
+description = "[Obsidian] Pull Obsidian Notes from Android Device"
+run = [
+  "rm -rf ~/obsidian.old",
+  "mv ~/obsidian ~/obsidian.old",
+  "adb pull /storage/emulated/0/Documents/obsidian ~/obsidian",
+]
+
+[tasks.push-obsidian]
+description = "[Obsidian] Push Obsidian Notes to Android Device"
+run = [
+  "adb shell rm -rf /storage/emulated/0/Documents/obsidian.old",
+  "adb shell mv /storage/emulated/0/Documents/obsidian /storage/emulated/0/Documents/obsidian.old",
+  "adb push ~/obsidian /storage/emulated/0/Documents/obsidian",
+]
+
+[tasks.pull-journals]
+description = "[Obsidian] Pull Obsidian Journals from Android Device"
+run = [
+  "mv ~/obsidian/journals ~/obsidian.old/journals",
+  "adb pull /storage/emulated/0/Documents/obsidian/journals ~/obsidian/journals",
+]
+
+[tasks.push-journals]
+description = "[Obsidian] Push Obsidian Journals to Android Device"
+run = [
+  "adb shell mv /storage/emulated/0/Documents/obsidian/journals /storage/emulated/0/Documents/obsidian.old/journals",
+  "adb push ~/obsidian/journals /storage/emulated/0/Documents/obsidian/journals",
+]
+
+[tasks.pull-pages]
+description = "[Obsidian] Pull Obsidian Journals from Android Device"
+run = [
+  "mv ~/obsidian/pages ~/obsidian.old/pages",
+  "adb pull /storage/emulated/0/Documents/obsidian/pages ~/obsidian/pages",
+]
+
+[tasks.push-pages]
+description = "[Obsidian] Push Obsidian Journals to Android Device"
+run = [
+  "adb shell mv /storage/emulated/0/Documents/obsidian/pages /storage/emulated/0/Documents/obsidian.old/pages",
+  "adb push ~/obsidian/pages /storage/emulated/0/Documents/obsidian/pages",
+]
+
+[tasks.gcloud-login]
+description = "[Google Cloud] Login Google Cloud CLI"
+run = "gcloud auth application-default login"

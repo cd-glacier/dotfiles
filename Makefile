@@ -1,4 +1,4 @@
-.PHONY: help nvim mac tmux tools bash wezterm ghostty yabai-skhd sketchybar
+.PHONY: help nvim mac tmux tools bash wezterm ghostty yabai-skhd sketchybar mise
 .DEFAULT_GOAL := help
 
 clean: ## delete auto created file and directory
@@ -33,6 +33,9 @@ yabai-skhd: ## link yabairc and skhdrc
 
 claude: ## link claude code setting files
 	bash ./claudecode/bin/installer.sh
+
+mise: ## link mise config files
+	bash ./mise/bin/installer.sh
 
 gitignore-global: ## link and add gitignore_global to gitconfig
 	if [ -f ~/.gitignore_global ]; then unlink ~/.gitignore_global&>/dev/null; fi

@@ -71,3 +71,6 @@ nvim/.config/coc/extensions/
 !claudecode/.claude/settings.json
 !claudecode/.claude/statusline.sh
 
+!mise/bin/*.sh
+!mise/.config/mise/config.toml
+
