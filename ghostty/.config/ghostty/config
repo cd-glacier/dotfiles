@@ -8,7 +8,7 @@ font-thicken
 
 mouse-hide-while-typing
 
-wait-after-command = true
+# wait-after-command = true
 
 # Scrollback (equivalent to wezterm's 9999999 lines)
 scrollback-limit = 9999999
