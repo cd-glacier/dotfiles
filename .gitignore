@@ -76,6 +76,7 @@ nvim/.config/coc/extensions/
 
 !termux/bin/*.sh
 !termux/.termux/termux.properties
+!termux/.config/starship.toml
 !termux/.config/nvim/init.lua
 !termux/.config/custom_bashrc/7777_setup_alias
 !termux/.config/custom_bashrc/8888_setup_func

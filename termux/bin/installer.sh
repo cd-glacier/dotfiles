@@ -24,6 +24,10 @@ mkdir -p ~/.termux
 unlink ~/.termux/termux.properties &>/dev/null
 ln -sf $TERMUX_DIR/.termux/termux.properties ~/.termux/termux.properties
 
+mkdir -p ~/.config
+unlink ~/.config/starship.toml &>/dev/null
+ln -sf $TERMUX_DIR/.config/starship.toml ~/.config/starship.toml
+
 mkdir -p ~/.config/nvim
 unlink ~/.config/nvim/init.lua &>/dev/null
 ln -sf $TERMUX_DIR/.config/nvim/init.lua ~/.config/nvim/init.lua

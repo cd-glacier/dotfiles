@@ -1,0 +1,46 @@
+format = """
+$time\
+$directory\
+$git_branch\
+$git_status\
+$kotlin\
+$java\
+$gradle\
+$custom\
+$line_break\
+$character"""
+
+[directory]
+truncation_length = 2
+truncate_to_repo = false
+
+[git_branch]
+symbol = "# "
+
+[git_status]
+ignore_submodules = true
+ahead = "^${count}"
+diverged = "^${ahead_count}v${behind_count}"
+behind = "v${count}"
+untracked = "?${count}"
+modified = "+${count}"
+staged = "*${count}"
+
+[kotlin]
+symbol="K "
+format = "[$symbol($version )]($style)"
+
+[java]
+symbol="J "
+format = "[$symbol($version )]($style)"
+detect_files = ["pom.xml", "build.gradle.kts", "build.gradle", ".java-version"]
+
+[gradle]
+symbol="G "
+format = "[$symbol($version )]($style)"
+
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format = "%H:%M:%S"
+style = "gray"
