@@ -1,0 +1,12 @@
+.idea/
+*.swp
+.tags_lock
+tags
+.vscode/
+.classpath
+.project
+.settings/
+*.class
+.evans.toml
+*.iml
+pg_*.log

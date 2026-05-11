@@ -75,4 +75,14 @@ nvim/.config/coc/extensions/
 !mise/.config/mise/config.toml
 
 !termux/bin/*.sh
+!termux/.termux/termux.properties
+!termux/.config/nvim/init.lua
+!termux/.config/custom_bashrc/7777_setup_alias
+!termux/.config/custom_bashrc/8888_setup_func
+!termux/.config/custom_bashrc/9999_launch_starship
+!termux/.claude/CLAUDE.md
+!termux/.claude/settings.json
+!termux/.bashrc
+!termux/.bash_profile
+!termux/.gitignore_global
 
