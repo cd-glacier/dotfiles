@@ -49,5 +49,11 @@ unlink ~/.gitignore_global &>/dev/null
 ln -sf $TERMUX_DIR/.gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 
+DOTFILES_DIR=$(dirname $TERMUX_DIR)
+for tool in add push preview-git-file; do
+  unlink $PREFIX/bin/$tool &>/dev/null
+  ln -sf $DOTFILES_DIR/tools/$tool $PREFIX/bin/$tool
+done
+
 echo "##### finish linking ######"
 echo "Run 'termux-reload-settings' to apply termux settings"
