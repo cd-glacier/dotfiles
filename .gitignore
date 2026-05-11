@@ -74,3 +74,5 @@ nvim/.config/coc/extensions/
 !mise/bin/*.sh
 !mise/.config/mise/config.toml
 
+!termux/bin/*.sh
+
