@@ -7,6 +7,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='fd --exclude "*.class"'
 
-for rc in $(ls ~/.config/custom_bashrc/); do
-  . ~/.config/custom_bashrc/$rc
+for rc in ~/.config/custom_bashrc/*; do
+  [ -f "$rc" ] && . "$rc"
 done
