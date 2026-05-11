@@ -13,7 +13,7 @@ pkg install git \
 	starship
 
 go install github.com/x-motemen/ghq@latest
-npm install -g @anthropic-ai/claude-code --force
+npm install -g @anthropic-ai/claude-code@2.1.112 --force
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 TERMUX_DIR=$(dirname $SCRIPT_DIR)
@@ -40,7 +40,7 @@ unlink ~/.bash_profile &>/dev/null
 ln -sf $TERMUX_DIR/.bash_profile ~/.bash_profile
 
 mkdir -p ~/.config/custom_bashrc
-for f in 7777_setup_alias 8888_setup_func 9999_launch_starship; do
+for f in 1000_claude_env 7777_setup_alias 8888_setup_func 9999_launch_starship; do
   unlink ~/.config/custom_bashrc/$f &>/dev/null
   ln -sf $TERMUX_DIR/.config/custom_bashrc/$f ~/.config/custom_bashrc/$f
 done
