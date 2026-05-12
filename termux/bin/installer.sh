@@ -10,7 +10,8 @@ pkg install git \
 	neovim \
 	fzf \
 	bat \
-	starship
+	starship \
+	tmux
 
 go install github.com/x-motemen/ghq@latest
 npm install -g @anthropic-ai/claude-code@2.1.112 --force
@@ -58,6 +59,9 @@ for tool in add push preview-git-file; do
   unlink $PREFIX/bin/$tool &>/dev/null
   ln -sf $DOTFILES_DIR/tools/$tool $PREFIX/bin/$tool
 done
+
+unlink ~/.tmux.conf &>/dev/null
+ln -sf $TERMUX_DIR/.tmux.conf ~/.tmux.conf
 
 echo "##### finish linking ######"
 echo "Run 'termux-reload-settings' to apply termux settings"
