@@ -6,4 +6,4 @@ alias commit="git commit"
 alias git_branch="git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'"
 
 alias m="mise run"
-alias c="claude"
+alias c="claude --enable-auto-mode"
