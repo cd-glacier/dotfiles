@@ -86,4 +86,5 @@ nvim/.config/coc/extensions/
 !termux/.bashrc
 !termux/.bash_profile
 !termux/.gitignore_global
+!termux/.tmux.conf
 
