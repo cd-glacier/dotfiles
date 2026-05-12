@@ -38,6 +38,9 @@ unlink ~/.claude/CLAUDE.md &>/dev/null
 ln -sf $TERMUX_DIR/.claude/CLAUDE.md ~/.claude/CLAUDE.md
 unlink ~/.claude/settings.json &>/dev/null
 ln -sf $TERMUX_DIR/.claude/settings.json ~/.claude/settings.json
+unlink ~/.claude/statusline.sh &>/dev/null
+ln -sf $TERMUX_DIR/.claude/statusline.sh ~/.claude/statusline.sh
+chmod +x $TERMUX_DIR/.claude/statusline.sh
 
 unlink ~/.bashrc &>/dev/null
 ln -sf $TERMUX_DIR/.bashrc ~/.bashrc

@@ -84,6 +84,7 @@ nvim/.config/coc/extensions/
 !termux/.config/custom_bashrc/9999_launch_starship
 !termux/.claude/CLAUDE.md
 !termux/.claude/settings.json
+!termux/.claude/statusline.sh
 !termux/.bashrc
 !termux/.bash_profile
 !termux/.gitignore_global
